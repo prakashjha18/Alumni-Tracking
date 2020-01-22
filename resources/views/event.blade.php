@@ -1,14 +1,13 @@
 @extends('layouts.app1')
 
 @section('content')
-    {{$nn}}
     <!--== Page Title Area Start ==-->
     <section id="page-title-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 m-auto text-center">
                     <div class="page-title-content">
-                        <h1 class="h2">All Event Archive</h1>
+                        <h1 class="h2">All Event Archiverokr</h1>
                         <p>Alumni Needs enables you to harness the power of your alumni network. Whatever may be the
                             need</p>
                         <a href="#page-content-wrap" class="btn btn-brand smooth-scroll">Let's See</a>
