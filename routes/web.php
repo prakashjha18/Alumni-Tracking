@@ -62,4 +62,6 @@ Route::group(['domain' => 'alumniportal.{account}.test'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/directoratedashboard','DirectorateController@dashboard')->name('startup.auth');
+Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
+Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
+Route::get('/alumnidashboard','AlumniController@dashboard')->name('alumni.auth');
