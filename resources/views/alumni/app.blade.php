@@ -31,7 +31,7 @@
 
 
 @empty($hidenav)
-    @include('directorate.nav')
+    @include('alumni.nav')
     
 @endempty
 

@@ -1,5 +1,5 @@
 
-@extends('directorate.app')
+@extends('alumni.app')
 
 
 @section('content')
