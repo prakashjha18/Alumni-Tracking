@@ -1,79 +1,80 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-@include('includes.head')
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
 <body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<!--[if lt IE 7]>
-<p class="browsehappy">We are Extreamly sorry, But the browser you are using is probably from when civilization started. Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
-<![endif]-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
 
-    <!--== Header Area Start ==-->
-@include('includes.header')
-<!--== Header Area End ==-->
-@yield('content')
-<!--== Footer Area Start ==-->
-@include('includes.footer')
-<!--== Footer Area End ==-->
+                    </ul>
 
-<!--== Scroll Top ==-->
-<a href="#" class="scroll-top">
-    <i class="fa fa-angle-up"></i>
-</a>
-<!--== Scroll Top ==-->
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
 
-<!-- SITE SCRIPT  -->
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
 
-<!-- Jquery JS  -->
-<script src="assets\vendor\jquery\jquery-3.3.1.min.js"></script>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-<!-- POPPER JS -->
-<script src="assets\vendor\bootstrap\js\popper.min.js"></script>
-
-<!-- BOOTSTRAP JS -->
-<script src="assets\vendor\bootstrap\js\bootstrap.min.js"></script>
-<script src="assets\vendor\navbar\bootstrap-4-navbar.js"></script>
-
-<!--owl-->
-<script src="assets\vendor\owl-carousel\owl.carousel.min.js"></script>
-
-<!--Waypoint-->
-<script src="assets\vendor\waypoint\waypoints.min.js"></script>
-
-<!--CounterUp-->
-<script src="assets\vendor\counterup\jquery.counterup.min.js"></script>
-
-<!--isotope-->
-<script src="assets\vendor\isotope\isotope.pkgd.min.js"></script>
-
-<!--magnific-->
-<script src="assets\vendor\magnific\jquery.magnific-popup.min.js"></script>
-
-<!--Smooth Scroll-->
-<script src="assets\vendor\smooth-scroll\jquery.smooth-scroll.min.js"></script>
-
-<!--Jquery Easing-->
-<script src="assets\vendor\jquery-easing\jquery.easing.1.3.min.js"></script>
-
-<!--Nice Select -->
-<script src="assets\vendor\nice-select\jquery.nice-select.js"></script>
-
-<!--Jquery Valadation -->
-<script src="assets\vendor\validation\jquery.validate.min.js"></script>
-<script src="assets\vendor\validation\additional-methods.min.js"></script>
-
-<!--off-canvas js -->
-<script src="assets\vendor\js-offcanvas\js\js-offcanvas.pkgd.min.js"></script>
-
-<!-- Countdown -->
-<script src="assets\vendor\jquery.countdown\jquery.countdown.min.js"></script>
-
-<!-- custom js: main custom theme js file  -->
-<script src="assets\js\theme.min.js"></script>
-
-<!-- custom js: custom js file is added for easy custom js code  -->
-<script src="assets\js\custom.js"></script>
-
-
-
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </div>
 </body>
 </html>

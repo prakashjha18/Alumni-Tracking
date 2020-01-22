@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app1')
 
 @section('content')
-
+    {{$nn}}
     <!--== Page Title Area Start ==-->
     <section id="page-title-area">
         <div class="container">

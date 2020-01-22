@@ -38,12 +38,11 @@
                                 <li class="nav-item"><a class="nav-link" href="/event">Event</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" data-toggle="dropdown" role="button">Blog</a>
+                                    <a class="nav-link dropdown-toggle" href="blog.html" data-toggle="dropdown" role="button">Connect</a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog List</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="single-blog.html">Single Blog Right Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="single-blog-leftsidebar.html">Single Blog left Sidebar</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="single-blog-withoutsidebar.html">Single Blog No Sidebar</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="http://blogs.alumniportal.test/blogs" target="_blank">Blog</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="http://localhost/StartupIgnitor_forum/public/" target="_blank">Forum</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
