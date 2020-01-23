@@ -74,3 +74,7 @@ Route::get('/alumnidashboard','AlumniController@dashboard2')->name('alumni.auth2
 Route::get('/funding','AlumniController@funding')->name('alumni.auth2');
 Route::get('/newsletter','AlumniController@newsletter')->name('alumni.auth2');
 Route::get('/internship','AlumniController@internship')->name('alumni.auth2');
+Route::post('/college/create', [
+    'uses' => 'CollegeController@insert',
+    'as' => 'college.save'
+]);

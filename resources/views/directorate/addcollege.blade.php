@@ -87,42 +87,44 @@ a {
 		            </div>
 		        </div>
 		        <div class="d-flex justify-content-center form_container"><br>
-		        <form>
+				<form method = "post" action="{{Route('college.save')}}">
+					@csrf
                     <div class="input-group mb-1">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
 		                </div>
-		                <input type="text" name="" class="form-control input_user" value="" placeholder="College Name">
+		                <input id="clgname" type="text" name="clgname" class="form-control input_user" value="" placeholder="College Name">
                     </div>
                     <div class="input-group mb-1">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-user-circle-o"></i></span>
 		                </div>
-		                <input type="text" name="" class="form-control input_user" value="" placeholder="College registered short form">
+		                <input id="clgshort" type="text" name="clgshort" class="form-control input_user" value="" placeholder="College registered short form">
                     </div>
                     <div class="input-group mb-1">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-envelope"></i></span>
 		                </div>
-		                <input type="text" name="" class="form-control input_user" value="" placeholder="College email">
+		                <input id="email" type="text" name="email" class="form-control input_user" value="" placeholder="College email">
 		            </div>
 		            <div class="input-group mb-1">
 		                <div class="input-group-append">
 		                    <span class="input-group-text"><i class="fa fa-key"></i></span>
 		                </div>
-		                <input type="password" name="" class="form-control input_pass" value="" placeholder="New password">
+		                <input id="newpass" type="password" name="newpass" class="form-control input_pass" value="" placeholder="New password">
                     </div>
                     <div class="input-group mb-1">
 		                <div class="input-group-append">
 		                    <span class="input-group-text"><i class="fa fa-unlock-alt"></i></span>
 		                </div>
-		                <input type="password" name="" class="form-control input_pass" value="" placeholder="Confirm password">
+		                <input id="newpass2" type="password" name="newpass2" class="form-control input_pass" value="" placeholder="Confirm password">
 		            </div>
-		        </form>
+					<div class="d-flex justify-content-center mt-2 login_container">
+						<button type="submit" name="button" class="btn login_btn">ADD COLLEGE</button>
+					</div>
+				</form>
 		        </div>
-		        <div class="d-flex justify-content-center mt-2 login_container">
-		            <button type="button" name="button" class="btn login_btn">ADD COLLEGE</button>
-		        </div>
+		        
 		        <div class="mt-1">
                     <div class="d-flex justify-content-center links" >
                         <a href="#" style="color:black">Forgot your password?</a>
