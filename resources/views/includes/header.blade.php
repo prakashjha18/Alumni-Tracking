@@ -35,7 +35,7 @@
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/event">Event</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/event">Events</a></li>
                                 <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" data-toggle="dropdown" role="button">Connect</a>
@@ -48,11 +48,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Pages</a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link dropdown-toggle" href="gallery.html" role="button">Gallery</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item"><a class="nav-link" href="single-album.html">Single Album</a></li>
-                                            </ul>
-                                        </li>
+                                        
                                         <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
                                         <li class="nav-item"><a class="nav-link" href="directory.html">Directory</a></li>
                                         <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>

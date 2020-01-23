@@ -31,7 +31,7 @@
 
     <!-- desktop bookmark -->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/cap.png">
     <meta name="theme-color" content="#ffffff">
 
     <!-- icons & favicons -->
