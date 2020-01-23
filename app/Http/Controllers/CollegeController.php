@@ -10,4 +10,7 @@ class CollegeController extends Controller
     {
         return view('college.dashboard');
     }
+    public function findalumni(){
+        return view('college.findalumni');
+    }
 }
