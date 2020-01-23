@@ -59,7 +59,7 @@ Route::group(['domain' => 'alumniportal.{account}.test'], function () {
     });
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
