@@ -42,7 +42,7 @@ class CollegeController extends Controller
             'currentstatus' =>'',
             'orgname' => $request->clgshort,
         ]);
-        return 'Successful';
+        return redirect()->back();
         }
     public function posts()
     {

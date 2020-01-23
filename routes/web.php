@@ -24,34 +24,6 @@ Route::get('/gallery',function(){
     return view('gallery');
 });
 
-
-
-// Route::get('/multiple', function () {
- 
-//     $url = parse_url(URL::all());
- 
-//     $domain = explode('.', $url['host']);
- 
-//     $subdomain = $domain[0];
- 
-//     $name = $subdomain;
- 
-//     dd($name); 
- 
-//     // write the rest of your code.
- 
-// });
-
-// Route::group(array('domain' => '{subdomain}.alumniportal.test'), function () {
- 
-//     Route::get('/multiple', function ($subdomain) {
- 
-//         $name =$subdomain;
- 
-//         dd($name);
- 
-//     });
-// });
 Route::get('multiple', function () {
     return 'jfb';
 });
