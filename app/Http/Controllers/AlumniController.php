@@ -26,4 +26,12 @@ class AlumniController extends Controller
     {
         return view('alumni.internship');
     }
+    public function editprofile()
+    {
+        return view('alumni.editprofile');
+    }
+    public function conventions()
+    {
+        return view('alumni.conventions');
+    }
 }

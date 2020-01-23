@@ -12,31 +12,23 @@
         </li>
       </ol>
       {{-- <img src="/assets/img/internship2.jpg" style="width:100%;height:200px;"> --}}
-      <div class = "container">
-        <h2>Internship</h2>
         <form>
-            <div class="form-group">
-                <label for="sel1">Internship Domain:</label>
-                <select class="form-control" id="sel1">
-                  <option>Software</option>
-                  <option>Hardware</option>
-                </select>
-              </div>
             <div class = "form-group">
-                <label for = "location">Internship Address</label>
-                <textarea class="form-control" rows="2" id="location"></textarea>
+                <label for = "location">Post</label>
+                <textarea class="form-control" rows="3" id="post"></textarea>
+                <button type = "submit" class = "btn btn-primary" style="margin-top:1%">Share </button>
             </div>
             <div class = "form-group">
-                <label for = "require">Requirement Document</label>
-                <textarea class="form-control" rows="4" id="location"></textarea>
+                <label for = "location">Events</label>
+                <textarea class="form-control" rows="3" id="events"></textarea>
+                <button type = "submit" class = "btn btn-primary" style="margin-top:1%">Share </button>
             </div>
-            <div class="form-group">
-              <label for="item-price" class="control-label" >Date</label>
-              <input type="date" class="form-control" id="date" name="date">
+            <div class = "form-group">
+                <label for = "location">Seminars</label>
+                <textarea class="form-control" rows="3" id="seminars"></textarea>
+                <button type = "submit" class = "btn btn-primary" style="margin-top:1%">Share </button>
             </div>
-           <button type = "submit" class = "btn btn-primary">Create Internship </button>
         </form>
-     </div>
     </div>
 </div>
     <!-- /.container-fluid-->

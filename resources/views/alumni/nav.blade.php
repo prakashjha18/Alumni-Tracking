@@ -93,10 +93,10 @@
                   </a>
                   <ul class="sidenav-second2-level collapse" id="collapseExamplePages1" >
                       <li>
-                        <a href="{{ url('http://localhost:8009/chats') }}" style="color:#868e96;display:block;padding:1em">Edit Profile</a>
+                        <a href="{{ url('/editprofile') }}" style="color:#868e96;display:block;padding:1em">Edit Profile</a>
                       </li>
                       <li>
-                          <a href="{{ url('http://localhost/video.php') }}" style="color:#868e96;display:block;padding:1em">Conventions</a>
+                          <a href="{{ url('/conventions') }}" style="color:#868e96;display:block;padding:1em">Conventions</a>
                       </li>
                       <li>
                           <a href="{{ url('/internship') }}" style="color:#868e96;display:block;padding:1em">Organise Intership</a>
