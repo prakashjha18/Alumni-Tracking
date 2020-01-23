@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>uniAlumni</title>
+    <title>Alumni Connect</title>
 
     <meta name="description" content="simple description for your site">
     <meta name="keywords" content="keyword1, keyword2">
@@ -31,7 +31,7 @@
 
     <!-- desktop bookmark -->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/cap.png">
     <meta name="theme-color" content="#ffffff">
 
     <!-- icons & favicons -->
