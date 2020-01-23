@@ -7,6 +7,7 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\college;
+use App\User;
 
 class CollegeController extends Controller
 {
@@ -31,7 +32,16 @@ class CollegeController extends Controller
         $college->email = $request->email;
         $college->newpass = $request->newpass;
         $college->save();
-    
+         User::create([
+            'name' => $request->clgname,
+            'email' => $request->email,
+            'password' => $request->newpass,
+            'type' => 'college',
+            'clgname' => $request->clgname,
+            'yearpass' => '',
+            'currentstatus' =>'',
+            'orgname' => $request->clgshort,
+        ]);
         return 'Successful';
         }
     public function posts()
@@ -39,17 +49,4 @@ class CollegeController extends Controller
         return view('college.posts');
     }
 
-    protected function create(Request $request)
-    {
-        return User::create([
-            'name' => '',
-            'email' => $request->email,
-            'password' => $request->newpass,
-            'type' => 'alumni',
-            'clgname' => $request->clgname,
-            'yearpass' => '',
-            'currentstatus' =>'',
-            'orgname' => $request->clgshort,
-        ]);
-    }
 }
