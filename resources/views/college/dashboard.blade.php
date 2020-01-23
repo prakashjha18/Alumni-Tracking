@@ -4,11 +4,12 @@
 
 @section('content')
 
+
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-          <li class="breadcrumb-item active">StartupView</li>
+          <li class="breadcrumb-item active">Name Of College</li>
         <li class="breadcrumb-item">
           <a href="/mentor_dashboard">Dashboard</a>
         </li>
@@ -23,7 +24,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-comments"></i>
               </div>
-              <div class="mr-5">Messages!</div>
+              <div class="mr-5">Messages</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -53,9 +54,9 @@
           <div class="card text-white bg-success o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
+                <i class="fa fa-address-book-o" aria-hidden="true"></i>
               </div>
-              <div class="mr-5">Requests</div>
+              <div class="mr-5">Invite</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -69,9 +70,9 @@
           <div class="card text-white bg-danger o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fa fa-fw fa-support"></i>
+                <i class="fa fa-plus" aria-hidden="true"></i> 
               </div>
-              <div class="mr-5">13 New Tickets!</div>
+              <div class="mr-5">Create Post</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -82,12 +83,33 @@
           </div>
         </div>
       </div>
-      <!-- Area Chart Example-->
-      
+      <div class="row">
+        <div class="col-lg-8">
           <!-- Example Bar Chart Card-->
-          
+          {{-- <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i> Bar Chart Example</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-8 my-auto">
+                  <canvas id="myBarChart" width="100" height="50"></canvas>
+                </div>
+                <div class="col-sm-4 text-center my-auto">
+                  <div class="h4 mb-0 text-primary">$34,693</div>
+                  <div class="small text-muted">YTD Revenue</div>
+                  <hr>
+                  <div class="h4 mb-0 text-warning">$18,474</div>
+                  <div class="small text-muted">YTD Expenses</div>
+                  <hr>
+                  <div class="h4 mb-0 text-success">$16,219</div>
+                  <div class="small text-muted">YTD Margin</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div> --}}
           <!-- Card Columns Example Social Feed-->
-          <div class="mb-0 mt-4">
+          <div>
             <i class="fa fa-newspaper-o"></i> News Feed</div>
           <hr class="mt-2">
           <div class="card-columns">
@@ -278,70 +300,124 @@
           </div>
           <!-- /Card Columns-->
         </div>
+         
+
+          
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         <div class="col-lg-4">
           <!-- Example Pie Chart Card-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
+          <div class="card" style="width: 18rem;">
+            {{-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
             <div class="card-body">
-              <canvas id="myPieChart" width="100%" height="100"></canvas>
+              <h5 class="card-title">Create An Event</h5>
+              <p class="card-text">Events vreated by the college will be visible to all the alumnus registered.</p>
+              <a href="#" class="btn btn-primary">Create</a>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
+          <br><br>
+
+          <div class="card" style="width: 18rem;">
+            {{-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
+            <div class="card-body">
+              <h5 class="card-title">Fundraisers</h5>
+              <p class="card-text">Create Fundraisers events and ask people to contribute for the cause</p>
+              <a href="#" class="btn btn-primary">Lean More</a>
+            </div>
+          </div>
+            <br><br>
+
+            <div class="card mb-3">
+              <div class="card-header">
+                <i class="fa fa-bell-o"></i> Recent Activity</div>
+              <div class="list-group list-group-flush small">
+                <a class="list-group-item list-group-item-action" href="#">
+                  <div class="media">
+                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+                    <div class="media-body">
+                      <strong>David Miller</strong> posted a new article to
+                      <strong>David Miller Website</strong>.
+                      <div class="text-muted smaller">Today at 5:43 PM - 5m ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#">
+                  <div class="media">
+                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+                    <div class="media-body">
+                      <strong>Samantha King</strong> new event at TCET
+                      <div class="text-muted smaller">Today at 4:37 PM - 1hr ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#">
+                  <div class="media">
+                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+                    <div class="media-body">
+                      <strong>Jeffery Wellings</strong> at SFIT
+                      <strong>Training Python</strong>.
+                      <div class="text-muted smaller">Today at 4:31 PM - 1hr ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#">
+                  <div class="media">
+                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
+                    <div class="media-body">
+                      <i class="fa fa-code-fork"></i>
+                      <strong>Monica Dennis</strong> providing
+                      <strong>Internship to DJ Sanghavi</strong>.
+                      <div class="text-muted smaller">Today at 3:54 PM - 2hrs ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#">View all activity...</a>
+              </div>
+              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+          </div>
+          
           <!-- Example Notifications Card-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-bell-o"></i> Feed Example</div>
-            <div class="list-group list-group-flush small">
-              <a class="list-group-item list-group-item-action" href="#">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <strong>David Miller</strong>posted a new article to
-                    <strong>David Miller Website</strong>.
-                    <div class="text-muted smaller">Today at 5:43 PM - 5m ago</div>
-                  </div>
-                </div>
-              </a>
-              <a class="list-group-item list-group-item-action" href="#">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <strong>Samantha King</strong>sent you a new message!
-                    <div class="text-muted smaller">Today at 4:37 PM - 1hr ago</div>
-                  </div>
-                </div>
-              </a>
-              <a class="list-group-item list-group-item-action" href="#">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <strong>Jeffery Wellings</strong>added a new photo to the album
-                    <strong>Beach</strong>.
-                    <div class="text-muted smaller">Today at 4:31 PM - 1hr ago</div>
-                  </div>
-                </div>
-              </a>
-              <a class="list-group-item list-group-item-action" href="#">
-                <div class="media">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                  <div class="media-body">
-                    <i class="fa fa-code-fork"></i>
-                    <strong>Monica Dennis</strong>forked the
-                    <strong>startbootstrap-sb-admin</strong>repository on
-                    <strong>GitHub</strong>.
-                    <div class="text-muted smaller">Today at 3:54 PM - 2hrs ago</div>
-                  </div>
-                </div>
-              </a>
-              <a class="list-group-item list-group-item-action" href="#">View all activity...</a>
-            </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-          </div>
+        </div>    
         </div>
-      </div>
       <!-- Example DataTables Card-->
-      <div class="card mb-3">
+      {{-- <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
@@ -829,7 +905,7 @@
           </div>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-      </div>
+      </div> --}}
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->

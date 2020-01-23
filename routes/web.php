@@ -24,6 +24,8 @@ Route::get('/gallery',function(){
     return view('gallery');
 });
 
+
+
 // Route::get('/multiple', function () {
  
 //     $url = parse_url(URL::all());
