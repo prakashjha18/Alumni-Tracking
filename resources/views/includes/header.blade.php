@@ -11,7 +11,7 @@
 
                 <div class="col-lg-6 col-sm-5 col-5 text-right">
                     <div class="preheader-right">
-                        <a title="Login" class="btn-auth btn-auth-rev" href="register.html">Login</a>
+                        <a title="Login" class="btn-auth btn-auth-rev" href="login.html">Login</a>
                         <a title="Register" class="btn-auth btn-auth" href="register.html">Signup</a>
                     </div>
                 </div>
@@ -50,16 +50,12 @@
                                     <ul class="dropdown-menu">
                                         <li class="nav-item"><a class="nav-link dropdown-toggle" href="gallery.html" role="button">Gallery</a>
                                             <ul class="dropdown-menu">
-                                                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                                                 <li class="nav-item"><a class="nav-link" href="single-album.html">Single Album</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
                                         <li class="nav-item"><a class="nav-link" href="directory.html">Directory</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
                                         <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-offcanvas.html">Off Canvas Menu</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="typography.html">Typography</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
