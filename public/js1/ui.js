@@ -23,7 +23,10 @@ class UI {
                 <li class="list-group-item">Website/Blog: ${user.blog}</li>
                 <li class="list-group-item">Location: ${user.location}</li>
                 <li class="list-group-item">Member Since: ${user.created_at}</li>
-                
+                <br>
+                <form>
+                <button onClick="window.location.reload();">Invite</button>
+                </form>
               </ul>
             </div>
           </div>
