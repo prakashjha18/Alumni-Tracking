@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('currentstatus');
             $table->string('orgname');
             $table->string('type');
+            $table->integer('verifiedbyclg')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
