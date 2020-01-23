@@ -52,9 +52,16 @@
                   <a class="nav-link " href="/startupkit" >
                       <i class="fa fa-fw fa-wrench"></i>
                       <span class="nav-link-text">Activity Log</span>
-                  </a>
-                  
+                  </a>  
               </li>
+
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+                <a class="nav-link " href="/addcollege" >
+                    <i class="fa fa-fw fa-plus"></i>
+                    <span class="nav-link-text">Add Colleges</span>
+                </a>  
+              </li>
+
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">
                   <a class="nav-link" href="{{ url('/list_mentors') }}">
                       <i class="fa fa-fw fa-map-marker"></i>

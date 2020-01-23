@@ -26,8 +26,6 @@
         <li class="breadcrumb-item">
           <a href="/mentor_dashboard">Dashboard</a>
         </li>
-        
-        
       </ol>
        <!-- Example DataTables Card-->
        <div class="card mb-3">

@@ -56,7 +56,7 @@
               </li>
   
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Newsletter">
-                  <a class="nav-link " href="/startupkit" >
+                  <a class="nav-link " href="/newsletter" >
                       <i class="fa fa-fw fa-newspaper-o"></i>
                       <span class="nav-link-text">Newsletter</span>
                   </a>
@@ -99,7 +99,7 @@
                           <a href="{{ url('http://localhost/video.php') }}" style="color:#868e96;display:block;padding:1em">Conventions</a>
                       </li>
                       <li>
-                          <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}" style="color:#868e96;display:block;padding:1em">Organise Intership</a>
+                          <a href="{{ url('/internship') }}" style="color:#868e96;display:block;padding:1em">Organise Intership</a>
                       </li>
                   </ul>
               </li>

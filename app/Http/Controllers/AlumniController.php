@@ -18,4 +18,12 @@ class AlumniController extends Controller
     {
         return view('alumni.funding');
     }
+    public function newsletter()
+    {
+        return view('alumni.newsletter');
+    }
+    public function internship()
+    {
+        return view('alumni.internship');
+    }
 }
