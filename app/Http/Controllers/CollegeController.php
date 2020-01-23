@@ -34,4 +34,8 @@ class CollegeController extends Controller
         
         return 'Successful';
         }
+    public function posts()
+    {
+        return view('college.posts');
+    }
 }

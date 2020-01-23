@@ -69,6 +69,7 @@ Route::get('/addcollege','DirectorateController@addcollege')->name('directorate.
 
 Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
 Route::get('/findalumni','CollegeController@findalumni')->name('college.find');
+Route::get('/posts','CollegeController@posts')->name('college.auth');
 
 Route::get('/alumnidashboard','AlumniController@dashboard2')->name('alumni.auth2');
 Route::get('/funding','AlumniController@funding')->name('alumni.auth2');
