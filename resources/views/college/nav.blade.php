@@ -73,7 +73,7 @@
               </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
                       <!--<span class="nav-link-text">List mentors</span>-->
-                      <a class="nav-link" href="{{ url('/mouform') }}">
+                      <a class="nav-link" href="{{ url('/posts') }}">
                       <i class="fa fa-pencil-square-o"></i>
   
                       <span class="nav-link-text">Your Posts</span>

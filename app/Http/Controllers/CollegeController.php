@@ -13,4 +13,8 @@ class CollegeController extends Controller
     public function findalumni(){
         return view('college.findalumni');
     }
+    public function posts()
+    {
+        return view('college.posts');
+    }
 }
