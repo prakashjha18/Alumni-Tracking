@@ -64,4 +64,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
 Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
-Route::get('/alumnidashboard','AlumniController@dashboard')->name('alumni.auth');
+//Route::get('/alumnidashboard','AlumniController@dashboard')->name('alumni.auth');
+Route::get('/alumnidashboard','AlumniController@dashboard2')->name('alumni.auth2');
+Route::get('/funding','AlumniController@funding')->name('alumni.auth2');

@@ -10,4 +10,12 @@ class AlumniController extends Controller
     {
         return view('alumni.dashboard');
     }
+    public function dashboard2()
+    {
+        return view('alumni.dashboard2');
+    }
+    public function funding()
+    {
+        return view('alumni.funding');
+    }
 }

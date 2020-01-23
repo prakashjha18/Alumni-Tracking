@@ -22,7 +22,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       
-      <a class="navbar-brand" href="{{ url('/admin') }}">alumni portal</a>
+      <a class="navbar-brand" href="{{ url('/admin') }}">Alumni Tracker</a>
       <div id="google_translate_element"></div>
   
   <script type="text/javascript">
@@ -40,7 +40,7 @@
           <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
               <!-- style="overflow-y: scroll;" -->
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                  <a class="nav-link" href="{{ url('/dashboard') }}">
+                  <a class="nav-link" href="{{ url('/alumnidashboard') }}">
                       <i class="fa fa-fw fa-dashboard"></i>
   
                       <span class="nav-link-text">Dashboard</span>
@@ -48,79 +48,62 @@
                   </a>
               </li>
                      
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                  <a class="nav-link" href="{{ url('/menteeapplyform') }}">
-                          <i class="fa fa-fw fa-sign-in"></i>
-                      <span class="nav-link-text">Registration</span><br>
-  
-                          
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Funding">
+                  <a class="nav-link" href="{{ url('/funding') }}">
+                          <i class="fa fa-fw fa-credit-card"></i>
+                      <span class="nav-link-text"> Funding</span><br> 
                   </a>
               </li>
   
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Newsletter">
                   <a class="nav-link " href="/startupkit" >
-                      <i class="fa fa-fw fa-wrench"></i>
-                      <span class="nav-link-text">Web services(startup kit)</span>
+                      <i class="fa fa-fw fa-newspaper-o"></i>
+                      <span class="nav-link-text">Newsletter</span>
                   </a>
                   
               </li>
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">
-                  <a class="nav-link" href="{{ url('/list_mentors') }}">
-                      <i class="fa fa-fw fa-area-chart"></i>
-  
-                      <span class="nav-link-text">List mentors</span>
-                  </a>   
-              </li> 
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
-                      <!--<span class="nav-link-text">List mentors</span>-->
-                      <a class="nav-link" href="{{ url('/mouform') }}">
-                      <i class="fa fa-pencil-square-o"></i>
-  
-                      <span class="nav-link-text">&nbsp;Agreement</span>
-                      </a>
-              </li> 
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                  <a class="nav-link" href="{{ url('/list_stakeholders') }}">
-                      <i class="fa fa-fw fa-table"></i>
-                      <span class="nav-link-text">List stakeholders</span>
-                  </a>
-              </li>
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
-                  <a class="nav-link " href="/application" >
-                      <i class="fa fa-fw fa-wrench"></i>
-                      <span class="nav-link-text">My Applications</span>
-                  </a>
-                  
-              </li>
-              
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
-                  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-                      <i class="fa fa-fw fa-file"></i>
-                      <span class="nav-link-text">My Network</span>
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-users"></i>
+                    <span class="nav-link-text">My Network</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="{{ url('http://localhost:8009/chats') }}">Chats</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('http://localhost/video.php') }}">Forum</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Sms</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Emails</a>
+                    </li>
+                </ul>
+            </li>
+              
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Profile">
+                  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages1" data-parent="#exampleAccordion">
+                      <i class="fa fa-pencil-square-o"></i>
+                      <span class="nav-link-text">My Profile</span>
                   </a>
-                  <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                  <ul class="sidenav-second2-level collapse" id="collapseExamplePages1" >
                       <li>
-                          <a href="{{ url('http://localhost:8009/chats') }}">Chats</a>
+                        <a href="{{ url('http://localhost:8009/chats') }}" style="color:#868e96;display:block;padding:1em">Edit Profile</a>
                       </li>
                       <li>
-                          <a href="{{ url('http://localhost/video.php') }}">Video Call</a>
+                          <a href="{{ url('http://localhost/video.php') }}" style="color:#868e96;display:block;padding:1em">Conventions</a>
                       </li>
                       <li>
-                          <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Forums</a>
-                      </li>
-                      <li>
-                          <a href="{{ url('http://blogs.startupigniter.test/blogs') }}">Blogs</a>
+                          <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}" style="color:#868e96;display:block;padding:1em">Organise Intership</a>
                       </li>
                   </ul>
               </li>
               
-              
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                  <a class="nav-link" href="{{ url('/ongoingconnection') }}">
-                      <i class="fa fa-fw fa-table"></i>
-                      <span class="nav-link-text">Ongoing Connection</span>
-                  </a>
-              </li>
               
           </ul>
           <ul class="navbar-nav sidenav-toggler">
