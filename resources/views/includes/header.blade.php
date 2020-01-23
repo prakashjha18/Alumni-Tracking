@@ -25,7 +25,7 @@
                 <div class="col-lg-12">
                     <nav class="main-menu navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="index.html">
-                            <img src="assets\img\logo.png" alt="Logo">
+                            <img src="assets\img\logo.png" alt="Logo" style="height: 60%; width: 60%;">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menucontent" aria-controls="menucontent" aria-expanded="false">
                             <span class="navbar-toggler-icon"></span>

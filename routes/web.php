@@ -37,6 +37,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
 Route::get('/addcollege','DirectorateController@addcollege')->name('directorate.auth');
 Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
+Route::get('/alumnidashboard','AlumniController@dashboard')->name('alumni.auth');
+Route::get('/collegepage1','StudentController@dashboard')->name('student1.auth');
 Route::get('/findalumni','CollegeController@findalumni')->name('college.find');
 Route::get('/posts','CollegeController@posts')->name('college.auth');
 Route::get('/alumnidashboard','AlumniController@dashboard2')->name('alumni.auth2');
