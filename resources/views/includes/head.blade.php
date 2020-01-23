@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>uniAlumni</title>
+    <title>Alumni Connect</title>
 
     <meta name="description" content="simple description for your site">
     <meta name="keywords" content="keyword1, keyword2">
