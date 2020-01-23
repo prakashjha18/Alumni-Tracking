@@ -22,7 +22,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       
-      <a class="navbar-brand" href="{{ url('/admin') }}">Startup Ignitor</a>
+      <a class="navbar-brand" href="{{ url('/admin') }}">Alumni Tracker</a>
       <div id="google_translate_element"></div>
   
   <script type="text/javascript">
@@ -40,7 +40,7 @@
           <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
               <!-- style="overflow-y: scroll;" -->
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                  <a class="nav-link" href="{{ url('/dashboard') }}">
+                  <a class="nav-link" href="{{ url('/directoratedashboard') }}">
                       <i class="fa fa-fw fa-dashboard"></i>
   
                       <span class="nav-link-text">Dashboard</span>
@@ -52,9 +52,16 @@
                   <a class="nav-link " href="/startupkit" >
                       <i class="fa fa-fw fa-wrench"></i>
                       <span class="nav-link-text">Activity Log</span>
-                  </a>
-                  
+                  </a>  
               </li>
+
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+                <a class="nav-link " href="/addcollege" >
+                    <i class="fa fa-fw fa-plus"></i>
+                    <span class="nav-link-text">Add Colleges</span>
+                </a>  
+              </li>
+
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">
                   <a class="nav-link" href="{{ url('/list_mentors') }}">
                       <i class="fa fa-fw fa-map-marker"></i>

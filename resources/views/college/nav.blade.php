@@ -22,7 +22,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       
-      <a class="navbar-brand" href="{{ url('/admin') }}">college portal</a>
+      <a class="navbar-brand" href="{{ url('/admin') }}">Name Of College</a>
       <div id="google_translate_element"></div>
   
   <script type="text/javascript">
@@ -49,9 +49,9 @@
               </li>
                      
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                  <a class="nav-link" href="{{ url('/menteeapplyform') }}">
-                          <i class="fa fa-fw fa-sign-in"></i>
-                      <span class="nav-link-text">Registration</span><br>
+                  <a class="nav-link" href="{{ url('/verifications') }}">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                      <span class="nav-link-text">  Verification</span><br>
   
                           
                   </a>
@@ -59,39 +59,47 @@
   
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                   <a class="nav-link " href="/startupkit" >
-                      <i class="fa fa-fw fa-wrench"></i>
-                      <span class="nav-link-text">Web services(startup kit)</span>
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                      <span class="nav-link-text">Chat Rooms</span>
                   </a>
                   
               </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">
                   <a class="nav-link" href="{{ url('/list_mentors') }}">
-                      <i class="fa fa-fw fa-area-chart"></i>
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
   
-                      <span class="nav-link-text">List mentors</span>
+                      <span class="nav-link-text">Activity Log</span>
                   </a>   
               </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
                       <!--<span class="nav-link-text">List mentors</span>-->
-                      <a class="nav-link" href="{{ url('/mouform') }}">
+                      <a class="nav-link" href="{{ url('/posts') }}">
                       <i class="fa fa-pencil-square-o"></i>
   
-                      <span class="nav-link-text">&nbsp;Agreement</span>
+                      <span class="nav-link-text">Your Posts</span>
                       </a>
               </li> 
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+              {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
                   <a class="nav-link" href="{{ url('/list_stakeholders') }}">
                       <i class="fa fa-fw fa-table"></i>
                       <span class="nav-link-text">List stakeholders</span>
                   </a>
-              </li>
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+              </li> --}}
+              {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                   <a class="nav-link " href="/application" >
                       <i class="fa fa-fw fa-wrench"></i>
                       <span class="nav-link-text">My Applications</span>
                   </a>
                   
-              </li>
+              </li> --}}
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
+                <!--<span class="nav-link-text">List mentors</span>-->
+                <a class="nav-link" href="{{ url('/mouform') }}">
+                <i class="fa fa-pencil-square-o"></i>
+
+                <span class="nav-link-text">Your Events</span>
+                </a>
+        </li> 
               
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                   <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
@@ -117,8 +125,8 @@
               
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
                   <a class="nav-link" href="{{ url('/ongoingconnection') }}">
-                      <i class="fa fa-fw fa-table"></i>
-                      <span class="nav-link-text">Ongoing Connection</span>
+                    <i class="fa fa-filter" aria-hidden="true"></i>
+                      <span class="nav-link-text">Alumnus Details</span>
                   </a>
               </li>
               

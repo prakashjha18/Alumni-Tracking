@@ -10,4 +10,8 @@ class DirectorateController extends Controller
     {
         return view('directorate.dashboard');
     }
+    public function addcollege()
+    {
+        return view('directorate.addcollege');
+    }
 }

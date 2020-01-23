@@ -26,8 +26,6 @@
         <li class="breadcrumb-item">
           <a href="/mentor_dashboard">Dashboard</a>
         </li>
-        
-        
       </ol>
        <!-- Example DataTables Card-->
        <div class="card mb-3">
@@ -622,7 +620,7 @@
             <div class="card-header" id="headingSix">
               <h3 class="title">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    Events and Seminars
+                    Enterpreneur Growth
                 </button>
               </h3>
             </div>
