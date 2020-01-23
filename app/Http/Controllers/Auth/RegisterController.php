@@ -73,5 +73,5 @@ class RegisterController extends Controller
             'currentstatus' =>$data['currentstatus'],
             'orgname' => $data['orgname'],
         ]);
-    }
+    }    
 }

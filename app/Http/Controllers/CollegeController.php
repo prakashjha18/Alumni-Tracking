@@ -31,11 +31,25 @@ class CollegeController extends Controller
         $college->email = $request->email;
         $college->newpass = $request->newpass;
         $college->save();
-        
+    
         return 'Successful';
         }
     public function posts()
     {
         return view('college.posts');
+    }
+
+    protected function create(Request $request)
+    {
+        return User::create([
+            'name' => '',
+            'email' => $request->email,
+            'password' => $request->newpass,
+            'type' => 'alumni',
+            'clgname' => $request->clgname,
+            'yearpass' => '',
+            'currentstatus' =>'',
+            'orgname' => $request->clgshort,
+        ]);
     }
 }
