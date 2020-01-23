@@ -65,3 +65,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
 Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
 Route::get('/alumnidashboard','AlumniController@dashboard')->name('alumni.auth');
+Route::get('/findalumni','CollegeController@findalumni')->name('college.find');
