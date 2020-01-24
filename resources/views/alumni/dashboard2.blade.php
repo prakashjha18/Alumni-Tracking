@@ -613,6 +613,5 @@ position:absolute;
         </div>
       </div>
     </div>
-  </div>
 
 @endsection

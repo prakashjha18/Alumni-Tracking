@@ -27,6 +27,18 @@ Route::get('/gallery',function(){
 Route::get('multiple', function () {
     return 'jfb';
 });
+Route::get('/committee',function(){
+    return view('committee');
+});
+Route::get('/directory',function(){
+    return view('directory');
+});
+Route::get('/career',function(){
+    return view('career');
+});
+Route::get('/contact',function(){
+    return view('contact');
+});
 Route::group(['domain' => 'alumniportal.{account}.test'], function () {
     Route::get('multiple', function ($account) {
         return('snds');
@@ -38,7 +50,8 @@ Auth::routes(['verify' => true]);
 Route::get('/alumnidashboard', 'HomeController@index')->name('alumni.auth');
 
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
-
+Route::get('/publishnotice','DirectorateController@publishnotice')->name('directorate.publishnotice');
+Route::get('/location','DirectorateController@location')->name('directorate.location');
 Route::get('/addcollege', [
     'uses' => 'DirectorateController@addcollege',
     'as'   => 'addcollege'

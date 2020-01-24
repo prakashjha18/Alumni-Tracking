@@ -35,7 +35,7 @@
 		margin-top: 100px;
 		}
 		.login_btn {
-		width: 40%;
+		width: 70%;
 		background: #4d4d4d !important;
 		color: white !important;
 		}

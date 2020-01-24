@@ -70,7 +70,7 @@
               </li>
 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">
-                  <a class="nav-link" href="{{ url('/list_mentors') }}">
+                  <a class="nav-link" href="{{ url('/location') }}">
                       <i class="fa fa-fw fa-map-marker"></i>
   
                       <span class="nav-link-text">Maps</span>
@@ -78,7 +78,7 @@
               </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
                       <!--<span class="nav-link-text">List mentors</span>-->
-                      <a class="nav-link" href="{{ url('/mouform') }}">
+                      <a class="nav-link" href="{{ url('/publishnotice') }}">
                       <i class="fa fa-pencil-square-o"></i>
   
                       <span class="nav-link-text">&nbsp;Publish Notice</span>
