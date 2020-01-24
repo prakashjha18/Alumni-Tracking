@@ -67,3 +67,7 @@ Route::get('/verifiedalumnis', [
     'as'   => 'college.verifiedalumni'
 ]);
 
+Route::get('/viewcolleges', [
+    'uses' => 'DirectorateController@viewcolleges',
+    'as'   => 'dir.viewcollege'
+]);

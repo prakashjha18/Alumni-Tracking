@@ -47,7 +47,14 @@
   
                   </a>
               </li>
-  
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="{{ url('/viewcolleges') }}">
+                    <i class="fa fa-fw fa-dashboard"></i>
+
+                    <span class="nav-link-text">view Colleges</span>
+
+                </a>
+            </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                   <a class="nav-link " href="/startupkit" >
                       <i class="fa fa-fw fa-wrench"></i>

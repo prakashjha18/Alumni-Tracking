@@ -40,7 +40,7 @@
           <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
               <!-- style="overflow-y: scroll;" -->
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                  <a class="nav-link" href="{{ url('/dashboard') }}">
+                  <a class="nav-link" href="{{ url('/collegedashboard') }}">
                       <i class="fa fa-fw fa-dashboard"></i>
   
                       <span class="nav-link-text">Dashboard</span>

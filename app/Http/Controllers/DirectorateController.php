@@ -15,4 +15,9 @@ class DirectorateController extends Controller
     {
         return view('directorate.addcollege');
     }
+    public function viewcolleges()
+    {
+        $colleges = User::where('type','college')->get();
+        return view('directorate.viewcollege')->with('colleges',$colleges);
+    }
 }
