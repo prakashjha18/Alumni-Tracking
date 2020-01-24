@@ -22,10 +22,10 @@
             type : {{$user->type}}
             registred at :{{$user->created_at}}<br><br><br>
           @endforeach --}}
-          <p>list of all verified alumnis</p>
+          <p>list of all colleges added</p>
           <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> alumni information</div>
+          <i class="fa fa-table"></i> college information</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
