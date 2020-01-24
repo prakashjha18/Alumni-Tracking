@@ -87,7 +87,7 @@
                                     <div class="col-lg-5">
                                         <div class="up-event-thumb">
                                             <img src="assets\img\event\event-img-1.jpg" class="img-fluid" alt="Upcoming Event">
-                                            <h4 class="up-event-date">It’s 15 February 2019</h4>
+                                            <h4 class="up-event-date">It’s 27 March 2020</h4>
                                         </div>
                                     </div>
     
@@ -96,7 +96,7 @@
                                             <div class="display-table-cell">
                                                 <div class="up-event-text">
                                                     <div class="event-countdown">
-                                                        <div class="event-countdown-counter" data-date="2018/9/10"></div>
+                                                        <div class="event-countdown-counter" data-date="2020/3/27"></div>
                                                         <p>Remaining</p>
                                                     </div>
                                                     <h3><a href="single-event.html">We are going to arrange a get together!</a></h3>
