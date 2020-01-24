@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\college;
 use App\User;
+use Session;
 
 class CollegeController extends Controller
 {
@@ -32,7 +33,9 @@ class CollegeController extends Controller
         $college->email = $request->email;
         $college->newpass = $request->newpass;
         $college->save();
-         User::create([
+
+
+        User::create([
             'name' => $request->clgname,
             'email' => $request->email,
             'password' => $request->newpass,
@@ -42,6 +45,9 @@ class CollegeController extends Controller
             'currentstatus' =>'',
             'orgname' => $request->clgshort,
         ]);
+
+        Session::flash('success', 'Sucessfully created a new user');
+
         return redirect()->back();
         }
     public function posts()

@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js1/app.js') }}" defer></script>
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css1/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -76,5 +78,7 @@
             @yield('content')
         </main>
     </div>
+
+    
 </body>
 </html>

@@ -43,12 +43,12 @@ Route::get('/alumnidashboard','AlumniController@dashboard2')->name('alumni.auth2
 Route::get('/funding','AlumniController@funding')->name('alumni.auth2');
 Route::get('/newsletter','AlumniController@newsletter')->name('alumni.auth2');
 Route::get('/internship','AlumniController@internship')->name('alumni.auth2');
-<<<<<<< Updated upstream
+
 Route::post('/college/create', [
     'uses' => 'CollegeController@insert',
     'as' => 'college.save'
 ]);
-=======
+
 Route::get('/editprofile','AlumniController@editprofile')->name('alumni.auth2');
 Route::get('/conventions','AlumniController@conventions')->name('alumni.auth2');
->>>>>>> Stashed changes
+
