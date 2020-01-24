@@ -9,12 +9,14 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\college;
 use App\User;
+use Auth;
 
 class CollegeController extends Controller
 {
     public function dashboard()
     {
-        return view('college.dashboard');
+        $user = Auth::user();
+        return view('college.dashboard')->with(['user' => $user]);
     }
     public function findalumni(){
         return view('college.findalumni');

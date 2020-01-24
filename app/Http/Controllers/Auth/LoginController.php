@@ -38,9 +38,9 @@ class LoginController extends Controller
     public function authenticated($request , $user){
         if($user->type=='alumni'){
             return redirect()->route('alumni.auth') ;
-        }elseif($user->sellist=='college'){
+        }elseif($user->type=='college'){
             return redirect()->route('college.auth') ;
-        }elseif($user->sellist=='directorate'){
+        }elseif($user->type=='directorate'){
             return redirect()->route('directorate.auth') ;
         }
     }
