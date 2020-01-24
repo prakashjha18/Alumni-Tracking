@@ -20,4 +20,13 @@ class DirectorateController extends Controller
         $colleges = User::where('type','college')->get();
         return view('directorate.viewcollege')->with('colleges',$colleges);
     }
+    public function publishnotice()
+    {
+        return view('directorate.publishnotice');
+    }
+    public function location()
+    {
+        return view('directorate.Location');
+    }
 }
+

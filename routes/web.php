@@ -35,6 +35,8 @@ Route::group(['domain' => 'alumniportal.{account}.test'], function () {
 Auth::routes(['verify' => true]);
 Route::get('/alumnidashboard', 'HomeController@index')->name('alumni.auth');
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
+Route::get('/publishnotice','DirectorateController@publishnotice')->name('directorate.publishnotice');
+Route::get('/location','DirectorateController@location')->name('directorate.location');
 Route::get('/addcollege', [
     'uses' => 'DirectorateController@addcollege',
     'as'   => 'addcollege'
