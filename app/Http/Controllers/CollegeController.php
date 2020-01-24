@@ -49,9 +49,9 @@ class CollegeController extends Controller
             'orgname' => $request->clgshort,
         ]);
 
-        Session::flash('success', 'Sucessfully created a new user');
-            
-        return redirect()->back();
+        Session::flash('success', 'successfully added a college');
+
+        return redirect()->route('addcollege');
         }
     public function posts()
     {
