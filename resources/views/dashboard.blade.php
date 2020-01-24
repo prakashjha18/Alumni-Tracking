@@ -11,7 +11,7 @@
                         <div class="col-lg-9">
                             <div class="slider-content">
                                 <h2>We Are Proud</h2>
-                                <h3>Students of <span>Oxfornt University</span></h3>
+                                <h3>Students of <span>TCET</span></h3>
                                 <p>Alumni Needs enables you to harness the power of your alumni network. Whatever may be the need (academic, relocation, career, projects, mentorship, etc. you can ask the community and get responses in three.</p>
                                 <div class="slider-btn">
                                     <a href="#about-area" class="btn btn-brand smooth-scroll">our mission</a>
@@ -31,7 +31,7 @@
                         <div class="col-lg-9">
                             <div class="slider-content">
                                 <h2>We Are Not Proud</h2>
-                                <h3>Students of <span>Oxfornt University</span></h3>
+                                <h3>Students of <span>TCET</span></h3>
                                 <p>Alumni Needs enables you to harness the power of your alumni network. Whatever may be the need (academic, relocation, career, projects, mentorship, etc. you can ask the community and get responses in three.</p>
                                 <div class="slider-btn">
                                     <a href="#" class="btn btn-brand">our mission</a>
@@ -51,7 +51,7 @@
                         <div class="col-lg-9">
                             <div class="slider-content">
                                 <h2>Why Proud for u</h2>
-                                <h3>Students of <span>Oxfornt University</span></h3>
+                                <h3>Students of <span>TCET</span></h3>
                                 <p>Alumni Needs enables you to harness the power of your alumni network. Whatever may be the need (academic, relocation, career, projects, mentorship, etc. you can ask the community and get responses in three.</p>
                                 <div class="slider-btn">
                                     <a href="#" class="btn btn-brand">our mission</a>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
             <!-- Single Slide Item End -->
         </div>
     
@@ -662,7 +662,7 @@
                     <article class="single-blog-post">
                         <figure class="blog-thumb">
                             <div class="blog-thumbnail">
-                                <img src="assets\img\blog\blog-1.jpg" alt="Blog" class="img-fluid">
+                                <img src="assets\img\blog\blog-7.jpg" alt="Blog" class="img-fluid">
                             </div>
                             <figcaption class="blog-meta clearfix">
                                 <a href="single-blog.html" class="author">
@@ -670,7 +670,7 @@
                                         <img src="assets\img\blog\author.jpg" alt="Author">
                                     </div>
                                     <div class="author-info">
-                                        <h5>Daney williams</h5>
+                                        <h5>Sanya Gandhi</h5>
                                         <p>2 hours Ago</p>
                                     </div>
                                 </a>
@@ -682,9 +682,8 @@
                         </figure>
     
                         <div class="blog-content">
-                            <h3><a href="single-blog.html">Recently we create a maassive project that</a></h3>
-                            <p>This is a big project of our company, we are happy to completed this type projec which are
-                                get world famous award</p>
+                            <h3><a href="single-blog.html">Excerpts From the W-L Alumni Lawsuit Over High School's Name Change</a></h3>
+                            <p>The Washington-Lee High School Alumni Association filed suit against the Arlington School Board last week</p>
                             <a href="single-blog.html" class="btn btn-brand">More</a>
                         </div>
                     </article>
@@ -696,15 +695,15 @@
                     <article class="single-blog-post">
                         <figure class="blog-thumb">
                             <div class="blog-thumbnail">
-                                <img src="assets\img\blog\blog-2.jpg" alt="Blog" class="img-fluid">
+                                <img src="assets\img\blog\blog-8.jpg" alt="Blog" class="img-fluid">
                             </div>
                             <figcaption class="blog-meta clearfix">
                                 <a href="single-blog.html" class="author">
                                     <div class="author-pic">
-                                        <img src="assets\img\blog\author.jpg" alt="Author">
+                                        <img src="assets\img\blog\author1.jpg" alt="Author">
                                     </div>
                                     <div class="author-info">
-                                        <h5>Myra Hindley</h5>
+                                        <h5>Abhishek Gupta</h5>
                                         <p>1 Day Ago</p>
                                     </div>
                                 </a>
@@ -716,9 +715,8 @@
                         </figure>
     
                         <div class="blog-content">
-                            <h3><a href="single-blog.html">Myra Hindley and her lover, Ian Brady, plotted and</a></h3>
-                            <p>This is a big project of our company, we are happy to completed this type projec which are
-                                get world famous award</p>
+                            <h3><a href="single-blog.html">Pondering the true nature of success</a></h3>
+                            <p>At primary school I was one of two at the top of the class; at secondary school I was one of three. On the sporting side, I represented my school at cricket.</p>
                             <a href="single-blog.html" class="btn btn-brand">More</a>
                         </div>
                     </article>
@@ -730,15 +728,15 @@
                     <article class="single-blog-post">
                         <figure class="blog-thumb">
                             <div class="blog-thumbnail">
-                                <img src="assets\img\blog\blog-3.jpg" alt="Blog" class="img-fluid">
+                                <img src="assets\img\blog\blog-9.jpg" alt="Blog" class="img-fluid">
                             </div>
                             <figcaption class="blog-meta clearfix">
                                 <a href="single-blog.html" class="author">
                                     <div class="author-pic">
-                                        <img src="assets\img\blog\author.jpg" alt="Author">
+                                        <img src="assets\img\blog\author3.jpg" alt="Author">
                                     </div>
                                     <div class="author-info">
-                                        <h5>Aileen Wuornos</h5>
+                                        <h5>Prakash Jha</h5>
                                         <p>3 mins Ago</p>
                                     </div>
                                 </a>
@@ -750,10 +748,10 @@
                         </figure>
     
                         <div class="blog-content">
-                            <h3><a href="single-blog.html">Nurse with a private practice, racked up dozens of victims</a></h3>
-                            <p>This is a big project of our company, we are happy to completed this type projec which are
-                                get world famous award</p>
-                            <a href="single-blog.html" class="btn btn-brand">More</a>
+                            <h3><a href="single-blog.html">Infy mirrors India plan: Eyes more campus recruits in US</a></h3>
+                            <p>InfosysNSE -1.24 % has been strengthening its base of college graduates in the US over the past two years, leveraging strong university connects.
+
+                          <a href="single-blog.html" class="btn btn-brand">More</a>
                         </div>
                     </article>
                 </div>

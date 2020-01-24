@@ -11,8 +11,8 @@
 
                 <div class="col-lg-6 col-sm-5 col-5 text-right">
                     <div class="preheader-right">
-                        <a title="Login" class="btn-auth btn-auth-rev" href="login.html">Login</a>
-                        <a title="Register" class="btn-auth btn-auth" href="register.html">Signup</a>
+                        <a title="Login" class="btn-auth btn-auth-rev" href="../login">Login</a>
+                        <a title="Register" class="btn-auth btn-auth" href="../register">Signup</a>
                     </div>
                 </div>
             </div>

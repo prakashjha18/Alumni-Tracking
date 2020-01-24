@@ -50,7 +50,7 @@ class CollegeController extends Controller
         ]);
 
         Session::flash('success', 'Sucessfully created a new user');
-
+            
         return redirect()->back();
         }
     public function posts()
