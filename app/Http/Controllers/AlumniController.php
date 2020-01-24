@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use Auth;
 use Session;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,8 @@ class AlumniController extends Controller
     }
     public function editprofile()
     {
-        return view('alumni.editprofile');
+        $user = Auth::user();
+        return view('alumni.editprofile')->with('user', $user);
     }
     public function conventions()
     {

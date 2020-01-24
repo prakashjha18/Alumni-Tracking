@@ -46,20 +46,26 @@
                       <form class="form" action="#" method="post" id="registrationForm" >
                             <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
-                                    <label for="first_name"><h6>Name</h6></label>
-                                    <input type="text" class="form-control" name="name" id="name" style="margin-top:-2%" placeholder="Name" title="Enter your name if any." disabled>
+                                <label for="first_name"><h6>Name</h6></label>
+                                    <input type="text" class="form-control" name="name" id="name" style="margin-top:-2%" value="{{$user->name}}" placeholder="Name" title="Enter your name if any." disabled>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin:0">
+                              <div class="col-xs-6">
+                                  <label for="email"><h6>Email</h6></label>
+                              <input type="email" class="form-control" name="email" style="margin-top:-2%" id="email" value="{{$user->email}}" title="Enter your Update email." disabled>
+                              </div>
+                          </div>
+                            <div class="form-group" style="margin:0">
+                                <div class="col-xs-6">
+                                    <label for="last_name"><h6>College name</h6></label>
+                                <input type="text" class="form-control" name="clgname"style="margin-top:-2%" id="username" title="Enter your user name if you want to change." value="{{$user->clgname}}">
                                 </div>
                             </div>
                             <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
-                                    <label for="last_name"><h6>User name</h6></label>
-                                    <input type="text" class="form-control" name="username"style="margin-top:-2%" id="username" placeholder="User name" title="Enter your user name if you want to change.">
-                                </div>
-                            </div>
-                            <div class="form-group" style="margin:0">
-                                <div class="col-xs-6">
-                                    <label for="phone"><h6>Phone</h6></label>
-                                    <input type="tel" class="form-control" name="phone" style="margin-top:-2%" id="phone" placeholder="Enter phone" title="Enter your update phone number .">
+                                    <label for="phone"><h6>Year of Passing</h6></label>
+                                <input type="tel" class="form-control" name="phone" style="margin-top:-2%" id="phone" value="{{$user->yearpass}}" title="Enter your update phone number .">
                                 </div>
                             </div>
                             {{-- <div class="form-group">
@@ -68,30 +74,20 @@
                                     <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
                                 </div>
                             </div> --}}
+                            
                             <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
-                                    <label for="email"><h6>Email</h6></label>
-                                    <input type="email" class="form-control" name="email" style="margin-top:-2%" id="email" placeholder="you@email.com" title="Enter your Update email.">
-                                </div>
-                            </div>
-                            <div class="form-group" style="margin:0">
-                                <div class="col-xs-6">
-                                    <label for="email"><h6>Location</h6></label>
-                                    <input type="email" class="form-control" style="margin-top:-2%" id="location" placeholder="Enter Current Location of Job" title="Enter a location">
+                                    <label for="email"><h6>Current Status</h6></label>
+                                    <input type="email" class="form-control" style="margin-top:-2%" id="location" value="{{$user->currentstatus}}" title="Enter a location">
                                 </div>
                             </div>
                             <div class="form-group" style="margin:0">      
                                 <div class="col-xs-6">
-                                    <label for="password"><h6>Old Password</h6></label>
-                                    <input type="password" class="form-control" style="margin-top:-2%" name="password" id="password" placeholder="Enter your old password" title="enter your password.">
+                                    <label for="password"><h6>Organization Name</h6></label>
+                                    <input type="text" class="form-control" style="margin-top:-2%" name="password" id="password" value="{{$user->orgname}}" title="enter your password.">
                                 </div>
                             </div>
-                            <div class="form-group" style="margin:0"> 
-                                <div class="col-xs-6">
-                                    <label for="password2"><h6>Change Password</h6></label>
-                                    <input type="password" class="form-control" style="margin-top:-2%" name="password2" id="password2" placeholder="Enter your new password" title="Enter your new password2.">
-                                </div>
-                            </div>
+                            
                             <div class="form-group" style="margin-top:2%">
                                 <div class="col-xs-12">
                                     <button class="btn btn-lg btn-success" type="submit"><i class="fa fa-check"></i> Update</button>
