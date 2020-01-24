@@ -1,5 +1,5 @@
 @extends('layouts.app1')
-
+@include('includes.bot')
 @section('content')
     <!--== Slider Area Start ==-->
     <section id="slider-area">

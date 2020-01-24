@@ -1,5 +1,5 @@
 @extends('layouts.app1')
-
+@include('includes.bot')
 @section('content')
 <!--== Page Title Area Start ==-->
 <section id="page-title-area">
