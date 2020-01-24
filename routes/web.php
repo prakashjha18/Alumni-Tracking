@@ -50,6 +50,7 @@ Route::post('/college/create', [
     'uses' => 'CollegeController@insert',
     'as' => 'college.save'
 ]);
+
 Route::get('/editprofile','AlumniController@editprofile')->name('alumni.auth2');
 Route::get('/conventions','AlumniController@conventions')->name('alumni.auth2');
 
