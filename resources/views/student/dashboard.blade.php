@@ -1,5 +1,132 @@
 @extends('layouts.app2')
+<style>
+    #team {
+    background: #eee !important;
+}
 
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #D7A818;
+    border-color: #D7A818;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #D7A818;
+    margin-bottom: 50px;
+    /* text-transform: uppercase; */
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #D7A818 !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #D7A818 !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+</style>
 @section('content')
     <!--== Slider Area Start ==-->
     <section id="slider-area">
@@ -172,7 +299,308 @@
     </section>
     <!--== Upcoming Event Area End ==-->
     
-        <!--== About Area Start ==-->
+       
+    <section id="team" class="pb-5">
+    <div class="container">
+    <div class="section-title " style="text-align: center;">
+                                <h2>Our Achievers</h2>
+                            </div>
+        <div class="row">
+            <!-- Team member1 -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                    <h4 class="card-title">Nandini Yadav</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <a href="#" </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Sunlimetech</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member1 -->
+            <!-- Team member2 -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
+                                    <h4 class="card-title">Prakash Jha</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <a href="#" </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Sunlimetech</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image"></p>
+                                    <h4 class="card-title">Tanya Gupta</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <a href="#" </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Sunlimetech</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Abhishek Gupta</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <a href="#" </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Sunlimetech</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png" alt="card image"></p>
+                                    <h4 class="card-title">Shubham Maheshwari</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <a href="#" </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Sunlimetech</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="assets\img\achievers\1.jfif" alt="card image"></p>
+                                    <h4 class="card-title">Sanya Gandhi</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <a href="#" </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Sunlimetech</h4>
+                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+
+        </div>
+    </div>
+</section>
+<!-- Team -->
+
+        <!--== Mission Area Start ==-->
     <section id="about-area" class="section-padding">
         <div class="about-area-wrapper">
             <div class="container">
@@ -184,11 +612,10 @@
                             </div>
     
                             <div class="about-thumb">
-                                <img src="assets\img\about-bg.jpg" alt="" class="img-fluid">
+                                <img src="assets\img\aicte.jpeg" alt="" class="img-fluid">
                             </div>
     
-                            <p>There are many company Lorem ipsm dolor sitg amet, csetur adipicing elit, sed do eiusmod tempor dncint ut labore et dolore magna alis enim ad minim veniam, quis  csetur adipicing elit, sed do eiusmod tempor dncint ut labore et dolore magna alis enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                            <p>There are many company Lorem ipsm dolor sitg amet, csetur adipicing elit, sed do eiusmod tempor dncint ut labore et dolore magna alis enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                            <p>"To provide state-of-the-art infrastructure and right academic ambience for developing professional skills as well as an environment for growth of leadership and managerial skills to students which will make them competent engineers to deliver quality results in industry" </p>
                             <a href="about.html" class="btn btn-brand about-btn">know more</a>
                         </div>
                     </div>
@@ -198,69 +625,11 @@
     </section>
     <!--== About Area End ==-->
     
-        <!--== Our Responsibility Area Start ==-->
-    <section id="responsibility-area" class="section-padding">
-        <div class="container">
-            <!--== Section Title Start ==-->
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <h2>Our Responsibility</h2>
-                    </div>
-                </div>
-            </div>
-            <!--== Section Title End ==-->
-    
-            <!--== Responsibility Content Wrapper ==-->
-            <div class="row text-center text-sm-left">
-                <!--== Single Responsibility Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-responsibility">
-                        <img src="assets\img\responsibility\01.png" alt="Responsibility">
-                        <h4>Scholarship</h4>
-                        <p>De create building thinking about your requirment and latest treand on our marketplace area</p>
-                    </div>
-                </div>
-                <!--== Single Responsibility End ==-->
-    
-                <!--== Single Responsibility Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-responsibility">
-                        <img src="assets\img\responsibility\02.png" alt="Responsibility">
-                        <h4>Help Current Students</h4>
-                        <p>De create building thinking about your requirment and latest treand on our marketplace area</p>
-                    </div>
-                </div>
-                <!--== Single Responsibility End ==-->
-    
-                <!--== Single Responsibility Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-responsibility">
-                        <img src="assets\img\responsibility\03.png" alt="Responsibility">
-                        <h4>Help Our University</h4>
-                        <p>De create building thinking about your requirment and latest treand on our marketplace area</p>
-                    </div>
-                </div>
-                <!--== Single Responsibility End ==-->
-    
-                <!--== Single Responsibility Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-responsibility">
-                        <img src="assets\img\responsibility\04.png" alt="Responsibility">
-                        <h4>Build Our Community</h4>
-                        <p>De create building thinking about your requirment and latest treand on our marketplace area</p>
-                    </div>
-                </div>
-                <!--== Single Responsibility End ==-->
-            </div>
-            <!--== Responsibility Content Wrapper ==-->
-        </div>
-    </section>
-    <!--== Our Responsibility Area End ==-->
+     
     
         <!--== FunFact Area Start ==-->
-    <section id="funfact-area">
-        <div class="container-fluid">
+    <section id="funfact-area"  style="background-color: black;">
+        <div class="container-fluid" >
             <div class="row text-center">
                 <!--== Single FunFact Start ==-->
                 <div class="col-lg-3 col-sm-6">
@@ -329,7 +698,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-title">
-                        <h2>Recent Jobs</h2>
+                        <h2>Job Offerings</h2>
                     </div>
                 </div>
             </div>
@@ -349,7 +718,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
+                                <h3><a href="#">Java Developer</a></h3>
                                 <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
                             </div>
                             <a href="#" class="btn btn-job">Apply now</a>
@@ -368,7 +737,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h3><a href="#">Product Owner (m/f) for our Charter Business</a></h3>
+                                <h3><a href="#">Software Engineer</a></h3>
                                 <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
                             </div>
                             <a href="#" class="btn btn-job">Apply now</a>
@@ -390,7 +759,7 @@
                                 <h3><a href="#">Backend Developer (Java) (m/f) wanted for leading</a></h3>
                                 <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
                             </div>
-                            <a href="#" class="btn btn-job btn-expired disabled">Expired</a>
+                            <a href="#" class="btn btn-job ">Apply Now</a>
                         </div>
                     </div>
                     <!--== Single Job opportunity End ==-->
@@ -406,7 +775,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h3><a href="#">API Architect and Lead - Python, SQLAlchemy, GraphQL</a></h3>
+                                <h3><a href="#">DataBase Expert</a></h3>
                                 <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
                             </div>
                             <a href="#" class="btn btn-job">Apply now</a>
@@ -425,10 +794,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h3><a href="#">Remotely - Javascript Developer Node.js</a></h3>
+                                <h3><a href="#">Javascript Developer</a></h3>
                                 <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
                             </div>
-                            <a href="#" class="btn btn-job btn-expired disabled">Expired</a>
+                            <a href="#" class="btn btn-job">Apply Now</a>
                         </div>
                     </div>
                     <!--== Single Job opportunity End ==-->
@@ -444,7 +813,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h3><a href="#">Five Years Experience Data Center Specialist Needed</a></h3>
+                                <h3><a href="#">Python Developer</a></h3>
                                 <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
                             </div>
                             <a href="#" class="btn btn-job">Apply now</a>
@@ -501,27 +870,13 @@
                     <article class="single-blog-post">
                         <figure class="blog-thumb">
                             <div class="blog-thumbnail">
-                                <img src="assets\img\blog\blog-1.jpg" alt="Blog" class="img-fluid">
+                                <img src="assets\img\news\microsoft.jfif" alt="Blog" class="img-fluid">
                             </div>
-                            <figcaption class="blog-meta clearfix">
-                                <a href="single-blog.html" class="author">
-                                    <div class="author-pic">
-                                        <img src="assets\img\blog\author.jpg" alt="Author">
-                                    </div>
-                                    <div class="author-info">
-                                        <h5>Daney williams</h5>
-                                        <p>2 hours Ago</p>
-                                    </div>
-                                </a>
-                                <div class="like-comm pull-right">
-                                    <a href="#"><i class="fa fa-comment-o"></i>77</a>
-                                    <a href="#"><i class="fa fa-heart-o"></i>12</a>
-                                </div>
-                            </figcaption>
+                           
                         </figure>
     
                         <div class="blog-content">
-                            <h3><a href="single-blog.html">Recently we create a maassive project that</a></h3>
+                            <h3><a href="single-blog.html">Microsoft hired 2 IT students from TCET</a></h3>
                             <p>This is a big project of our company, we are happy to completed this type projec which are
                                 get world famous award</p>
                             <a href="single-blog.html" class="btn btn-brand">More</a>
@@ -535,27 +890,13 @@
                     <article class="single-blog-post">
                         <figure class="blog-thumb">
                             <div class="blog-thumbnail">
-                                <img src="assets\img\blog\blog-2.jpg" alt="Blog" class="img-fluid">
+                                <img src="assets\img\news\higher.jfif" alt="Blog" class="img-fluid">
                             </div>
-                            <figcaption class="blog-meta clearfix">
-                                <a href="single-blog.html" class="author">
-                                    <div class="author-pic">
-                                        <img src="assets\img\blog\author.jpg" alt="Author">
-                                    </div>
-                                    <div class="author-info">
-                                        <h5>Myra Hindley</h5>
-                                        <p>1 Day Ago</p>
-                                    </div>
-                                </a>
-                                <div class="like-comm pull-right">
-                                    <a href="#"><i class="fa fa-comment-o"></i>77</a>
-                                    <a href="#"><i class="fa fa-heart-o"></i>12</a>
-                                </div>
-                            </figcaption>
+                           
                         </figure>
     
                         <div class="blog-content">
-                            <h3><a href="single-blog.html">Myra Hindley and her lover, Ian Brady, plotted and</a></h3>
+                            <h3><a href="single-blog.html">67 students cleared GATE exams in 2019</a></h3>
                             <p>This is a big project of our company, we are happy to completed this type projec which are
                                 get world famous award</p>
                             <a href="single-blog.html" class="btn btn-brand">More</a>
@@ -569,29 +910,14 @@
                     <article class="single-blog-post">
                         <figure class="blog-thumb">
                             <div class="blog-thumbnail">
-                                <img src="assets\img\blog\blog-3.jpg" alt="Blog" class="img-fluid">
+                                <img src="assets\img\news\placement.png" alt="Blog" class="img-fluid">
                             </div>
-                            <figcaption class="blog-meta clearfix">
-                                <a href="single-blog.html" class="author">
-                                    <div class="author-pic">
-                                        <img src="assets\img\blog\author.jpg" alt="Author">
-                                    </div>
-                                    <div class="author-info">
-                                        <h5>Aileen Wuornos</h5>
-                                        <p>3 mins Ago</p>
-                                    </div>
-                                </a>
-                                <div class="like-comm pull-right">
-                                    <a href="#"><i class="fa fa-comment-o"></i>77</a>
-                                    <a href="#"><i class="fa fa-heart-o"></i>12</a>
-                                </div>
-                            </figcaption>
+                         
                         </figure>
     
                         <div class="blog-content">
-                            <h3><a href="single-blog.html">Nurse with a private practice, racked up dozens of victims</a></h3>
-                            <p>This is a big project of our company, we are happy to completed this type projec which are
-                                get world famous award</p>
+                            <h3><a href="single-blog.html">The percentage of placements has increased from 67% to 89% in 2019</a></h3>
+                            <p>This is a big project of our company, we are happy to completed </p>
                             <a href="single-blog.html" class="btn btn-brand">More</a>
                         </div>
                     </article>
