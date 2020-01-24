@@ -16,8 +16,19 @@
     
     <link href="{{ asset('/css/') }}/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="chat.css">
-    <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
-
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    {{-- <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"> --}}
 </head>
 
 @isset($bodyclass)
@@ -70,11 +81,10 @@
     });
 </script>
 
-<script src="{{ asset('js/toastr.min.js') }}" ></script>
-    <script>
-        @if(Session::has('success'))
-            toastr.success(" {{ Session::get('success') }} ")
-        @endif
+<script>
+@if(Session::has('success'))
+    toastr.success(" {{ Session::get('success') }} ")
+@endif
 </script>
 
 

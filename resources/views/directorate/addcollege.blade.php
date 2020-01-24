@@ -135,4 +135,9 @@ a {
 	</div>
     </div>
 </div>
+<script>
+	
+		//toastr.success('afdj')
+	
+</script>
 @endsection
