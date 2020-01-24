@@ -37,6 +37,8 @@ Route::get('/alumnidashboard', 'HomeController@index')->name('alumni.auth');
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
 Route::get('/addcollege','DirectorateController@addcollege')->name('directorate.addcollege');
 Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
+Route::get('/alumnidashboard','AlumniController@dashboard')->name('alumni.auth');
+Route::get('/collegepage1','StudentController@dashboard')->name('student1.auth');
 Route::get('/findalumni','CollegeController@findalumni')->name('college.find');
 Route::get('/posts','CollegeController@posts')->name('college.posts');
 //Route::get('/alumnidashboard','AlumniController@dashboard2')->name('alumni.auth');
@@ -47,6 +49,6 @@ Route::post('/college/create', [
     'uses' => 'CollegeController@insert',
     'as' => 'college.save'
 ]);
-Route::get('/editprofile','AlumniController@editprofile')->name('alumni.editprofile');
-Route::get('/conventions','AlumniController@conventions')->name('alumni.conventions');
-Route::get('/verifications','CollegeController@verifications')->name('college.verifications');
+Route::get('/editprofile','AlumniController@editprofile')->name('alumni.auth2');
+Route::get('/conventions','AlumniController@conventions')->name('alumni.auth2');
+
