@@ -61,6 +61,12 @@ class CollegeController extends Controller
         $clgshort = Auth::user()->orgname;
         $unverified = User::where('clgname',$clgshort)->where('verifiedbyclg',0)->get();
         $user = Auth::user();
-        return view('college.verifications')->with('user', $user)->with('unverified',$unverified);
+        return view('college.verifications')->with('userm', $user)->with('unverified',$unverified);
+    }
+    public function verifiedalumnis(){
+        $clgshort = Auth::user()->orgname;
+        $verified = User::where('clgname',$clgshort)->where('verifiedbyclg',1)->get();
+        $user = Auth::user();
+        return view('college.verifiedalumni')->with('userm', $user)->with('verified',$verified);
     }
 }

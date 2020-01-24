@@ -35,17 +35,14 @@ Route::group(['domain' => 'alumniportal.{account}.test'], function () {
 Auth::routes(['verify' => true]);
 Route::get('/alumnidashboard', 'HomeController@index')->name('alumni.auth');
 Route::get('/directoratedashboard','DirectorateController@dashboard')->name('directorate.auth');
-//Route::get('/addcollege','DirectorateController@addcollege')->name('directorate.addcollege');
 Route::get('/addcollege', [
     'uses' => 'DirectorateController@addcollege',
     'as'   => 'addcollege'
 ]);
 Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
-//Route::get('/alumnidashboard','AlumniController@dashboard')->name('alumni.auth');
 Route::get('/collegepage1','StudentController@dashboard')->name('student1.auth');
 Route::get('/findalumni','CollegeController@findalumni')->name('college.find');
 Route::get('/posts','CollegeController@posts')->name('college.posts');
-//Route::get('/alumnidashboard','AlumniController@dashboard2')->name('alumni.auth');
 Route::get('/funding','AlumniController@funding')->name('alumni.funding');
 Route::get('/newsletter','AlumniController@newsletter')->name('alumni.newsletter');
 Route::get('/internship','AlumniController@internship')->name('alumni.internship');
@@ -55,4 +52,17 @@ Route::post('/college/create', [
 ]);
 Route::get('/editprofile','AlumniController@editprofile')->name('alumni.auth2');
 Route::get('/conventions','AlumniController@conventions')->name('alumni.auth2');
+
+Route::get('/verifications', [
+    'uses' => 'CollegeController@verifications',
+    'as'   => 'college.verification'
+]);
+Route::get('/alumni/verify/{id}', [
+    'uses' => 'AlumniController@verify',
+    'as'   => 'alumni.verify'
+]); 
+Route::get('/verifiedalumnis', [
+    'uses' => 'CollegeController@verifiedalumnis',
+    'as'   => 'college.verifiedalumni'
+]);
 

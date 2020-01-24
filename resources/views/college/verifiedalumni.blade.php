@@ -26,10 +26,10 @@
             type : {{$user->type}}
             registred at :{{$user->created_at}}<br><br><br>
           @endforeach --}}
-          <p>List of all alumnis which have registered from your college which but not verified</p>
+          <p>list of all verified alumnis</p>
           <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> alumi information</div>
+          <i class="fa fa-table"></i> alumni information</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -42,7 +42,6 @@
                   <th>orgname</th>
                   <th>type</th>
                   <th>registred at</th>
-                  <th>verify</th>
                 </tr>
               </thead>
               <tfoot>
@@ -54,11 +53,10 @@
                   <th>orgname</th>
                   <th>type</th>
                   <th>registred at</th>
-                  <th>verify </th>
                 </tr>
               </tfoot>
               <tbody>
-                @foreach($unverified as $user)
+                @foreach($verified as $user)
                 <tr>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
@@ -67,8 +65,7 @@
                 <td> {{$user->orgname}}</td>
                 <td> {{$user->type}}</td>
                 <td>{{$user->created_at}}</td>
-                <td>{{$user->id}}</td>
-                <td><a href="{{ route('alumni.verify', ['id'=> $user->id]) }}" class="btn btn-primary">verify</a></td>
+                
                 </tr>
               @endforeach
               </tbody>

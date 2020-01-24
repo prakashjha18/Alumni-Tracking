@@ -51,12 +51,19 @@
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
                   <a class="nav-link" href="{{ url('/verifications') }}">
                     <i class="fa fa-lock" aria-hidden="true"></i>
-                      <span class="nav-link-text">  Verification</span><br>
+                      <span class="nav-link-text">pending  Verification</span><br>
   
                           
                   </a>
               </li>
-  
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="{{ url('/verifiedalumnis') }}">
+                  <i class="fa fa-lock" aria-hidden="true"></i>
+                    <span class="nav-link-text">verified alumnis</span><br>
+
+                        
+                </a>
+            </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                   <a class="nav-link " href="/startupkit" >
                     <i class="fa fa-comments" aria-hidden="true"></i>
