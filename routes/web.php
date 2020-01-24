@@ -49,3 +49,4 @@ Route::post('/college/create', [
 ]);
 Route::get('/editprofile','AlumniController@editprofile')->name('alumni.editprofile');
 Route::get('/conventions','AlumniController@conventions')->name('alumni.conventions');
+Route::get('/verifications','CollegeController@verifications')->name('college.verifications');

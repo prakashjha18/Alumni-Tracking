@@ -22,7 +22,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       
-      <a class="navbar-brand" href="{{ url('/admin') }}">Alumni Tracker</a>
+      <a class="navbar-brand" href="{{ url('/admin') }}">directorate dashboard</a>
       <div id="google_translate_element"></div>
   
   <script type="text/javascript">
