@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/alumnidashboard';
 
     /**
      * Create a new controller instance.
@@ -73,5 +73,5 @@ class RegisterController extends Controller
             'currentstatus' =>$data['currentstatus'],
             'orgname' => $data['orgname'],
         ]);
-    }    
+    }
 }

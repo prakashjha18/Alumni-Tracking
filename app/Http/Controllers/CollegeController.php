@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\college;
@@ -35,7 +36,7 @@ class CollegeController extends Controller
          User::create([
             'name' => $request->clgname,
             'email' => $request->email,
-            'password' => $request->newpass,
+            'password' => Hash::make($request->newpass),
             'type' => 'college',
             'clgname' => $request->clgname,
             'yearpass' => '',
