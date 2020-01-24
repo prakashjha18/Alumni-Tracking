@@ -9,7 +9,7 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-          <li class="breadcrumb-item active">Name Of College</li>
+          <li class="breadcrumb-item active">{{$user->clgname}}</li>
         <li class="breadcrumb-item">
           <a href="/mentor_dashboard">Dashboard</a>
         </li>

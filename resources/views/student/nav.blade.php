@@ -22,7 +22,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       
-      <a class="navbar-brand" href="{{ url('/admin') }}">directorate dashboard</a>
+      <a class="navbar-brand" href="{{ url('/admin') }}">alumni portal</a>
       <div id="google_translate_element"></div>
   
   <script type="text/javascript">
@@ -40,33 +40,35 @@
           <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
               <!-- style="overflow-y: scroll;" -->
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                  <a class="nav-link" href="{{ url('/directoratedashboard') }}">
+                  <a class="nav-link" href="{{ url('/dashboard') }}">
                       <i class="fa fa-fw fa-dashboard"></i>
   
                       <span class="nav-link-text">Dashboard</span>
   
                   </a>
               </li>
+                     
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                  <a class="nav-link" href="{{ url('/menteeapplyform') }}">
+                          <i class="fa fa-fw fa-sign-in"></i>
+                      <span class="nav-link-text">Registration</span><br>
+  
+                          
+                  </a>
+              </li>
   
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                   <a class="nav-link " href="/startupkit" >
                       <i class="fa fa-fw fa-wrench"></i>
-                      <span class="nav-link-text">Activity Log</span>
-                  </a>  
+                      <span class="nav-link-text">Web services(startup kit)</span>
+                  </a>
+                  
               </li>
-
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
-                <a class="nav-link " href="/addcollege" >
-                    <i class="fa fa-fw fa-plus"></i>
-                    <span class="nav-link-text">Add Colleges</span>
-                </a>  
-              </li>
-
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">
                   <a class="nav-link" href="{{ url('/list_mentors') }}">
-                      <i class="fa fa-fw fa-map-marker"></i>
+                      <i class="fa fa-fw fa-area-chart"></i>
   
-                      <span class="nav-link-text">Maps</span>
+                      <span class="nav-link-text">List mentors</span>
                   </a>   
               </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
@@ -74,9 +76,22 @@
                       <a class="nav-link" href="{{ url('/mouform') }}">
                       <i class="fa fa-pencil-square-o"></i>
   
-                      <span class="nav-link-text">&nbsp;Publish Notice</span>
+                      <span class="nav-link-text">&nbsp;Agreement</span>
                       </a>
               </li> 
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                  <a class="nav-link" href="{{ url('/list_stakeholders') }}">
+                      <i class="fa fa-fw fa-table"></i>
+                      <span class="nav-link-text">List stakeholders</span>
+                  </a>
+              </li>
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+                  <a class="nav-link " href="/application" >
+                      <i class="fa fa-fw fa-wrench"></i>
+                      <span class="nav-link-text">My Applications</span>
+                  </a>
+                  
+              </li>
               
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                   <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
@@ -88,14 +103,11 @@
                           <a href="{{ url('http://localhost:8009/chats') }}">Chats</a>
                       </li>
                       <li>
-                          <a href="{{ url('http://localhost/video.php') }}">Emails</a>
+                          <a href="{{ url('http://localhost/video.php') }}">Video Call</a>
                       </li>
                       <li>
                           <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Forums</a>
                       </li>
-                      <li>
-                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">SMS</a>
-                    </li>
                       <li>
                           <a href="{{ url('http://blogs.startupigniter.test/blogs') }}">Blogs</a>
                       </li>

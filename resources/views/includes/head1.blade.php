@@ -31,7 +31,7 @@
 
     <!-- desktop bookmark -->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicon/cap.png">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <!-- icons & favicons -->
@@ -88,5 +88,5 @@
     <!-- MODERNIZER  -->
     <script src="assets\vendor\modernizr\modernizr-custom.js"></script>
     <!-- Main Master Style  CSS  -->
-    <link id="cbx-style" data-layout="1" rel="stylesheet" href="assets\css\style-default.min.css" media="all">
+    <link id="cbx-style" data-layout="1" rel="stylesheet" href="assets\css\style-default.min1.css" media="all">
 </head>

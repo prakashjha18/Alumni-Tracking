@@ -7,17 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>directorate dashboard</title>
-    <!-- Bootstrap core CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <!-- Custom fonts for this template-->
-    <link href="{{ asset('/vendor/') }}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> <!-- latest 5.0.13 june 2018, needs update -->
-    <!-- Custom styles for this template-->
-    
-    <link href="{{ asset('/css/') }}/sb-admin.css" rel="stylesheet">
-    <link rel="stylesheet" href="chat.css">
-    <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/proper.min.js"></script> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+<!-- <script src="assests/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="assests/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assests/js/jquery-ui.js" type="text/javascript"></script> -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
 </head>
 
 @isset($bodyclass)
@@ -69,14 +73,6 @@
         $('body').toggleClass('bg-dark bg-light');
     });
 </script>
-
-<script src="{{ asset('js/toastr.min.js') }}" ></script>
-    <script>
-        @if(Session::has('success'))
-            toastr.success(" {{ Session::get('success') }} ")
-        @endif
-</script>
-
 
 </body>
 </html>
