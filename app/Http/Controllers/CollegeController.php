@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\college;
 use App\User;
+use Auth;
 
 class CollegeController extends Controller
 {
     public function dashboard()
     {
-        return view('college.dashboard');
+        $user = Auth::user();
+        return view('college.dashboard')->with(['user' => $user]);
     }
     public function findalumni(){
         return view('college.findalumni');
@@ -35,7 +38,7 @@ class CollegeController extends Controller
          User::create([
             'name' => $request->clgname,
             'email' => $request->email,
-            'password' => $request->newpass,
+            'password' => Hash::make($request->newpass),
             'type' => 'college',
             'clgname' => $request->clgname,
             'yearpass' => '',
@@ -48,5 +51,10 @@ class CollegeController extends Controller
     {
         return view('college.posts');
     }
-
+    public function verifications(){
+        $clgshort = Auth::user()->orgname;
+        $unverified = User::where('clgname',$clgshort)->where('verifiedbyclg',0)->get();
+        $user = Auth::user();
+        return view('college.verifications')->with('user', $user)->with('unverified',$unverified);
+    }
 }
