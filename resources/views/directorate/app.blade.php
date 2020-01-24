@@ -15,9 +15,9 @@
     <!-- Custom styles for this template-->
     
     <link href="{{ asset('/css/') }}/sb-admin.css" rel="stylesheet">
-
     <link rel="stylesheet" href="chat.css">
-    
+    <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
+
 </head>
 
 @isset($bodyclass)
@@ -69,6 +69,14 @@
         $('body').toggleClass('bg-dark bg-light');
     });
 </script>
+
+<script src="{{ asset('js/toastr.min.js') }}" ></script>
+    <script>
+        @if(Session::has('success'))
+            toastr.success(" {{ Session::get('success') }} ")
+        @endif
+</script>
+
 
 </body>
 </html>
