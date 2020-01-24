@@ -9,15 +9,7 @@
     <meta name="keywords" content="keyword1, keyword2">
     <meta name="author" content="Jobz">
 
-    <!-- twitter card starts from here, if you don't need remove this section -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@yourtwitterusername">
-    <meta name="twitter:creator" content="@yourtwitterusername">
-    <meta name="twitter:url" content="http://twitter.com">
-    <meta name="twitter:title" content="Your home page title, max 140 char"> <!-- maximum 140 char -->
-    <meta name="twitter:description" content="Your site description, maximum 140 char "> <!-- maximum 140 char -->
-    <meta name="twitter:image" content="assets/img/twittercardimg/twittercard-144-144.png">  <!-- when you post this page url in twitter , this image will be shown -->
-    <!-- twitter card ends here -->
+   
 
     <!-- facebook open graph starts from here, if you don't need then delete open graph related  -->
     <meta property="og:title" content="Your home page title">

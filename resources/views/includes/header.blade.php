@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-7 col-7">
                     <div class="preheader-left">
-                        <a href="mailto:info@construc.com"><strong>Email:</strong> info@construc.com</a>
-                        <a href="mailto:info@construc.com"><strong>Hotline:</strong> 880 454 5477</a>
+                        <a href="mailto:info@construc.com"><strong>Email:</strong> alumus@connect.com</a>
+                        
                     </div>
                 </div>
 
@@ -25,7 +25,7 @@
                 <div class="col-lg-12">
                     <nav class="main-menu navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="index.html">
-                            <img src="assets\img\logo.png" alt="Logo" style="height: 60%; width: 60%;">
+                            <img src="assets\img\logo.png" alt="Logo" style="height: 14vh; width: 10vw;">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menucontent" aria-controls="menucontent" aria-expanded="false">
                             <span class="navbar-toggler-icon"></span>

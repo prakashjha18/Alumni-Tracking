@@ -10,9 +10,11 @@
                     <div class="row">
                         <div class="col-lg-9">
                             <div class="slider-content">
-                                <h2>We Are Proud</h2>
-                                <h3>Students of <span>TCET</span></h3>
-                                <p>Alumni Needs enables you to harness the power of your alumni network. Whatever may be the need (academic, relocation, career, projects, mentorship, etc. you can ask the community and get responses in three.</p>
+
+                                
+                                <h2>Alumnus Connect</h2>
+                                <h4>A platform for efficient alumni tracking</h4>
+
                                 <div class="slider-btn">
                                     <a href="#about-area" class="btn btn-brand smooth-scroll">our mission</a>
                                     <a href="about.html" class="btn btn-brand-rev">our story</a>
@@ -65,16 +67,7 @@
             <!-- Single Slide Item End -->
         </div>
     
-        <!-- Social Icons Area Start -->
-        <div class="social-networks-icon">
-            <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i> <span>7.2k Likes</span></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i> <span>3.2m Followers</span></a></li>
-                <li><a href="#"><i class="fa fa-pinterest"></i> <span>7.2k Likes</span></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i> <span>2.2k Subscribers</span></a></li>
-            </ul>
-        </div>
-        <!-- Social Icons Area End -->
+       
     </section>
     <!--== Slider Area End ==-->
     
@@ -94,7 +87,7 @@
                                     <div class="col-lg-5">
                                         <div class="up-event-thumb">
                                             <img src="assets\img\event\event-img-1.jpg" class="img-fluid" alt="Upcoming Event">
-                                            <h4 class="up-event-date">It’s 27 February 2019</h4>
+                                            <h4 class="up-event-date">It’s 15 February 2019</h4>
                                         </div>
                                     </div>
     
@@ -183,32 +176,97 @@
         </div>
     </section>
     <!--== Upcoming Event Area End ==-->
-    
-        <!--== About Area Start ==-->
-    <section id="about-area" class="section-padding">
-        <div class="about-area-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 ml-auto">
-                        <div class="about-content-wrap">
-                            <div class="section-title text-center text-lg-left">
-                                <h2>Our Misssion</h2>
-                            </div>
-    
-                            <div class="about-thumb">
-                                <img src="assets\img\about-bg.jpg" alt="" class="img-fluid">
-                            </div>
-    
-                            <p>There are many company Lorem ipsm dolor sitg amet, csetur adipicing elit, sed do eiusmod tempor dncint ut labore et dolore magna alis enim ad minim veniam, quis  csetur adipicing elit, sed do eiusmod tempor dncint ut labore et dolore magna alis enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                            <p>There are many company Lorem ipsm dolor sitg amet, csetur adipicing elit, sed do eiusmod tempor dncint ut labore et dolore magna alis enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                            <a href="about.html" class="btn btn-brand about-btn">know more</a>
-                        </div>
+ 
+
+   <!--== Blog Area Start ==-->
+   <section id="blog-area" class="section-padding">
+        <div class="container">
+            <!--== Section Title Start ==-->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Affiliated Colleges</h2>
                     </div>
                 </div>
             </div>
+            <!--== Section Title End ==-->
+    
+            <!--== Blog Content Wrapper ==-->
+            <div class="row">
+                <!--== Single Blog Post start ==-->
+                <div class="col-lg-4 col-md-6">
+                    <article class="single-blog-post">
+                        <figure class="blog-thumb">
+                            <div class="blog-thumbnail">
+                                <img src="assets\img\tcetimage.jfif" alt="Blog" class="img-fluid" style="width: 100%;">
+                            </div>
+                           
+                        </figure>
+    
+                        <div class="blog-content">
+                            <h3><a href="single-blog.html">Thakur College Of Engineering and Technology</a></h3>
+                            <p>This is a big project of our company, we are happy to completed this type projec which are
+                                get world famous award</p>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4"></div>
+                                    <div> <a href="/collegepage1" class="btn btn-brand"><i class="fa fa-link"></i>   </a></div>
+                                </div>
+                           
+                        </div>
+                    </article>
+                </div>
+                <!--== Single Blog Post End ==-->
+    
+                <!--== Single Blog Post start ==-->
+                <div class="col-lg-4 col-md-6">
+                    <article class="single-blog-post">
+                        <figure class="blog-thumb">
+                            <div class="blog-thumbnail">
+                                <img src="assets\img\vjti.jfif" alt="Blog" class="img-fluid"  style="width: 100%;">
+                            </div>
+                           
+                        </figure>
+    
+                        <div class="blog-content">
+                            <h3><a href="single-blog.html">Victoria Jubilee Technical Institute</a></h3>
+                            <p>This is a big project of our company, we are happy to completed this type projec which are
+                                get world famous award</p>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4"></div>
+                                    <div> <a href="single-blog.html" class="btn btn-brand"><i class="fa fa-link"></i></a></div>
+                                </div>
+                        </div>
+                    </article>
+                </div>
+                <!--== Single Blog Post End ==-->
+    
+                <!--== Single Blog Post start ==-->
+                <div class="col-lg-4 col-md-6">
+                    <article class="single-blog-post">
+                        <figure class="blog-thumb">
+                            <div class="blog-thumbnail">
+                                <img src="assets\img\thadomal.jpg" alt="Blog" class="img-fluid">
+                            </div>
+                         
+                        </figure>
+    
+                        <div class="blog-content">
+                            <h3><a href="single-blog.html">Thadomal Shahani Engineering College</a></h3>
+                            <p>This is a big project of our company, we are happy to completed this type projec which are
+                                get world famous award</p>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4"></div>
+                                <div> <a href="single-blog.html" class="btn btn-brand"> <i class="fa fa-link"></i></a></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--== Single Blog Post End ==-->
+            </div>
+            <!--== Blog Content Wrapper ==-->
         </div>
     </section>
-    <!--== About Area End ==-->
+    <!--== Blog Area EndBlog ==-->
     
         <!--== Our Responsibility Area Start ==-->
     <section id="responsibility-area" class="section-padding">
@@ -270,211 +328,148 @@
     </section>
     <!--== Our Responsibility Area End ==-->
     
-        <!--== FunFact Area Start ==-->
-    <section id="funfact-area">
-        <div class="container-fluid">
-            <div class="row text-center">
-                <!--== Single FunFact Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-funfact-wrap">
-                        <div class="funfact-icon">
-                            <img src="assets\img\fun-fact\user.svg" alt="Funfact">
-                        </div>
-                        <div class="funfact-info">
-                            <h5 class="funfact-count">4025</h5>
-                            <p>Members</p>
-                        </div>
-                    </div>
-                </div>
-                <!--== Single FunFact End ==-->
-    
-                <!--== Single FunFact Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-funfact-wrap">
-                        <div class="funfact-icon">
-                            <img src="assets\img\fun-fact\picture.svg" alt="Funfact">
-                        </div>
-                        <div class="funfact-info">
-                            <h5 class="funfact-count">8725</h5>
-                            <p>Photos</p>
-                        </div>
-                    </div>
-                </div>
-                <!--== Single FunFact End ==-->
-    
-                <!--== Single FunFact Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-funfact-wrap">
-                        <div class="funfact-icon">
-                            <img src="assets\img\fun-fact\event.svg" alt="Funfact">
-                        </div>
-                        <div class="funfact-info">
-                            <h5><span class="funfact-count">231</span>+</h5>
-                            <p>Events</p>
-                        </div>
-                    </div>
-                </div>
-                <!--== Single FunFact End ==-->
-    
-                <!--== Single FunFact Start ==-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-funfact-wrap">
-                        <div class="funfact-icon">
-                            <img src="assets\img\fun-fact\medal.svg" alt="Funfact">
-                        </div>
-                        <div class="funfact-info">
-                            <h5><span class="funfact-count">32</span>+</h5>
-                            <p>Awards</p>
-                        </div>
-                    </div>
-                </div>
-                <!--== Single FunFact End ==-->
-            </div>
-        </div>
-    </section>
-    <!--== FunFact Area End ==-->
-    
-        <!--== Job Opportunity Area Start ==-->
-    <section id="job-opportunity" class="section-padding">
-        <div class="container">
-            <!--== Section Title Start ==-->
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-title">
-                        <h2>Recent Jobs</h2>
-                    </div>
-                </div>
-            </div>
-            <!--== Section Title End ==-->
-    
-            <!--== Job opportunity Wrapper ==-->
-            <div class="job-opportunity-wrapper">
-                <div class="row">
-                    <!--== Single Job opportunity Start ==-->
-                    <div class="col-lg-4 col-sm-6 text-center">
-                        <div class="single-job-opportunity">
-                            <div class="job-opportunity-text">
-                                <div class="job-oppor-logo">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <img src="assets\img\job\compnay-logo-1.png" alt="Job">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                            </div>
-                            <a href="#" class="btn btn-job">Apply now</a>
-                        </div>
-                    </div>
-                    <!--== Single Job opportunity End ==-->
-    
-                    <!--== Single Job opportunity Start ==-->
-                    <div class="col-lg-4 col-sm-6 text-center">
-                        <div class="single-job-opportunity">
-                            <div class="job-opportunity-text">
-                                <div class="job-oppor-logo">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <img src="assets\img\job\compnay-logo-2.png" alt="Job">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3><a href="#">Product Owner (m/f) for our Charter Business</a></h3>
-                                <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                            </div>
-                            <a href="#" class="btn btn-job">Apply now</a>
-                        </div>
-                    </div>
-                    <!--== Single Job opportunity End ==-->
-    
-                    <!--== Single Job opportunity Start ==-->
-                    <div class="col-lg-4 col-sm-6 text-center">
-                        <div class="single-job-opportunity">
-                            <div class="job-opportunity-text">
-                                <div class="job-oppor-logo">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <img src="assets\img\job\compnay-logo-1.png" alt="Job">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3><a href="#">Backend Developer (Java) (m/f) wanted for leading</a></h3>
-                                <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                            </div>
-                            <a href="#" class="btn btn-job btn-expired disabled">Expired</a>
-                        </div>
-                    </div>
-                    <!--== Single Job opportunity End ==-->
-    
-                    <!--== Single Job opportunity Start ==-->
-                    <div class="col-lg-4 col-sm-6 text-center">
-                        <div class="single-job-opportunity">
-                            <div class="job-opportunity-text">
-                                <div class="job-oppor-logo">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <img src="assets\img\job\compnay-logo-2.png" alt="Job">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3><a href="#">API Architect and Lead - Python, SQLAlchemy, GraphQL</a></h3>
-                                <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                            </div>
-                            <a href="#" class="btn btn-job">Apply now</a>
-                        </div>
-                    </div>
-                    <!--== Single Job opportunity End ==-->
-    
-                    <!--== Single Job opportunity Start ==-->
-                    <div class="col-lg-4 col-sm-6 text-center">
-                        <div class="single-job-opportunity">
-                            <div class="job-opportunity-text">
-                                <div class="job-oppor-logo">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <img src="assets\img\job\compnay-logo-3.png" alt="Job">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3><a href="#">Remotely - Javascript Developer Node.js</a></h3>
-                                <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                            </div>
-                            <a href="#" class="btn btn-job btn-expired disabled">Expired</a>
-                        </div>
-                    </div>
-                    <!--== Single Job opportunity End ==-->
-    
-                    <!--== Single Job opportunity Start ==-->
-                    <div class="col-lg-4 col-sm-6 text-center">
-                        <div class="single-job-opportunity">
-                            <div class="job-opportunity-text">
-                                <div class="job-oppor-logo">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <img src="assets\img\job\compnay-logo-4.png" alt="Job">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3><a href="#">Five Years Experience Data Center Specialist Needed</a></h3>
-                                <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                            </div>
-                            <a href="#" class="btn btn-job">Apply now</a>
-                        </div>
-                    </div>
-                    <!--== Single Job opportunity End ==-->
-                </div>
-    
+ 
+         <!--== Job Opportunity Area Start ==-->
+         <section id="job-opportunity" class="section-padding">
+            <div class="container">
+                <!--== Section Title Start ==-->
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <a href="career.html" class="btn btn-brand btn-loadmore">All job list</a>
+                        <div class="section-title">
+                            <h2>Job Offerings</h2>
+                        </div>
                     </div>
                 </div>
+                <!--== Section Title End ==-->
+        
+                <!--== Job opportunity Wrapper ==-->
+                <div class="job-opportunity-wrapper">
+                    <div class="row">
+                        <!--== Single Job opportunity Start ==-->
+                        <div class="col-lg-4 col-sm-6 text-center">
+                            <div class="single-job-opportunity">
+                                <div class="job-opportunity-text">
+                                    <div class="job-oppor-logo">
+                                        <div class="display-table">
+                                            <div class="display-table-cell">
+                                                <img src="assets\img\job\compnay-logo-1.png" alt="Job">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3><a href="#">Java Developer</a></h3>
+                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                </div>
+                                <a href="#" class="btn btn-job">Apply now</a>
+                            </div>
+                        </div>
+                        <!--== Single Job opportunity End ==-->
+        
+                        <!--== Single Job opportunity Start ==-->
+                        <div class="col-lg-4 col-sm-6 text-center">
+                            <div class="single-job-opportunity">
+                                <div class="job-opportunity-text">
+                                    <div class="job-oppor-logo">
+                                        <div class="display-table">
+                                            <div class="display-table-cell">
+                                                <img src="assets\img\job\compnay-logo-2.png" alt="Job">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3><a href="#">Software Engineer</a></h3>
+                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                </div>
+                                <a href="#" class="btn btn-job">Apply now</a>
+                            </div>
+                        </div>
+                        <!--== Single Job opportunity End ==-->
+        
+                        <!--== Single Job opportunity Start ==-->
+                        <div class="col-lg-4 col-sm-6 text-center">
+                            <div class="single-job-opportunity">
+                                <div class="job-opportunity-text">
+                                    <div class="job-oppor-logo">
+                                        <div class="display-table">
+                                            <div class="display-table-cell">
+                                                <img src="assets\img\job\compnay-logo-1.png" alt="Job">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3><a href="#">Backend Developer (Java) (m/f) wanted for leading</a></h3>
+                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                </div>
+                                <a href="#" class="btn btn-job ">Apply Now</a>
+                            </div>
+                        </div>
+                        <!--== Single Job opportunity End ==-->
+        
+                        <!--== Single Job opportunity Start ==-->
+                        <div class="col-lg-4 col-sm-6 text-center">
+                            <div class="single-job-opportunity">
+                                <div class="job-opportunity-text">
+                                    <div class="job-oppor-logo">
+                                        <div class="display-table">
+                                            <div class="display-table-cell">
+                                                <img src="assets\img\job\compnay-logo-2.png" alt="Job">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3><a href="#">DataBase Expert</a></h3>
+                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                </div>
+                                <a href="#" class="btn btn-job">Apply now</a>
+                            </div>
+                        </div>
+                        <!--== Single Job opportunity End ==-->
+        
+                        <!--== Single Job opportunity Start ==-->
+                        <div class="col-lg-4 col-sm-6 text-center">
+                            <div class="single-job-opportunity">
+                                <div class="job-opportunity-text">
+                                    <div class="job-oppor-logo">
+                                        <div class="display-table">
+                                            <div class="display-table-cell">
+                                                <img src="assets\img\job\compnay-logo-3.png" alt="Job">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3><a href="#">Javascript Developer</a></h3>
+                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                </div>
+                                <a href="#" class="btn btn-job">Apply Now</a>
+                            </div>
+                        </div>
+                        <!--== Single Job opportunity End ==-->
+        
+                        <!--== Single Job opportunity Start ==-->
+                        <div class="col-lg-4 col-sm-6 text-center">
+                            <div class="single-job-opportunity">
+                                <div class="job-opportunity-text">
+                                    <div class="job-oppor-logo">
+                                        <div class="display-table">
+                                            <div class="display-table-cell">
+                                                <img src="assets\img\job\compnay-logo-4.png" alt="Job">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3><a href="#">Python Developer</a></h3>
+                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                </div>
+                                <a href="#" class="btn btn-job">Apply now</a>
+                            </div>
+                        </div>
+                        <!--== Single Job opportunity End ==-->
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <a href="career.html" class="btn btn-brand btn-loadmore">All job list</a>
+                        </div>
+                    </div>
+                </div>
+                <!--== Job opportunity Wrapper ==-->
             </div>
-            <!--== Job opportunity Wrapper ==-->
-        </div>
-    </section>
-    <!--== Job Opportunity Area End ==-->
+        </section>
+        <!--== Job Opportunity Area End ==-->
     
         <!--== Gallery Area Start ==-->
     <section id="gallery-area" class="section-padding">
@@ -496,10 +491,10 @@
                         <!-- Gallery Menu Start -->
                         <div class="gallery-menu text-center">
                             <span class="active" data-filter="*">All</span>
-                            <span data-filter=".old">Old Memories</span>
-                            <span data-filter=".event">Event</span>
-                            <span data-filter=".pic">Our Picnic</span>
-                            <span class="d-none d-sm-inline-block" data-filter=".recent">Recent</span>
+                            <span data-filter=".old">Thakur college</span>
+                            <span data-filter=".event">Thadomal Shahani</span>
+                            <span data-filter=".pic">VJTI</span>
+                            <span class="d-none d-sm-inline-block" data-filter=".recent">Atharva College</span>
                         </div>
                         <!-- Gallery Menu End -->
     
@@ -510,7 +505,7 @@
                         <div class="single-gallery-item gallery-bg-1">
                             <div class="gallery-hvr-wrap">
                                 <div class="gallery-hvr-text">
-                                    <h4>University Cumpus</h4>
+                                    <h4></h4>
                                     <p class="gallery-event-date">28 Oct, 2018</p>
                                 </div>
                                 <a href="assets\img\gallery\gellary-img-1.jpg" class="btn-zoom image-popup">
@@ -534,7 +529,7 @@
                         <div class="single-gallery-item gallery-bg-3">
                             <div class="gallery-hvr-wrap">
                                 <div class="gallery-hvr-text">
-                                    <h4>University Cumpus</h4>
+                                    <h4>Thakur College of Engineering</h4>
                                     <p class="gallery-event-date">28 Oct, 2018</p>
                                 </div>
                                 <a href="assets\img\gallery\gellary-img-3.jpg" class="btn-zoom image-popup">
