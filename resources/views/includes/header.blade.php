@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="main-menu navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/">
                             <img src="assets\img\logo.png" alt="Logo" style="height: 14vh; width: 10vw;">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menucontent" aria-controls="menucontent" aria-expanded="false">
@@ -49,12 +49,12 @@
                                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Pages</a>
                                     <ul class="dropdown-menu">
                                         
-                                        <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="directory.html">Directory</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../committee">Committee</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../directory">Directory</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../career">Career</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
                             </ul>
                         </div>
                     </nav>

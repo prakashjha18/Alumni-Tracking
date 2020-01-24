@@ -27,6 +27,18 @@ Route::get('/gallery',function(){
 Route::get('multiple', function () {
     return 'jfb';
 });
+Route::get('/committee',function(){
+    return view('committee');
+});
+Route::get('/directory',function(){
+    return view('directory');
+});
+Route::get('/career',function(){
+    return view('career');
+});
+Route::get('/contact',function(){
+    return view('contact');
+});
 Route::group(['domain' => 'alumniportal.{account}.test'], function () {
     Route::get('multiple', function ($account) {
         return('snds');

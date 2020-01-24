@@ -89,7 +89,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="footer-bottom-text">
-                        <p>© 2018 Codeboxr, All Rights Reserved.</p>
+                        <p>© 2020 Alumnus Connect, All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
