@@ -9,6 +9,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\college;
 use App\User;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\collegepasswd;
 use Auth;
 use Session;
 
@@ -48,7 +50,10 @@ class CollegeController extends Controller
             'currentstatus' =>'',
             'orgname' => $request->clgshort,
         ]);
-
+        $name = $college->clgname;
+        $email = $college->email;
+        $pass = $college->newpass;
+        Mail::to($request->email)->send(new collegepasswd($name,$email,$pass));
         Session::flash('success', 'successfully added a college');
 
         return redirect()->route('addcollege');
