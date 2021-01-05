@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\collegepasswd;
 use Auth;
 use Session;
+use Illuminate\Support\Facades\Http;
 
 class CollegeController extends Controller
 {
@@ -77,5 +78,16 @@ class CollegeController extends Controller
         $verified = User::where('clgname',$clgshort)->where('verifiedbyclg',1)->get();
         $user = Auth::user();
         return view('college.verifiedalumni')->with('userm', $user)->with('verified',$verified);
+    }
+
+    public function analysis(){
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', 'http://127.0.0.1:8000/sentanalysis', [
+        'form_params' => [
+        'review' => 'excellent',
+    ]
+    ]);
+    
+        return($response);
     }
 }
