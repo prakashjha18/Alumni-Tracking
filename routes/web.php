@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/about',function(){
     return view('about');
 });
+Route::get('/myevents',function(){
+    return view('college.myevent');
+});
 Route::get('/event',function(){
     return view('event');
 });
