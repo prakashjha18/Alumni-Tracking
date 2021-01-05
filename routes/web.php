@@ -125,3 +125,11 @@ Route::get('/prediction', [
     'uses' => 'CollegeController@prediction',
     'as'   => 'college.prediction'
 ]);
+Route::get('/myevents', [
+    'uses' => 'CollegeController@myevents',
+    'as'   => 'college.myevents'
+]);
+Route::get('/myevent/{id}', [
+    'uses' => 'CollegeController@mysinglevent',
+    'as'   => 'college.mysinglevent'
+]);
