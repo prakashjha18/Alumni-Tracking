@@ -17,9 +17,6 @@ Route::get('/', function () {
 Route::get('/about',function(){
     return view('about');
 });
-Route::get('/myevents',function(){
-    return view('college.myevent');
-});
 Route::get('/event',function(){
     return view('event');
 });
@@ -74,9 +71,16 @@ Route::get('/newsletter','AlumniController@newsletter')->name('alumni.newsletter
 
 Route::get('/internship','AlumniController@internship')->name('alumni.internship');
 
+Route::get('/createvent', 'CollegeController@createvent')->name('college.createvent');
+
 Route::post('/college/create', [
     'uses' => 'CollegeController@insert',
     'as' => 'college.save'
+]);
+
+Route::post('/storevent', [
+    'uses' => 'CollegeController@storevent',
+    'as' => 'college.storevent'
 ]);
 
 Route::get('/editprofile','AlumniController@editprofile')->name('alumni.auth2');
@@ -98,4 +102,12 @@ Route::get('/verifiedalumnis', [
 Route::get('/viewcolleges', [
     'uses' => 'DirectorateController@viewcolleges',
     'as'   => 'dir.viewcollege'
+]);
+Route::get('/myevents', [
+    'uses' => 'CollegeController@myevents',
+    'as'   => 'college.myevents'
+]);
+Route::get('/myevent/{id}', [
+    'uses' => 'CollegeController@mysinglevent',
+    'as'   => 'college.mysinglevent'
 ]);

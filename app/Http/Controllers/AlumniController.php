@@ -40,7 +40,7 @@ class AlumniController extends Controller
     public function verify($id)
     {
         $user = User::find($id);
-        $user->verifiedbyclg =1;
+        $user->verifiedbyclg = 1;
         $user->save();
         Session::flash('success', 'ALUMNI SUCCESSFULLLY VERIFIED');
         return redirect()->route('college.verification');
