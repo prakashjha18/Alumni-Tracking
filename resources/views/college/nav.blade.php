@@ -80,7 +80,7 @@
               </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
                       <!--<span class="nav-link-text">List mentors</span>-->
-                      <a class="nav-link" href="{{ url('/posts') }}">
+                      <a class="nav-link" href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">
                       <i class="fa fa-pencil-square-o"></i>
   
                       <span class="nav-link-text">Your Posts</span>
@@ -107,6 +107,20 @@
                 <span class="nav-link-text">Your Events</span>
                 </a>
         </li> 
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+            <a class="nav-link " href="/yrclgrevs" >
+              <i class="fa fa-comments" aria-hidden="true"></i>
+                <span class="nav-link-text">Your Reviews</span>
+            </a>
+            
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+            <a class="nav-link " href="/prediction" >
+              <i class="fa fa-comments" aria-hidden="true"></i>
+                <span class="nav-link-text">Predictions</span>
+            </a>
+            
+        </li>
               
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                   <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
@@ -124,7 +138,7 @@
                           <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Forums</a>
                       </li>
                       <li>
-                          <a href="{{ url('http://blogs.startupigniter.test/blogs') }}">Blogs</a>
+                          <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
                       </li>
                   </ul>
               </li>

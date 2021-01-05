@@ -10,10 +10,12 @@ use App\Http\Controllers\Controller;
 use App\college;
 use App\User;
 use App\events;
+use App\reviews;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\collegepasswd;
 use Auth;
 use Session;
+use Illuminate\Support\Facades\Http;
 
 class CollegeController extends Controller
 {
@@ -63,7 +65,11 @@ class CollegeController extends Controller
     {
         return view('college.posts');
     }
-    public function verifications() {
+
+    public function createposts(){
+        return view('college.createpost');
+    }
+    public function verifications(){
         $clgshort = Auth::user()->orgname;
         $unverified = User::where('clgname',$clgshort)->where('verifiedbyclg',0)->get();
         $user = Auth::user();
@@ -74,6 +80,27 @@ class CollegeController extends Controller
         $verified = User::where('clgname',$clgshort)->where('verifiedbyclg',1)->get();
         $user = Auth::user();
         return view('college.verifiedalumni')->with('userm', $user)->with('verified',$verified);
+    }
+
+    public function analysis(){
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', 'http://127.0.0.1:8000/sentanalysis', [
+            'form_params' => [
+            'review' => 'excellent',]
+        ]);
+        return($response);
+    }
+
+    public function yrclgrevs(){
+        $clgshort = Auth::user()->orgname;
+        $reviews = reviews::where('clgname',$clgshort)->get();
+        $pos = reviews::where('clgname',$clgshort)->where('analysis','pos')->get()->count();
+        $neg = reviews::where('clgname',$clgshort)->where('analysis','neg')->get()->count();
+        return view('college.analysis')->with('reviews', $reviews)->with('pos',$pos)->with('neg',$neg);
+    }
+    
+    public function prediction(){
+        return view('college.prediction');
     }
     public function myevents() {
         $events = events::where('user_id', Auth::user()->id)->get();

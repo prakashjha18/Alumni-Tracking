@@ -65,10 +65,12 @@ Route::get('/findalumni','CollegeController@findalumni')->name('college.find');
 
 Route::get('/posts','CollegeController@posts')->name('college.posts');
 
+Route::get('/createclgposts','CollegeController@createposts')->name('college.createposts');
+
 Route::get('/funding','AlumniController@funding')->name('alumni.funding');
 
 Route::get('/newsletter','AlumniController@newsletter')->name('alumni.newsletter');
-
+Route::get('/addreview','AlumniController@addreview')->name('alumni.addreview');
 Route::get('/internship','AlumniController@internship')->name('alumni.internship');
 
 Route::get('/createvent', 'CollegeController@createvent')->name('college.createvent');
@@ -76,6 +78,11 @@ Route::get('/createvent', 'CollegeController@createvent')->name('college.createv
 Route::post('/college/create', [
     'uses' => 'CollegeController@insert',
     'as' => 'college.save'
+]);
+
+Route::post('/submitreview', [
+    'uses' => 'AlumniController@submitreview',
+    'as' => 'alummni.submitreview'
 ]);
 
 Route::post('/storevent', [
@@ -103,11 +110,18 @@ Route::get('/viewcolleges', [
     'uses' => 'DirectorateController@viewcolleges',
     'as'   => 'dir.viewcollege'
 ]);
-Route::get('/myevents', [
-    'uses' => 'CollegeController@myevents',
-    'as'   => 'college.myevents'
+
+Route::get('/analysis', [
+    'uses' => 'CollegeController@analysis',
+    'as'   => 'college.analysis'
 ]);
-Route::get('/myevent/{id}', [
-    'uses' => 'CollegeController@mysinglevent',
-    'as'   => 'college.mysinglevent'
+
+Route::get('/yrclgrevs', [
+    'uses' => 'CollegeController@yrclgrevs',
+    'as'   => 'college.yrclgrevs'
+]);
+
+Route::get('/prediction', [
+    'uses' => 'CollegeController@prediction',
+    'as'   => 'college.prediction'
 ]);
