@@ -45,4 +45,11 @@ class AlumniController extends Controller
         Session::flash('success', 'ALUMNI SUCCESSFULLLY VERIFIED');
         return redirect()->route('college.verification');
     }
+    public function addreview(){
+        return view('alumni.addreview');
+    }
+
+    public function submitreview(Request $request){
+        return $request;
+    }
 }

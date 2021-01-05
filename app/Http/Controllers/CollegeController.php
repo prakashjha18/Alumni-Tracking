@@ -62,6 +62,10 @@ class CollegeController extends Controller
     {
         return view('college.posts');
     }
+
+    public function createposts(){
+        return view('college.createpost');
+    }
     public function verifications(){
         $clgshort = Auth::user()->orgname;
         $unverified = User::where('clgname',$clgshort)->where('verifiedbyclg',0)->get();

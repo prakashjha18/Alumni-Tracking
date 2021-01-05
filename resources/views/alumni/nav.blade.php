@@ -62,6 +62,13 @@
                   </a>
                   
               </li>
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Newsletter">
+                  <a class="nav-link " href="/addreview" >
+                      <i class="fa fa-fw fa-newspaper-o"></i>
+                      <span class="nav-link-text">add review</span>
+                  </a>
+                  
+              </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-users"></i>

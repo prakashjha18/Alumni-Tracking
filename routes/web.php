@@ -68,15 +68,22 @@ Route::get('/findalumni','CollegeController@findalumni')->name('college.find');
 
 Route::get('/posts','CollegeController@posts')->name('college.posts');
 
+Route::get('/createclgposts','CollegeController@createposts')->name('college.createposts');
+
 Route::get('/funding','AlumniController@funding')->name('alumni.funding');
 
 Route::get('/newsletter','AlumniController@newsletter')->name('alumni.newsletter');
-
+Route::get('/addreview','AlumniController@addreview')->name('alumni.addreview');
 Route::get('/internship','AlumniController@internship')->name('alumni.internship');
 
 Route::post('/college/create', [
     'uses' => 'CollegeController@insert',
     'as' => 'college.save'
+]);
+
+Route::post('/submitreview', [
+    'uses' => 'AlumniController@submitreview',
+    'as' => 'alummni.submitreview'
 ]);
 
 Route::get('/editprofile','AlumniController@editprofile')->name('alumni.auth2');

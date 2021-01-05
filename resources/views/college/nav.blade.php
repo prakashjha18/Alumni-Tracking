@@ -80,7 +80,7 @@
               </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
                       <!--<span class="nav-link-text">List mentors</span>-->
-                      <a class="nav-link" href="{{ url('/posts') }}">
+                      <a class="nav-link" href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">
                       <i class="fa fa-pencil-square-o"></i>
   
                       <span class="nav-link-text">Your Posts</span>
@@ -124,7 +124,7 @@
                           <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Forums</a>
                       </li>
                       <li>
-                          <a href="{{ url('http://blogs.startupigniter.test/blogs') }}">Blogs</a>
+                          <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
                       </li>
                   </ul>
               </li>
