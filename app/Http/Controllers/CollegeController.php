@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\college;
 use App\User;
+use App\reviews;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\collegepasswd;
 use Auth;
@@ -83,11 +84,21 @@ class CollegeController extends Controller
     public function analysis(){
         $client = new \GuzzleHttp\Client();
         $response = $client->request('POST', 'http://127.0.0.1:8000/sentanalysis', [
-        'form_params' => [
-        'review' => 'excellent',
-    ]
-    ]);
-    
+            'form_params' => [
+            'review' => 'excellent',]
+        ]);
         return($response);
+    }
+
+    public function yrclgrevs(){
+        $clgshort = Auth::user()->orgname;
+        $reviews = reviews::where('clgname',$clgshort)->get();
+        $pos = reviews::where('clgname',$clgshort)->where('analysis','pos')->get()->count();
+        $neg = reviews::where('clgname',$clgshort)->where('analysis','neg')->get()->count();
+        return view('college.analysis')->with('reviews', $reviews)->with('pos',$pos)->with('neg',$neg);
+    }
+    
+    public function prediction(){
+        return view('college.prediction');
     }
 }

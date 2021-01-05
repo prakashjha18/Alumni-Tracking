@@ -106,11 +106,18 @@ Route::get('/viewcolleges', [
     'uses' => 'DirectorateController@viewcolleges',
     'as'   => 'dir.viewcollege'
 ]);
-<<<<<<< Updated upstream
-=======
 
 Route::get('/analysis', [
     'uses' => 'CollegeController@analysis',
     'as'   => 'college.analysis'
 ]);
->>>>>>> Stashed changes
+
+Route::get('/yrclgrevs', [
+    'uses' => 'CollegeController@yrclgrevs',
+    'as'   => 'college.yrclgrevs'
+]);
+
+Route::get('/prediction', [
+    'uses' => 'CollegeController@prediction',
+    'as'   => 'college.prediction'
+]);

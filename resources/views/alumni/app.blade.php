@@ -15,8 +15,13 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('/css/') }}/sb-admin.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="chat.css">
-    
+   
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 </head>
 
 @isset($bodyclass)
@@ -31,7 +36,7 @@
 
 
 @empty($hidenav)
-    @include('alumni.nav')
+    @include('college.nav')
     
 @endempty
 
@@ -68,6 +73,10 @@
         $('body').toggleClass('bg-dark bg-light');
     });
 </script>
-
+<script>
+    @if(Session::has('success'))
+        toastr.success(" {{ Session::get('success') }} ")
+    @endif
+</script>
 </body>
 </html>

@@ -107,6 +107,20 @@
                 <span class="nav-link-text">Your Events</span>
                 </a>
         </li> 
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+            <a class="nav-link " href="/yrclgrevs" >
+              <i class="fa fa-comments" aria-hidden="true"></i>
+                <span class="nav-link-text">Your Reviews</span>
+            </a>
+            
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+            <a class="nav-link " href="/prediction" >
+              <i class="fa fa-comments" aria-hidden="true"></i>
+                <span class="nav-link-text">Predictions</span>
+            </a>
+            
+        </li>
               
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                   <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
