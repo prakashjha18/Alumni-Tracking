@@ -36,7 +36,7 @@
 
 
 @empty($hidenav)
-    @include('college.nav')
+    @include('alumni.nav')
     
 @endempty
 
