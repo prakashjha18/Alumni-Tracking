@@ -54,7 +54,13 @@
                       <span class="nav-link-text"> Funding</span><br> 
                   </a>
               </li>
-  
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+                  <a class="nav-link " href="{{ url('http://localhost:3000') }}" target="_blank">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                      <span class="nav-link-text">Chat Rooms</span>
+                  </a>
+                  
+              </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Newsletter">
                   <a class="nav-link " href="/newsletter" >
                       <i class="fa fa-fw fa-newspaper-o"></i>
@@ -76,19 +82,10 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseExamplePages">
                     <li>
-                        <a href="{{ url('http://localhost:8009/chats') }}">Chats</a>
+                        <a href="{{ url('http://localhost/8007') }}">Forum</a>
                     </li>
                     <li>
-                        <a href="{{ url('http://localhost/video.php') }}">Forum</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Blogs</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Sms</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Emails</a>
+                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}">Blogs</a>
                     </li>
                 </ul>
             </li>
