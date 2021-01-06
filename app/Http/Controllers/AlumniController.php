@@ -63,7 +63,7 @@ class AlumniController extends Controller
         $user->review_count=$user->review_count + 1;
         $user->save();
         $client = new \GuzzleHttp\Client();
-        $response = $client->request('POST', 'http://127.0.0.1:8000/sentanalysis', [
+        $response = $client->request('POST', 'http://127.0.0.1:8005/sentanalysis', [
         'form_params' => [
         'review' => $review->review,
     ]
