@@ -106,6 +106,91 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
+                        <img src="/assets/img/byte.jfif" alt="Avatar" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>The Byte</h1> 
+                        <p>Effective implementation of ISO 9001: 2008 based Quality Management System (QMS)</p> 
+                        <p>Training on “Advance Machine Learning Algorithms” is initiated by Mr. AnadKhandare, AP CMPNdepartment where 13 students have registered.</p>
+                      </div>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <button type="button" class="btn btn-danger">Subscription</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/assets/img/byte.jfif" alt="Avatar" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>The Byte</h1> 
+                        <p>Effective implementation of ISO 9001: 2008 based Quality Management System (QMS)</p> 
+                        <p>Training on “Advance Machine Learning Algorithms” is initiated by Mr. AnadKhandare, AP CMPNdepartment where 13 students have registered.</p>
+                      </div>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <button type="button" class="btn btn-danger">Subscription</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/assets/img/byte.jfif" alt="Avatar" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>The Byte</h1> 
+                        <p>Effective implementation of ISO 9001: 2008 based Quality Management System (QMS)</p> 
+                        <p>Training on “Advance Machine Learning Algorithms” is initiated by Mr. AnadKhandare, AP CMPNdepartment where 13 students have registered.</p>
+                      </div>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <button type="button" class="btn btn-danger">Subscription</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/assets/img/byte.jfif" alt="Avatar" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>The Byte</h1> 
+                        <p>Effective implementation of ISO 9001: 2008 based Quality Management System (QMS)</p> 
+                        <p>Training on “Advance Machine Learning Algorithms” is initiated by Mr. AnadKhandare, AP CMPNdepartment where 13 students have registered.</p>
+                      </div>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <button type="button" class="btn btn-danger">Subscription</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/assets/img/byte.jfif" alt="Avatar" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>The Byte</h1> 
+                        <p>Effective implementation of ISO 9001: 2008 based Quality Management System (QMS)</p> 
+                        <p>Training on “Advance Machine Learning Algorithms” is initiated by Mr. AnadKhandare, AP CMPNdepartment where 13 students have registered.</p>
+                      </div>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <button type="button" class="btn btn-danger">Subscription</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
                         <img src="/assets/img/nimbus.jfif" alt="Avatar" style="width:300px;height:300px;">
                       </div>
                       <div class="flip-card-back">

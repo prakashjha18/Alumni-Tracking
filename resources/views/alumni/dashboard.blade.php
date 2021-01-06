@@ -337,6 +337,7 @@ h1 {
               <a class="list-group-item list-group-item-action" href="#">View all activity...</a>
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div> <button type="submit" class="btn btn-primary">Submit</button> </div>
           </div>
         </div>
       </div>

@@ -65,7 +65,7 @@
                 </a>
             </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
-                  <a class="nav-link " href="/startupkit" >
+                  <a class="nav-link " href="{{ url('http://localhost:3000') }}" target="_blank">
                     <i class="fa fa-comments" aria-hidden="true"></i>
                       <span class="nav-link-text">Chat Rooms</span>
                   </a>
@@ -86,19 +86,6 @@
                       <span class="nav-link-text">Your Posts</span>
                       </a>
               </li> 
-              {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                  <a class="nav-link" href="{{ url('/list_stakeholders') }}">
-                      <i class="fa fa-fw fa-table"></i>
-                      <span class="nav-link-text">List stakeholders</span>
-                  </a>
-              </li> --}}
-              {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
-                  <a class="nav-link " href="/application" >
-                      <i class="fa fa-fw fa-wrench"></i>
-                      <span class="nav-link-text">My Applications</span>
-                  </a>
-                  
-              </li> --}}
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
                 <!--<span class="nav-link-text">List mentors</span>-->
                 <a class="nav-link" href="{{ url('/myevents') }}">
@@ -129,13 +116,7 @@
                   </a>
                   <ul class="sidenav-second-level collapse" id="collapseExamplePages">
                       <li>
-                          <a href="{{ url('http://localhost:8009/chats') }}">Chats</a>
-                      </li>
-                      <li>
-                          <a href="{{ url('http://localhost/video.php') }}">Video Call</a>
-                      </li>
-                      <li>
-                          <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Forums</a>
+                          <a href="{{ url('http://localhost:8007') }}" target="_blank">Forums</a>
                       </li>
                       <li>
                           <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
