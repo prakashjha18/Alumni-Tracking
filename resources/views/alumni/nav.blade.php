@@ -82,10 +82,10 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseExamplePages">
                     <li>
-                        <a href="{{ url('http://localhost/8007') }}">Forum</a>
+                        <a href="{{ url('http://localhost/8007') }}" target="_blank">Forum</a>
                     </li>
                     <li>
-                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}">Blogs</a>
+                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
                     </li>
                 </ul>
             </li>
