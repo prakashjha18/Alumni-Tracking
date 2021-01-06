@@ -84,7 +84,7 @@ class CollegeController extends Controller
 
     public function analysis(){
         $client = new \GuzzleHttp\Client();
-        $response = $client->request('POST', 'http://127.0.0.1:8000/sentanalysis', [
+        $response = $client->request('POST', 'http://127.0.0.1:8005/sentanalysis', [
             'form_params' => [
             'review' => 'excellent',]
         ]);
@@ -148,4 +148,47 @@ class CollegeController extends Controller
         return redirect()->back();
         
     }
+    public function editevent($id) {
+        $event = events::find($id);
+        return view('college.editevent')->with('event',$event);
+    }
+    public function updatevent(Request $request, $id) {
+        $this->validate($request, [
+            'title' => 'required', 
+            'date' => 'required', 
+            'description' => 'required',
+            'imagef' => 'image|nullable|max:1999',
+        ]);
+        $events = events::find($id);
+        if($request->hasFile('imagef')){
+            // return $request;
+            $avatar = $request->imagef;
+            $avatar_new_name = time() .$avatar->getClientOriginalName();
+            $avatar->move('uploads/events',$avatar_new_name);
+            $events->image = 'uploads/events/' . $avatar_new_name;
+        } else {
+            $events->image = 'uploads/events/noimage.jpg';
+        }
+        
+        $events->title = $request->title;
+        $events->date = $request->date;
+        $events->description = $request->description;
+        //image field
+        
+        $events->mode = $request->mode;
+        $events->college = Auth::user()->clgname;
+        $events->user_id = Auth::user()->id;
+        $events->save();
+        Session::flash('success', 'Event successfully updated');
+        return redirect('/myevents');
+    }
+
+    public function deletevent($id) {
+        $event = events::find($id);
+        $event->delete();
+        if(!$event == null) {
+            Session::flash('success', 'Event successfully deleted');
+        }
+        return redirect('/myevents');
+    } 
 }

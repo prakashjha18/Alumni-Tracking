@@ -46,7 +46,7 @@
                   <td>{{$event->date}}</td>
                   <td>{{$event->mode}}</td>
                   <td>{{$event->created_at}}</td>
-                  <td> <a class="btn btn-primary"  href="/myevent/{{$event->id}}">View</a> </td>
+                  <td class="text-center"> <a class="btn btn-primary"  href="/myevent/{{$event->id}}">View</a> </td>
                   </tr>
                 @endforeach
                 </tbody>

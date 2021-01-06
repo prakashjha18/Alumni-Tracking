@@ -133,3 +133,19 @@ Route::get('/myevent/{id}', [
     'uses' => 'CollegeController@mysinglevent',
     'as'   => 'college.mysinglevent'
 ]);
+Route::get('/editevent/{id}', [
+    'uses' => 'CollegeController@editevent',
+    'as'   => 'college.editevent'
+]);
+Route::put('/updatevent/{id}', [
+    'uses' => 'CollegeController@updatevent',
+    'as'   => 'college.updatevent'
+]);
+Route::get('/deletevent/{id}', [
+    'uses' => 'CollegeController@deletevent',
+    'as'   => 'college.deletevent'
+]);
+Route::get('/friendslist', [
+    'uses' => 'AlumniController@friendslist',
+    'as' => 'alumni.friendslist'
+]);
