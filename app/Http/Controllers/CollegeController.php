@@ -141,7 +141,7 @@ class CollegeController extends Controller
         //image field
         
         $events->mode = $request->mode;
-        $events->college = Auth::user()->clgname;
+        $events->college = Auth::user()->orgname;
         $events->user_id = Auth::user()->id;
         $events->save();
         Session::flash('success', 'Event successfully created, you can view in Your events');
@@ -179,4 +179,5 @@ class CollegeController extends Controller
         }
         return redirect('/myevents');
     } 
+    
 }

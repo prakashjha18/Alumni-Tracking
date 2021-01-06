@@ -149,3 +149,11 @@ Route::get('/friendslist', [
     'uses' => 'AlumniController@friendslist',
     'as' => 'alumni.friendslist'
 ]);
+Route::get('/alumnievents', [
+    'uses' => 'AlumniController@alumnievents',
+    'as' => 'alumni.alumnievents'
+]);
+Route::get('/alumnievents/{id}', [
+    'uses' => 'AlumniController@alumnisinglevent',
+    'as' => 'alumni.alumnisinglevent'
+]);
