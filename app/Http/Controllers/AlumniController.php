@@ -77,4 +77,7 @@ class AlumniController extends Controller
         }
 
     }
+    public function friendslist() {
+        return view('alumni.userslist');
+    }
 }

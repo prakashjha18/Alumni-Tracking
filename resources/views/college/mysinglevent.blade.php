@@ -17,25 +17,26 @@
         @csrf
         <div class="form-group">
             <label for="Title">Title</label>
-            <input type="Text" class="form-control" id="title" name="title" value="{{$events->title}}" placeholder="Enter Title" required>
+            <input type="Text" class="form-control" id="title" name="title" value="{{$events->title}}" placeholder="Enter Title" required disabled>
         </div>
         <div class="form-group"> <!-- Date input -->
             <label class="control-label" for="date">Date</label>
-            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" value="{{$events->date}}" type=""/>
+            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" value="{{$events->date}}" type="" disabled/>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description"  rows="5" required> {{$events->description}} </textarea>
+            <textarea class="form-control" id="description" name="description"  rows="5" required disabled> {{$events->description}} </textarea>
         </div>
         <div class="form-group">
-                <img src = "{{asset($events->image)}}">
+            <img src = "{{asset($events->image)}}" class="rounded img-thumbnail mx-auto d-block col-md-6" disabld>
         </div>
         <div class="form-group">
-            <label for="modes">Mode</label>
-            <input class="form-control" name="mode" value="{{$events->mode}}" id="modes"  disabled>
+            <label for="mode"> Mode </label> 
+            <input class="form-control" name="mode" value="{{$events->mode}}" id="modes" disabled>
         </div>
 
-        <button type="submit" class="btn btn-primary">Update</button>
+        <a class="btn btn-primary" href="/editevent/{{$events->id}}">Update</a>
+        <a class="btn btn-danger" class = "float-right" href="/deletevent/{{$events->id}}">Delete</a>
         </form>
      </div>
     </div>     
