@@ -40,19 +40,5 @@ class DirectorateController extends Controller
         // return $colleges;
         return view('directorate.location')->with('colleges',$colleges);
     }
-    public function directoratevent() {
-        $events = events::all();
-        return view('directorate.directoratevent')->with('events',$events);
-    }
-    public function directoratesinglevent($id) {
-        $events = events::find($id);
-        return view('directorate.directoratesinglevent')->with('events',$events);
-    }
-
-    public function viewalumnibyclgname($name){
-        $users = User::where('type','alumni')->where('clgname',$name)->get();
-        return view('directorate.dashboard')->with('users', $users);
-    }
-
 }
 

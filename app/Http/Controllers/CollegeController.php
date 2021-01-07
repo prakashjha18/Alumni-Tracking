@@ -118,6 +118,7 @@ class CollegeController extends Controller
         return view('college.createvent');
     }
     public function storevent(Request $request) { 
+        //return $request;
         $this->validate($request, [
             'title' => 'required', 
             'date' => 'required', 

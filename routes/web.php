@@ -167,6 +167,10 @@ Route::get('/deletevent/{id}', [
     'uses' => 'CollegeController@deletevent',
     'as'   => 'college.deletevent'
 ]);
+Route::get('/dirclgreviews', [
+    'uses' => 'DirectorateController@collegerevs',
+    'as'   => 'dire.collegerevs'
+]);
 Route::get('/friendslist', [
     'uses' => 'AlumniController@friendslist',
     'as' => 'alumni.friendslist'
