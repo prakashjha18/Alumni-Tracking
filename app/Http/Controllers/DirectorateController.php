@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\User;
+use App\events;
 use Illuminate\Http\Request;
 
 class DirectorateController extends Controller
 {
     public function dashboard()
     {
-        return view('directorate.dashboard');
+        $users = User::where('type','alumni')->get();
+        return view('directorate.dashboard')->with('users', $users);
     }
+
     public function addcollege()
     {
         return view('directorate.addcollege');
@@ -20,8 +23,7 @@ class DirectorateController extends Controller
         $colleges = User::where('type','college')->get();
         for ($x = 0; $x < sizeof($colleges); $x++) {
             $colleges[$x]->orgname=strtolower($colleges[$x]->orgname);
-        }
-        $colleges = User::where('type','college')->get();
+          }
         return view('directorate.viewcollege')->with('colleges',$colleges);
     }
     public function publishnotice()
@@ -31,13 +33,6 @@ class DirectorateController extends Controller
     public function location()
     {
         return view('directorate.location');
-    }
-    public function collegerevs(){
-        $colleges = User::where('type','college')->get();
-        for ($x = 0; $x < sizeof($colleges); $x++) {
-            $colleges[$x]->orgname=strtolower($colleges[$x]->orgname);
-        }
-        return view('directorate.collegereviews')->with('colleges',$colleges);
     }
 }
 

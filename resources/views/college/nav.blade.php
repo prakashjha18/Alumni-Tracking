@@ -90,7 +90,6 @@
                 <!--<span class="nav-link-text">List mentors</span>-->
                 <a class="nav-link" href="{{ url('/myevents') }}">
                 <i class="fa fa-pencil-square-o"></i>
-
                 <span class="nav-link-text">Your Events</span>
                 </a>
         </li> 

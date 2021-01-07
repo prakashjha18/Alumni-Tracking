@@ -75,6 +75,14 @@
                   </a>
                   
               </li>
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Newsletter">
+                <a class="nav-link " href="/alumnitable" >
+                    <i class="fa fa-fw fa-users"></i>
+                    <span class="nav-link-text">Find other alumni</span>
+                </a>
+                
+            </li>
+
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
                 <!--<span class="nav-link-text">List mentors</span>-->
                 <a class="nav-link" href="{{ url('/alumnievents') }}">

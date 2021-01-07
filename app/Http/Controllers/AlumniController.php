@@ -35,6 +35,24 @@ class AlumniController extends Controller
         $user = Auth::user();
         return view('alumni.editprofile')->with('user', $user);
     }
+    public function updateprofile(Request $request, $id) {
+        $user = user::find($id);
+        if($request->hasFile('image')){
+            // return $request;
+            $avatar = $request->image;
+            $avatar_new_name = time() .$avatar->getClientOriginalName();
+            $avatar->move('uploads/profile',$avatar_new_name);
+            $user->image = 'uploads/profile/' . $avatar_new_name;
+        } else {
+            $events->image = 'uploads/profile/noimage.jpg';
+        }
+        $user->yearpass = $request->yearpass;
+        $user->currentstatus = $request->currentstatus;
+        $user->orgname = $request->orgname;
+        $user->save();
+        Session::flash('success', 'Profile successfully updated');
+        return redirect()->back();
+    }
     public function conventions()
     {
         return view('alumni.conventions');
@@ -81,6 +99,32 @@ class AlumniController extends Controller
     public function friendslist() {
         return view('alumni.userslist');
     }
+
+    public function alumnitable(){
+        $clgname = Auth::user()->clgname;
+        $yearpass = Auth::user()->yearpass;
+        $currentstatus = Auth::user()->currentstatus; 
+        // $users = User::where('type','alumni')->where('currentstatus',$currentstatus)->get();
+        $users = User::where('type','alumni')->where('id', '!=', auth()->id())->get();
+        return view('alumni.alumnitable')->with('users', $users);
+    }
+
+    public function viewalumni(Request $request){
+        $clgname = Auth::user()->clgname;
+        $yearpass = Auth::user()->yearpass;
+        $currentstatus = Auth::user()->currentstatus; 
+        if($request->viewby=='College Name'){
+        $users = User::where('type','alumni')->where('clgname',$clgname)->where('id', '!=', auth()->id())->get();
+        }
+        if($request->viewby=='Passing Year'){
+            $users = User::where('type','alumni')->where('yearpass',$yearpass)->where('id', '!=', auth()->id())->get();
+        }
+        if($request->viewby=='Current Status'){
+            $users = User::where('type','alumni')->where('currentstatus',$currentstatus)->where('id', '!=', auth()->id())->get();
+        }
+        // $users = User::where('type','alumni')->get();
+        return view('alumni.alumnitable')->with('users', $users);
+    }
     public function alumnievents() {
         $events = events::where('college', Auth::user()->clgname)->get();
         return view('alumni.alumnievents')->with('events',$events);
@@ -94,3 +138,5 @@ class AlumniController extends Controller
         return view('alumni.alumnisinglevent')->with('events',$events);
     }
 }
+
+// $users = User::where('id', '!=', auth()->id())->get();

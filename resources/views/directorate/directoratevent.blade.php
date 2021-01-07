@@ -1,4 +1,4 @@
-@extends('college.app')
+@extends('directorate.app')
 
 
 @section('content')
@@ -9,12 +9,11 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item active">Dashboard</li>
         <li class="breadcrumb-item">
-            <a href="/myevents">Events</a>
+            <a href="/directoratevent">Events</a>
         </li>
      </ol>
       <div class="row">
         <div class="col-12">
-          <a class="btn btn-primary" href="{{ url('/createvent') }}" role="button">Create Event</a>
           <div class="card-header">
             <i class="fa fa-table">Your Events</i>
           </div>
@@ -46,7 +45,7 @@
                   <td>{{$event->date}}</td>
                   <td>{{$event->mode}}</td>
                   <td>{{$event->created_at}}</td>
-                  <td class="text-center"> <a class="btn btn-primary"  href="/myevent/{{$event->id}}">View</a> </td>
+                  <td class="text-center"> <a class="btn btn-primary"  href="/directoratevent/{{$event->id}}">View</a> </td>
                   </tr>
                 @endforeach
                 </tbody>

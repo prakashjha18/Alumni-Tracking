@@ -61,6 +61,8 @@
                       <span class="nav-link-text">Activity Log</span>
                   </a>  
               </li>
+
+
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                   <a class="nav-link " href="/dirclgreviews" >
                       <i class="fa fa-fw fa-wrench"></i>
@@ -73,6 +75,14 @@
                     <span class="nav-link-text">Add Colleges</span>
                 </a>  
               </li>
+
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
+                <!--<span class="nav-link-text">List mentors</span>-->
+                <a class="nav-link" href="{{ url('/directoratevent') }}">
+                <i class="fa fa-pencil-square-o"></i>
+                <span class="nav-link-text">Your Events</span>
+                </a>
+            </li>
 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">
                   <a class="nav-link" href="{{ url('/location') }}">

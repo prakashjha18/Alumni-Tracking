@@ -18,12 +18,7 @@
             <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a></div>
         </div> --}}
         <div class="row">
-            <div class="col-sm-3"><!--left col-->
-                <div class="text-center">
-                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                    <h6>Upload a different photo...</h6>
-                    <input type="file" class="text-center center-block file-upload">
-                </div>              
+            <div class="col-sm-3"><!--left col-->              
                 <ul class="list-group" style="margin-top:1%">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong>Events</strong></span> 125</li>
@@ -43,7 +38,15 @@
               <div class="tab-content">
                 <div class="tab-pane active" id="home">
                     <hr>
-                      <form class="form" action="#" method="post" id="registrationForm" >
+                      <form class="form" action="{{Route('alumni.updateprofile', $user->id)}}" method="post" id="registrationForm" enctype="multipart/form-data">
+                          @csrf
+                          {{method_field('PUT')}}
+                          <input type="hidden" name="id" id="id" value="{{ $user->id }}">
+                            <div class="text-center">
+                              <img src = "{{asset($user->image)}}" class="rounded img-thumbnail mx-auto d-block col-md-6" disabld>
+                              <h6>Upload a different photo...</h6>
+                              <input type="file" class="text-center center-block file-upload" name = "image" required>
+                          </div>
                             <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
                                 <label for="first_name"><h6>Name</h6></label>
@@ -59,13 +62,29 @@
                             <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
                                     <label for="last_name"><h6>College name</h6></label>
-                                <input type="text" class="form-control" name="clgname"style="margin-top:-2%" id="username" title="Enter your user name if you want to change." value="{{$user->clgname}}">
+                                <input type="text" class="form-control" name="clgname"style="margin-top:-2%" id="username" title="Enter your user name if you want to change." value="{{$user->clgname}}" disabled>
                                 </div>
                             </div>
                             <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
                                     <label for="phone"><h6>Year of Passing</h6></label>
-                                <input type="tel" class="form-control" name="phone" style="margin-top:-2%" id="phone" value="{{$user->yearpass}}" title="Enter your update phone number .">
+                                    <select class="form-control" id="yearpass" value = "{{$user->yearpass}}"name="yearpass">
+                                      <option>2005</option>
+                                      <option>2006</option>
+                                      <option>2007</option>
+                                      <option>2008</option>
+                                      <option>2009</option>
+                                      <option>2010</option>
+                                      <option>2011</option>
+                                      <option>2012</option>
+                                      <option>2013</option>
+                                      <option>2014</option>
+                                      <option>2015</option>
+                                      <option>2016</option>
+                                      <option>2017</option>
+                                      <option>2018</option>
+                                      <option>2019</option>
+                                  </select>
                                 </div>
                             </div>
                             {{-- <div class="form-group">
@@ -77,14 +96,19 @@
                             
                             <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
-                                    <label for="email"><h6>Current Status</h6></label>
-                                    <input type="email" class="form-control" style="margin-top:-2%" id="location" value="{{$user->currentstatus}}" title="Enter a location">
+                                    <label for="text"><h6>Current Status</h6></label>
+                                    <select class="form-control" id="currentstatus" name="currentstatus" value="{{$user->currentstatus}}">
+                                      <option>Job</option>
+                                      <option>Higher Studies</option>
+                                      <option>startup</option>
+                                      <option>Others</option>
+                                  </select>
                                 </div>
                             </div>
                             <div class="form-group" style="margin:0">      
                                 <div class="col-xs-6">
                                     <label for="password"><h6>Organization Name</h6></label>
-                                    <input type="text" class="form-control" style="margin-top:-2%" name="password" id="password" value="{{$user->orgname}}" title="enter your password.">
+                                    <input type="text" class="form-control" style="margin-top:-2%" name="orgname" id="password" value="{{$user->orgname}}" title="enter your password.">
                                 </div>
                             </div>
                             
@@ -103,6 +127,8 @@
     </div><!--/row-->
     </div>
 </div>
+<br>
+<br>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">

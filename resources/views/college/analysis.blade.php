@@ -4,7 +4,6 @@
 @section('content')
 <div class="content-wrapper">
     <div class="container-fluid">
-    
     <!-- Page Content -->
   <div class="container">
     <h6>Positive Reviews: {{$pos}}</h6>
