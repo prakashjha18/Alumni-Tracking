@@ -161,3 +161,11 @@ Route::put('/updateprofile/{id}', [
     'uses' => 'AlumniController@updateprofile',
     'as'   => 'alumni.updateprofile'
 ]);
+Route::get('/directoratevent', [
+    'uses' => 'DirectorateController@directoratevent',
+    'as' => 'directorate.directoratevent'
+]);
+Route::get('/directoratevent/{id}', [
+    'uses' => 'DirectorateController@directoratesinglevent',
+    'as' => 'directorate.directoratesinglevent'
+]);

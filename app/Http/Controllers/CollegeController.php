@@ -139,14 +139,12 @@ class CollegeController extends Controller
         $events->date = $request->date;
         $events->description = $request->description;
         //image field
-        
         $events->mode = $request->mode;
         $events->college = Auth::user()->orgname;
         $events->user_id = Auth::user()->id;
         $events->save();
         Session::flash('success', 'Event successfully created, you can view in Your events');
         return redirect()->back();
-        
     }
     public function editevent($id) {
         $event = events::find($id);

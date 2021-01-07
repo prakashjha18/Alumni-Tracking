@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\User;
+use App\events;
 use Illuminate\Http\Request;
 
 class DirectorateController extends Controller
@@ -26,7 +27,15 @@ class DirectorateController extends Controller
     }
     public function location()
     {
-        return view('directorate.Location');
+        return view('directorate.location');
+    }
+    public function directoratevent() {
+        $events = events::all();
+        return view('directorate.directoratevent')->with('events',$events);
+    }
+    public function directoratesinglevent($id) {
+        $events = events::find($id);
+        return view('directorate.directoratesinglevent')->with('events',$events);
     }
 }
 
