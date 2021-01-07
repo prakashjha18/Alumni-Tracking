@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\User;
 use App\events;
+use App\reviews;
 use Illuminate\Http\Request;
 
 class DirectorateController extends Controller
@@ -51,6 +52,20 @@ class DirectorateController extends Controller
             $colleges[$x]->orgname=strtolower($colleges[$x]->orgname);
         }
         return view('directorate.collegereviews')->with('colleges',$colleges);
+    }
+    public function directoratevent() {
+        $events = events::all();
+        return view('directorate.directoratevent')->with('events',$events);
+    }
+    public function directoratesinglevent($id) {
+        $events = events::find($id);
+        return view('directorate.directoratesinglevent')->with('events',$events);
+    }
+    public function directoratesingleclgreviews($name) {
+        $reviews = reviews::where('clgname',$name)->get();
+        $pos = reviews::where('clgname',$name)->where('analysis','pos')->get()->count();
+        $neg = reviews::where('clgname',$name)->where('analysis','neg')->get()->count();
+        return view('directorate.directoratesingleclgreviews')->with('reviews', $reviews)->with('pos',$pos)->with('neg',$neg);
     }
 }
 

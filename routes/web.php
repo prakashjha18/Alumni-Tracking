@@ -195,3 +195,7 @@ Route::get('/directoratevent/{id}', [
     'uses' => 'DirectorateController@directoratesinglevent',
     'as' => 'directorate.directoratesinglevent'
 ]);
+Route::get('reviewclg/{name}', [
+    'uses' => 'DirectorateController@directoratesingleclgreviews',
+    'as' => 'directorate.directoratesingleclgreviews'
+]);
