@@ -61,7 +61,12 @@
                       <span class="nav-link-text">Activity Log</span>
                   </a>  
               </li>
-
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
+                  <a class="nav-link " href="/dirclgreviews" >
+                      <i class="fa fa-fw fa-wrench"></i>
+                      <span class="nav-link-text">College reviews</span>
+                  </a>  
+              </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                 <a class="nav-link " href="/addcollege" >
                     <i class="fa fa-fw fa-plus"></i>

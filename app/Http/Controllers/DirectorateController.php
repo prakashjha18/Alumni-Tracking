@@ -18,6 +18,10 @@ class DirectorateController extends Controller
     public function viewcolleges()
     {
         $colleges = User::where('type','college')->get();
+        for ($x = 0; $x < sizeof($colleges); $x++) {
+            $colleges[$x]->orgname=strtolower($colleges[$x]->orgname);
+        }
+        $colleges = User::where('type','college')->get();
         return view('directorate.viewcollege')->with('colleges',$colleges);
     }
     public function publishnotice()
@@ -26,7 +30,14 @@ class DirectorateController extends Controller
     }
     public function location()
     {
-        return view('directorate.Location');
+        return view('directorate.location');
+    }
+    public function collegerevs(){
+        $colleges = User::where('type','college')->get();
+        for ($x = 0; $x < sizeof($colleges); $x++) {
+            $colleges[$x]->orgname=strtolower($colleges[$x]->orgname);
+        }
+        return view('directorate.collegereviews')->with('colleges',$colleges);
     }
 }
 
