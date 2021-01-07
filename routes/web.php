@@ -157,3 +157,7 @@ Route::get('/alumnievents/{id}', [
     'uses' => 'AlumniController@alumnisinglevent',
     'as' => 'alumni.alumnisinglevent'
 ]);
+Route::put('/updateprofile/{id}', [
+    'uses' => 'AlumniController@updateprofile',
+    'as'   => 'alumni.updateprofile'
+]);
