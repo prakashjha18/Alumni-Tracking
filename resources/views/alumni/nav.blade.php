@@ -75,6 +75,14 @@
                   </a>
                   
               </li>
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
+                <!--<span class="nav-link-text">List mentors</span>-->
+                <a class="nav-link" href="{{ url('/alumnievents') }}">
+                <i class="fa fa-pencil-square-o"></i>
+
+                <span class="nav-link-text">Your Events</span>
+                </a>
+            </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-users"></i>

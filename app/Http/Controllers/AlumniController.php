@@ -5,6 +5,7 @@ use App\User;
 use App\reviews;
 use Auth;
 use Session;
+use App\events;
 use Illuminate\Http\Request;
 
 class AlumniController extends Controller
@@ -79,5 +80,17 @@ class AlumniController extends Controller
     }
     public function friendslist() {
         return view('alumni.userslist');
+    }
+    public function alumnievents() {
+        $events = events::where('college', Auth::user()->clgname)->get();
+        return view('alumni.alumnievents')->with('events',$events);
+    }
+    public function alumnisinglevent($id) {
+        $events = events::find($id);
+        if (strtolower(Auth::user()->clgname) != strtolower($events->college)) {
+            Session::flash('success', 'Unauthorized User!');
+            return redirect()->back();
+        }
+        return view('alumni.alumnisinglevent')->with('events',$events);
     }
 }
