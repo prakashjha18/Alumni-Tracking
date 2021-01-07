@@ -34,6 +34,7 @@
                   <th>Name</th>
                   <th>email</th>
                   <th>Orgname</th>
+                  <th>View Alumni</th>
                   
                 </tr>
               </thead>
@@ -42,6 +43,7 @@
                   <th>name</th>
                   <th>email</th>
                   <th>Orgname</th>
+                  <th>View Alumni</th>
                 </tr>
               </tfoot>
               <tbody>
@@ -50,7 +52,7 @@
                 <td>{{$college->name}}</td>
                 <td>{{$college->email}}</td>
                 <td> {{$college->orgname}}</td>
-                
+                <td><a href="/viewcollege/{{$college->orgname}}" class="btn btn-primary">View</a></td>
                 </tr>
               @endforeach
               </tbody>

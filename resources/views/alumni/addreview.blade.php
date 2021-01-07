@@ -1,12 +1,11 @@
 @extends('alumni.app')
 
-
 @section('content')
 <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-          <li class="breadcrumb-item active">Internship</li>
+          <li class="breadcrumb-item active">Add review</li>
         <li class="breadcrumb-item">
           <a href="/alumnidashboard">Dashboard</a>
         </li>

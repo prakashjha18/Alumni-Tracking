@@ -75,6 +75,14 @@
                   </a>
                   
               </li>
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Newsletter">
+                <a class="nav-link " href="/alumnitable" >
+                    <i class="fa fa-fw fa-users"></i>
+                    <span class="nav-link-text">Find other alumni</span>
+                </a>
+                
+            </li>
+
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-users"></i>
