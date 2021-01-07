@@ -57,6 +57,8 @@ Route::get('/addcollege', [
     'as'   => 'addcollege'
 ]);
 
+
+
 Route::get('/collegedashboard','CollegeController@dashboard')->name('college.auth');
 
 Route::get('/collegepage1','StudentController@dashboard')->name('student1.auth');
@@ -90,6 +92,15 @@ Route::post('/storevent', [
     'as' => 'college.storevent'
 ]);
 
+Route::post('/viewalumni', [
+    'uses' => 'AlumniController@viewalumni',
+    'as' => 'alumni.viewalumni'
+]);
+Route::post('/dashboard', [
+    'uses' => 'DirectorateController@dashboard',
+    'as' => 'directorate.dashboard'
+]);
+
 Route::get('/editprofile','AlumniController@editprofile')->name('alumni.auth2');
 Route::get('/conventions','AlumniController@conventions')->name('alumni.auth2');
 
@@ -100,6 +111,11 @@ Route::get('/verifications', [
 Route::get('/alumni/verify/{id}', [
     'uses' => 'AlumniController@verify',
     'as'   => 'alumni.verify'
+]); 
+
+Route::get('/viewcollege/{name}', [
+    'uses' => 'DirectorateController@viewalumnibyclgname',
+    'as'   => 'directorate.viewalumnibyclgname'
 ]); 
 Route::get('/verifiedalumnis', [
     'uses' => 'CollegeController@verifiedalumnis',
@@ -119,6 +135,12 @@ Route::get('/analysis', [
 Route::get('/yrclgrevs', [
     'uses' => 'CollegeController@yrclgrevs',
     'as'   => 'college.yrclgrevs'
+]);
+
+
+Route::get('/alumnitable', [
+    'uses' => 'AlumniController@alumnitable',
+    'as'   => 'alumni.alumnitable'
 ]);
 
 Route::get('/prediction', [
