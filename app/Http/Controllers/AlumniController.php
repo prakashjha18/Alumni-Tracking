@@ -5,6 +5,7 @@ use App\User;
 use App\reviews;
 use Auth;
 use Session;
+use App\events;
 use Illuminate\Http\Request;
 
 class AlumniController extends Controller
@@ -33,6 +34,24 @@ class AlumniController extends Controller
     {
         $user = Auth::user();
         return view('alumni.editprofile')->with('user', $user);
+    }
+    public function updateprofile(Request $request, $id) {
+        $user = user::find($id);
+        if($request->hasFile('image')){
+            // return $request;
+            $avatar = $request->image;
+            $avatar_new_name = time() .$avatar->getClientOriginalName();
+            $avatar->move('uploads/profile',$avatar_new_name);
+            $user->image = 'uploads/profile/' . $avatar_new_name;
+        } else {
+            $events->image = 'uploads/profile/noimage.jpg';
+        }
+        $user->yearpass = $request->yearpass;
+        $user->currentstatus = $request->currentstatus;
+        $user->orgname = $request->orgname;
+        $user->save();
+        Session::flash('success', 'Profile successfully updated');
+        return redirect()->back();
     }
     public function conventions()
     {
@@ -105,6 +124,18 @@ class AlumniController extends Controller
         }
         // $users = User::where('type','alumni')->get();
         return view('alumni.alumnitable')->with('users', $users);
+    }
+    public function alumnievents() {
+        $events = events::where('college', Auth::user()->clgname)->get();
+        return view('alumni.alumnievents')->with('events',$events);
+    }
+    public function alumnisinglevent($id) {
+        $events = events::find($id);
+        if (strtolower(Auth::user()->clgname) != strtolower($events->college)) {
+            Session::flash('success', 'Unauthorized User!');
+            return redirect()->back();
+        }
+        return view('alumni.alumnisinglevent')->with('events',$events);
     }
 }
 

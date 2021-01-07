@@ -91,21 +91,16 @@
                       <span class="nav-link-text">My Network</span>
                   </a>
                   <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-                      <li>
-                          <a href="{{ url('http://localhost:8009/chats') }}">Chats</a>
-                      </li>
-                      <li>
-                          <a href="{{ url('http://localhost/video.php') }}">Emails</a>
-                      </li>
-                      <li>
-                          <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">Forums</a>
-                      </li>
-                      <li>
-                        <a href="{{ url('http://localhost/StartupIgnitor_forum/public/') }}">SMS</a>
+                    <li>
+                        <a href="{{ url('http://localhost:8000') }}" target="_blank">Forum</a>
                     </li>
-                      <li>
-                          <a href="{{ url('http://blogs.startupigniter.test/blogs') }}">Blogs</a>
-                      </li>
+                    <li>
+                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('http://localhost:3000') }}" target="_blank">Chats</a>
+                    </li>
+                      
                   </ul>
               </li>
               

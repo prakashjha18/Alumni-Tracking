@@ -141,7 +141,7 @@ class CollegeController extends Controller
         //image field
         
         $events->mode = $request->mode;
-        $events->college = Auth::user()->clgname;
+        $events->college = Auth::user()->orgname;
         $events->user_id = Auth::user()->id;
         $events->save();
         Session::flash('success', 'Event successfully created, you can view in Your events');
@@ -157,25 +157,13 @@ class CollegeController extends Controller
             'title' => 'required', 
             'date' => 'required', 
             'description' => 'required',
-            'imagef' => 'image|nullable|max:1999',
         ]);
         $events = events::find($id);
-        if($request->hasFile('imagef')){
-            // return $request;
-            $avatar = $request->imagef;
-            $avatar_new_name = time() .$avatar->getClientOriginalName();
-            $avatar->move('uploads/events',$avatar_new_name);
-            $events->image = 'uploads/events/' . $avatar_new_name;
-        } else {
-            $events->image = 'uploads/events/noimage.jpg';
-        }
         
         $events->title = $request->title;
         $events->date = $request->date;
         $events->description = $request->description;
-        //image field
         
-        $events->mode = $request->mode;
         $events->college = Auth::user()->clgname;
         $events->user_id = Auth::user()->id;
         $events->save();
@@ -191,4 +179,5 @@ class CollegeController extends Controller
         }
         return redirect('/myevents');
     } 
+    
 }

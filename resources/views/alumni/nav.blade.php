@@ -83,6 +83,14 @@
                 
             </li>
 
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceptance">       
+                <!--<span class="nav-link-text">List mentors</span>-->
+                <a class="nav-link" href="{{ url('/alumnievents') }}">
+                <i class="fa fa-pencil-square-o"></i>
+
+                <span class="nav-link-text">Your Events</span>
+                </a>
+            </li> 
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-users"></i>
@@ -90,10 +98,10 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseExamplePages">
                     <li>
-                        <a href="{{ url('http://localhost/8007') }}">Forum</a>
+                        <a href="{{ url('http://localhost:8000') }}" target="_blank">Forum</a>
                     </li>
                     <li>
-                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}">Blogs</a>
+                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
                     </li>
                 </ul>
             </li>
