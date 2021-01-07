@@ -11,118 +11,26 @@
             <a href="/directoratedashboard">Dashboard</a>
         </li>
       </ol>
-      <h3>COLLEGE ALUMNI LOCATION</h3>
+      <h3>COLLEGE LOCATION</h3>
     <div class="container ">
+      @foreach($colleges as $college)
         <div class="panel-group" id="faqAccordion" style="font-family:cursive">
             <div class="panel panel-default ">
                 <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
-                     <h5 class="panel-title"><u>Thakur College Of Engineering and Technology</u></h5>
+                     <h5 class="panel-title"><u>{{$college->orgname}}</u></h5>
     
                 </div>
                 <div id="question0" class="panel-collapse collapse" style="height: 0px;">
                     <div class="panel-body">
                          <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=SFIT&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
+                            <iframe src="https://maps.google.com/maps?q={{$college->orgname}}&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
                               style="border:0" allowfullscreen></iframe>
                           </div>
                     </div>
                 </div>
-            </div>
-            <div class="panel panel-default ">
-                <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
-                     <h5 class="panel-title"><u>KJ Somaiya College of Engineering, Mumbai</u></h5>
-                </div>
-                <div id="question1" class="panel-collapse collapse" style="height: 0px;">
-                    <div class="panel-body">
-                        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=mumbai&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default ">
-                <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
-                     <h5 class="panel-title"><u>Sardar Patel Institute of Technology, Mumbai</u></h5>
-    
-                </div>
-                <div id="question2" class="panel-collapse collapse" style="height: 0px;">
-                    <div class="panel-body">
-                        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=dubai&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default ">
-                <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
-                    <h5 class="panel-title"><u>Vidyalankar Institute of Technology, Mumbai</u></h5>
-                </div>
-                <div id="question3" class="panel-collapse collapse" style="height: 0px;">
-                    <div class="panel-body">
-                        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=banglore&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default ">
-                <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question4">
-                     <h5 class="panel-title"><u>Indian Institute of Technology Bombay</u></h5>
-                </div>
-                <div id="question4" class="panel-collapse collapse" style="height: 0px;">
-                    <div class="panel-body">
-                        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=malyasia&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default ">
-                <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question5">
-                     <h5 class="panel-title"><u>KJ Somaiya Institute of Engineering and Information Technology, Mumbai</u></h5>
-                </div>
-                <div id="question5" class="panel-collapse collapse" style="height: 0px;">
-                    <div class="panel-body">
-                        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=delhi&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default ">
-                <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question6">
-                    <h5 class="panel-title"><u>Dwarkadas J Sanghvi College of Engineering, Mumbai</u></h5>
-    
-                </div>
-                <div id="question6" class="panel-collapse collapse" style="height: 0px;">
-                    <div class="panel-body">
-                        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=jhansi&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default ">
-                <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question7">
-                     <h5 class="panel-title">SNDT Womens University, Mumbai</a></h5>
-    
-                </div>
-                <div id="question7" class="panel-collapse collapse" style="height: 0px;">
-                    <div class="panel-body">
-                        <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=chennai&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
-                              style="border:0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              </div>
         </div>
+      @endforeach
     </div>
     </div>
 </div>
