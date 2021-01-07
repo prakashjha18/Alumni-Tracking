@@ -11,7 +11,7 @@
             <a href="/directoratedashboard">Dashboard</a>
         </li>
       </ol>
-      <h3>COLLEGE LOCATION</h3>
+      <h3>COLLEGE ALUMNI LOCATION</h3>
     <div class="container ">
         <div class="panel-group" id="faqAccordion" style="font-family:cursive">
             <div class="panel panel-default ">
@@ -29,7 +29,7 @@
                           </div>
                     </div> 
                 </div>
-              </div>
+            </div>
         </div>
     </div>
     </div>
