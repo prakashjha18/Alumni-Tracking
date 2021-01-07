@@ -22,7 +22,7 @@
                 <div id="question0" class="panel-collapse collapse" style="height: 0px;">
                     <div class="panel-body">
                          <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                            <iframe src="https://maps.google.com/maps?q=sfit&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
+                            <iframe src="https://maps.google.com/maps?q=SFIT&t=k&z=13&ie=UTF8&iwloc=&output=embed" id="map" style="width:100%;height:50% "frameborder="0"
                               style="border:0" allowfullscreen></iframe>
                           </div>
                     </div>

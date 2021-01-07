@@ -34,5 +34,16 @@ class DirectorateController extends Controller
     {
         return view('directorate.location');
     }
+    public function viewalumnibyclgname($name){
+        $users = User::where('type','alumni')->where('clgname',$name)->get();
+        return view('directorate.dashboard')->with('users', $users);
+    }
+    public function collegerevs(){
+        $colleges = User::where('type','college')->get();
+        for ($x = 0; $x < sizeof($colleges); $x++) {
+            $colleges[$x]->orgname=strtolower($colleges[$x]->orgname);
+        }
+        return view('directorate.collegereviews')->with('colleges',$colleges);
+    }
 }
 
