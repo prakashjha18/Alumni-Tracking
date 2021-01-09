@@ -6,6 +6,7 @@ use App\reviews;
 use Auth;
 use Session;
 use App\events;
+use App\friends;
 use Illuminate\Http\Request;
 
 class AlumniController extends Controller
@@ -96,10 +97,127 @@ class AlumniController extends Controller
         }
 
     }
-    public function friendslist() {
-        return view('alumni.userslist');
-    }
+    public function userslist() {
+        $users = Auth::user()::all();
+        $user_id = Auth::user()->id;
 
+        //below code should be there in a new function named viewprofile($name)
+        // $user_id = Auth::user()->id;
+        // $name = Auth::user()::select('name')->where('id',$user_id)->first();
+        // $friend_id = Auth::user()::select('id')->where('name',$name)->first();
+        // $friendCount = friends::where(['user_id' => $user_id, 'friend_id' => $friend_id])->count();
+        // $friendDetails = friends::where(['user_id' => $user_id, 'friend_id' => $friend_id])->first();
+        // $friendRequest = "Add Friend";
+        // if ($friendCount>0) {
+        //     if ($friendDetails->status == 0) {
+        //         $friendRequest = "Add Friend";
+        //     } else {
+        //         $friendRequest = "Friend Request Sent";
+        //     }
+        // }
+        // return $friendRequest;
+        // return $friend_id;
+        return view('alumni.userslist')->with('users', $users)->with('user_id', $user_id);
+    }
+    public function viewprofile($id) {
+        $userCount = Auth::user()::where('id',$id)->count();
+        $user = Auth::user()::where('id',$id)->get();
+        if($userCount > 0) {
+            $user_id = Auth::user()->id;
+            $name = Auth::user()::select('name')->where('id',$id)->first();
+            $friend_id = $id;
+            $friendCount = friends::where(['user_id' => $user_id, 'friend_id' => $friend_id])->count();
+            $friendDetails = friends::where(['user_id' => $user_id, 'friend_id' => $friend_id])->first();
+            $friendRequest = "Add Friend";
+            if ($friendCount>0) {
+                if ($friendDetails->status == 1) {
+                    $friendRequest = "UnFriend";
+                } else {
+                    $friendRequest = "Friend Request Sent";
+                }
+            } else {
+                $friendRequestCount = friends::where(['friend_id' => $user_id, 'user_id' => $friend_id])->count();
+                if ($friendRequestCount > 0) {
+                    $friendRequest = "Confirm Friend Request";
+                    $friendrequest = friends::where(['friend_id' => $user_id, 'user_id' => $friend_id])->first();
+                    if($friendrequest->status == 1) {
+                        $friendRequest = "UnFriend";
+                    } else {
+                        $friendRequest = "Confirm Friend Request";
+                    }
+                } else {
+                     $friendRequest = "Add Friend";
+                }
+            }
+            // return $user; 
+            return view('alumni.viewprofile')->with('user',$user)->with('friendRequest', $friendRequest);
+        } else {
+            abort(404);
+        }
+    }
+    public function addfriend($id) {
+        $userCount = Auth::user()::where('id',$id)->count();
+        if($userCount > 0) {
+            $user_id = Auth::user()->id;
+            $friend = new friends;
+            $friend->user_id = $user_id;
+            $friend->friend_id = $id;
+            $friend->save(); 
+            return redirect()->back(); 
+        } else {
+            abort(404);
+        }
+    }
+    public function unfriend($id) {
+        $userCount = Auth::user()::where('id',$id)->count();
+        if($userCount > 0) {
+            $user_id = Auth::user()->id;
+            $friend_id = $id;
+            friends::where(['user_id' => $user_id, 'friend_id' => $friend_id])->delete();
+            return redirect()->back();
+        } else {
+            abort(404);
+        }
+    }
+    public function friendrequests() {
+        $user_id = Auth::user()->id;
+        $friendRequests = friends::where(['friend_id'=>$user_id, 'status' => 0])->get();
+        // return $friendRequests;
+        return view('alumni.friendrequests')->with('friendRequests', $friendRequests);
+    }
+    public function acceptfriendrequest($id) {
+        $receiver_id = Auth::user()->id;
+        friends::where(['user_id' => $id, 'friend_id' => $receiver_id])->update(['status'=> 1]);
+        return redirect()->back()->with('success', 'Friend Request Successfully Accepted!');
+    }
+    public function rejectfriendrequest($id) {
+        $receiver_id = Auth::user()->id;
+        friends::where(['user_id' => $id, 'friend_id' => $receiver_id])->delete();
+        friends::where(['user_id' => $receiver_id, 'friend_id' => $id])->delete();
+        return redirect()->back()->with('success', 'Friend Request Successfully Deleted!');
+    }
+    public function friends() {
+        $user_id = Auth::user()->id;
+        $friendCount = friends::where(['friend_id' => $user_id, 'status' => 1])->count();
+        if ($friendCount > 0) {
+            $friends = friends::where(['friend_id' => $user_id, 'status' => 1])->get();
+        } else {
+            $friends = friends::where(['user_id' => $user_id, 'status' => 1])->get();
+        }
+        // return $friends; 
+        return view('alumni.friends')->with('friends', $friends);
+    }
+    public function confirmfriendrequest($id) {
+        $user_id = Auth::user()->id;
+        $friend_id = $id;
+        $friendCount = friends::where(['friend_id' => $user_id, 'user_id' => $friend_id])->count();
+        if ($friendCount > 0) {
+            friends::where(['friend_id' => $user_id, 'user_id' => $friend_id])->update(['status' => 1]);
+            return redirect()->back();
+        } else {
+            abort(404);
+        }
+    }
     public function alumnitable(){
         $clgname = Auth::user()->clgname;
         $yearpass = Auth::user()->yearpass;

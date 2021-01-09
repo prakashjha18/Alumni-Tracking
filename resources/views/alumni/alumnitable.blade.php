@@ -31,7 +31,7 @@
                     <th>College</th>
                     <th>Year</th>
                     <th>Current Status</th>
-                    <th>Add</th>
+                    <th>View Profile</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -41,7 +41,7 @@
                     <td>{{$user->clgname}}</td>
                     <td>{{$user->yearpass}}</td>
                     <td>{{$user->currentstatus}}</td>
-                  <td><a href="{{ route('alumni.verify', ['id'=> $user->id]) }}" class="btn btn-primary">Add</a></td>
+                  <td><a href="{{ route('alumni.viewprofile', ['id'=> $user->id]) }}" class="btn btn-primary">View</a></td>
                   </tr>
                 @endforeach
                 </tbody>

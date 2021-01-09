@@ -572,7 +572,7 @@ position:absolute;
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                       <br>
-                        <div class="text-center"> <a class="btn btn-primary" href="/friendslist">ALL ALUMNI</a> </div>
+                        <div class="text-center"> <a class="btn btn-primary" href="/userslist">ALL ALUMNI</a> </div>
                       </div>
                     </div>
                   </div>

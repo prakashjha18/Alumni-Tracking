@@ -18,11 +18,12 @@
 
         <!-- Grid row -->
         <div class="row">
-    
-        <!-- Grid column -->
-            @foreach($users as $user) 
-                @if($user->email_verified_at != null && $user->id != $user_id)  
-                <div class="col-sm-3">
+            @foreach($user as $user) 
+         <!-- Grid column --> 
+                <div class="col-sm-4" style="float: none;
+                                            margin-right: auto;
+                                            margin-left: auto;">
+            
                     <!-- Card group-->
                     <div class="card-group">
                     
@@ -31,7 +32,7 @@
                             
                             <!-- Card image-->
                             <div class="view overlay">
-                                <img class="card-img-top" src="{{asset($user->image)}}" alt="Card image cap">
+                                <img class="card-img-top" src="{{asset($user->image)}}"  alt="Card image cap">
                                 <a href="#!">
                                     <div class="mask rgba-white-slight"></div>
                                 </a>
@@ -47,9 +48,18 @@
                                 </a>
                                 <!-- Text -->
                                 <p class="card-text">{{$user->currentstatus}}</p>
+                                <p class="card-text">{{$user->clgname}}</p>
+                                <p class="card-text">{{$user->orgname}}</p>
                                 <hr>
-                                <a class="card-meta" href="{{url('/viewprofile/'. $user->id)}}"><span><i class="fa fa-user-plus" aria-hidden="true"></i>View Profile</span></a>
-                                {{-- <a class="card-meta" href="{{url('/addfriend/'. $user->name)}}"><span><i class="fa fa-user-plus" aria-hidden="true"></i>Add Friend</span></a> --}}
+                                @if($friendRequest=="Add Friend") 
+                                    <a class="card-meta" href="{{url('/addfriend/'. $user->id)}}"><span><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;{{$friendRequest}}</span></a>
+                                @elseif($friendRequest=="UnFriend") 
+                                    <a class="card-meta" href="{{url('/unfriend/'. $user->id)}}"><span><i class="fa fa-minus-circle" aria-hidden="true"></i>&nbsp;{{$friendRequest}}</span></a>
+                                @elseif($friendRequest=="Confirm Friend Request") 
+                                    <a class="card-meta" href="{{url('/confirmfriendrequest/'. $user->id)}}"><span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;{{$friendRequest}}</span></a>
+                                @else 
+                                <a class="card-meta" style="color: #007bff"><span><i class="fa fa-user" aria-hidden="true"></i>&nbsp;{{$friendRequest}}</span></a>
+                                @endif
                                 <p class="card-meta float-right">Joined in 2020</p>
                     
                             </div>
@@ -59,11 +69,8 @@
                             
                     </div>
                             <!-- Card group-->
-                    
+                    @endforeach
                 </div>
-                
-        @endif
-        @endforeach
                 <!-- Grid row -->
     
     </section>

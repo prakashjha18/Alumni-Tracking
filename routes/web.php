@@ -171,9 +171,9 @@ Route::get('/dirclgreviews', [
     'uses' => 'DirectorateController@collegerevs',
     'as'   => 'dire.collegerevs'
 ]);
-Route::get('/friendslist', [
-    'uses' => 'AlumniController@friendslist',
-    'as' => 'alumni.friendslist'
+Route::get('/userslist', [
+    'uses' => 'AlumniController@userslist',
+    'as' => 'alumni.userslist'
 ]);
 Route::get('/alumnievents', [
     'uses' => 'AlumniController@alumnievents',
@@ -195,7 +195,39 @@ Route::get('/directoratevent/{id}', [
     'uses' => 'DirectorateController@directoratesinglevent',
     'as' => 'directorate.directoratesinglevent'
 ]);
-Route::get('reviewclg/{name}', [
+Route::get('/reviewclg/{name}', [
     'uses' => 'DirectorateController@directoratesingleclgreviews',
     'as' => 'directorate.directoratesingleclgreviews'
+]);
+Route::get('/viewprofile/{id}', [
+    'uses' => 'AlumniController@viewprofile',
+    'as' => 'alumni.viewprofile'
+]);
+Route::get('/friendrequests', [
+    'uses' => 'AlumniController@friendrequests',
+    'as' => 'alumni.friendrequests'
+]);
+Route::get('/acceptfriendrequest/{id}', [
+    'uses' => 'AlumniController@acceptfriendrequest',
+    'as' => 'alumni.acceptfriendrequest'
+]);
+Route::get('/rejectfriendrequest/{id}', [
+    'uses' => 'AlumniController@rejectfriendrequest',
+    'as' => 'alumni.rejectfriendrequest'
+]);
+Route::get('/confirmfriendrequest/{id}', [
+    'uses' => 'AlumniController@confirmfriendrequest',
+    'as' => 'alumni.confirmfriendrequest'
+]);
+Route::get('/friends', [
+    'uses' => 'AlumniController@friends',
+    'as' => 'alumni.friends'
+]);
+Route::match(['get','post'], '/addfriend/{id}', [
+    'uses' => 'AlumniController@addfriend',
+    'as' => 'alumni.addfriend'
+]);
+Route::match(['get','post'], '/unfriend/{id}', [
+    'uses' => 'AlumniController@unfriend',
+    'as' => 'alumni.unfriend'
 ]);
