@@ -47,13 +47,43 @@
   
                   </a>
               </li>
-                     
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Funding">
+              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Profile">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages1" data-parent="#exampleAccordion">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span class="nav-link-text">My Profile</span>
+                </a>
+                <ul class="sidenav-second2-level collapse" id="collapseExamplePages1" >
+                    <li>
+                      <a href="{{ url('/editprofile') }}" style="color:#868e96;display:block;padding:1em">Edit Profile</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/conventions') }}" style="color:#868e96;display:block;padding:1em">Conventions</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/internship') }}" style="color:#868e96;display:block;padding:1em">Organise Intership</a>
+                    </li>
+                </ul>
+            </li>  
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-users"></i>
+                    <span class="nav-link-text">My Network</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="{{ url('http://localhost:8000') }}" target="_blank">Forum</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
+                    </li>
+                </ul>
+            </li>   
+              {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Funding">
                   <a class="nav-link" href="{{ url('/funding') }}">
                           <i class="fa fa-fw fa-credit-card"></i>
                       <span class="nav-link-text"> Funding</span><br> 
                   </a>
-              </li>
+              </li> --}}
               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Applications">
                   <a class="nav-link " href="{{ url('http://localhost:3000') }}" target="_blank">
                     <i class="fa fa-comments" aria-hidden="true"></i>
@@ -105,39 +135,6 @@
                 <span class="nav-link-text">Friends</span>
                 </a>
             </li>
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-                    <i class="fa fa-fw fa-users"></i>
-                    <span class="nav-link-text">My Network</span>
-                </a>
-                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-                    <li>
-                        <a href="{{ url('http://localhost:8000') }}" target="_blank">Forum</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
-                    </li>
-                </ul>
-            </li>
-              
-              <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Profile">
-                  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages1" data-parent="#exampleAccordion">
-                      <i class="fa fa-pencil-square-o"></i>
-                      <span class="nav-link-text">My Profile</span>
-                  </a>
-                  <ul class="sidenav-second2-level collapse" id="collapseExamplePages1" >
-                      <li>
-                        <a href="{{ url('/editprofile') }}" style="color:#868e96;display:block;padding:1em">Edit Profile</a>
-                      </li>
-                      <li>
-                          <a href="{{ url('/conventions') }}" style="color:#868e96;display:block;padding:1em">Conventions</a>
-                      </li>
-                      <li>
-                          <a href="{{ url('/internship') }}" style="color:#868e96;display:block;padding:1em">Organise Intership</a>
-                      </li>
-                  </ul>
-              </li>
-              
               
           </ul>
           <ul class="navbar-nav sidenav-toggler">
