@@ -200,12 +200,11 @@ class AlumniController extends Controller
     public function friends() {
         $user_id = Auth::user()->id;
         $friendCount = friends::where(['friend_id' => $user_id, 'status' => 1])->count();
-            $friends = friends::where(['friend_id' => $user_id, 'status' => 1])->get();
+        $friends = friends::where(['friend_id' => $user_id, 'status' => 1])->orwhere(function($query){
+            $query->where(['user_id' => Auth::user()->id, 'status' => 1]);
+        })->get();
         
-            $friends2 = friends::where(['user_id' => $user_id, 'status' => 1])->get();
-        
-        // return $friends; 
-        return view('alumni.friends')->with('friends', $friends)->with('friends2', $friends2);
+        return view('alumni.friends')->with('friends', $friends);
     }
     public function confirmfriendrequest($id) {
         $user_id = Auth::user()->id;
