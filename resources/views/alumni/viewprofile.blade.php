@@ -47,9 +47,10 @@
                                     <h4 class="card-title">{{$user->name}}</h4>
                                 </a>
                                 <!-- Text -->
-                                <p class="card-text">{{$user->currentstatus}}</p>
-                                <p class="card-text">{{$user->clgname}}</p>
-                                <p class="card-text">{{$user->orgname}}</p>
+                                <p class="card-text">E mail : {{$user->email}}</p>
+                                <p class="card-text">Current status : {{$user->currentstatus}}</p>
+                                <p class="card-text">College name : {{$user->clgname}}</p>
+                                <p class="card-text">Organization name : {{$user->orgname}}</p>
                                 <hr>
                                 @if($friendRequest=="Add Friend") 
                                     <a class="card-meta" href="{{url('/addfriend/'. $user->id)}}"><span><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;{{$friendRequest}}</span></a>

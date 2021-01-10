@@ -45,7 +45,7 @@ class AlumniController extends Controller
             $avatar->move('uploads/profile',$avatar_new_name);
             $user->image = 'uploads/profile/' . $avatar_new_name;
         } else {
-            $events->image = 'uploads/profile/noimage.jpg';
+            $user->image = 'uploads/profile/noimage.jpg';
         }
         $user->yearpass = $request->yearpass;
         $user->currentstatus = $request->currentstatus;
@@ -199,13 +199,12 @@ class AlumniController extends Controller
     public function friends() {
         $user_id = Auth::user()->id;
         $friendCount = friends::where(['friend_id' => $user_id, 'status' => 1])->count();
-        if ($friendCount > 0) {
             $friends = friends::where(['friend_id' => $user_id, 'status' => 1])->get();
-        } else {
-            $friends = friends::where(['user_id' => $user_id, 'status' => 1])->get();
-        }
+        
+            $friends2 = friends::where(['user_id' => $user_id, 'status' => 1])->get();
+        
         // return $friends; 
-        return view('alumni.friends')->with('friends', $friends);
+        return view('alumni.friends')->with('friends', $friends)->with('friends2', $friends2);
     }
     public function confirmfriendrequest($id) {
         $user_id = Auth::user()->id;
