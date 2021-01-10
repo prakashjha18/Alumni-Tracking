@@ -174,6 +174,7 @@ class AlumniController extends Controller
             $user_id = Auth::user()->id;
             $friend_id = $id;
             friends::where(['user_id' => $user_id, 'friend_id' => $friend_id])->delete();
+            friends::where(['user_id' => $friend_id, 'friend_id' => $user_id])->delete();
             return redirect()->back();
         } else {
             abort(404);
