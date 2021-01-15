@@ -11,8 +11,15 @@
 |
 */
 
+use App\internships;
+
 Route::get('/', function () {
-    return view('dashboard');
+    $internship = internships::all();
+    return view('dashboard')->with('internship', $internship);
+});
+Route::get('/jobdescription/{id}/',function($id) {
+    $internship = internships::find($id);
+    return view('jobdescription');
 });
 Route::get('/about',function(){
     return view('about');
@@ -85,6 +92,11 @@ Route::post('/college/create', [
 Route::post('/submitreview', [
     'uses' => 'AlumniController@submitreview',
     'as' => 'alummni.submitreview'
+]);
+
+Route::post('/storeinternship', [
+    'uses' => 'AlumniController@storeinternship',
+    'as' => 'alumni.storeinternship'
 ]);
 
 Route::post('/storevent', [
@@ -230,4 +242,24 @@ Route::match(['get','post'], '/addfriend/{id}', [
 Route::match(['get','post'], '/unfriend/{id}', [
     'uses' => 'AlumniController@unfriend',
     'as' => 'alumni.unfriend'
+]);
+Route::get('/myinternships', [
+    'uses' => 'AlumniController@myinternships',
+    'as'   => 'AlumniController.myinternships'
+]);
+Route::get('/myinternships/{id}', [ 
+    'uses' => 'AlumniController@singleinternship',
+    'as'   => 'AlumniController.singleinternship'
+]);
+Route::get('/editinternship/{id}', [ 
+    'uses' => 'AlumniController@editinternship',
+    'as'   => 'alumni.editinternship'
+]);
+Route::put('/updateinternship/{id}', [
+    'uses' => 'AlumniController@updateinternship',
+    'as'   => 'alumni.updateinternship'
+]);
+Route::get('/deleteinternship/{id}', [
+    'uses' => 'AlumniController@deleteinternship',
+    'as'   => 'alumni.deleteinternship'
 ]);

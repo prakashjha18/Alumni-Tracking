@@ -80,7 +80,7 @@
             height="430"
             src="https://console.dialogflow.com/api-client/demo/embedded/4ce60952-89ed-48fc-9d21-2631f56996f5">
         </iframe><br><br><br><br>
-          <button type="button" class="btn cancel" onclick="closeForm()"  >Close</button>
+          <button type="button" class="btn cancel" style="height: 58px" onclick="closeForm()"  >Close</button>
       </form>
     </div>
     

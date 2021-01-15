@@ -14,41 +14,31 @@
       {{-- <img src="/assets/img/internship2.jpg" style="width:100%;height:200px;"> --}}
       <div class = "container">
         <h2>Internship</h2>
-        <form class = "form" method="POST" action="{{Route('alumni.storeinternship')}}" id="internshipform" enctype="multipart/form-data">
+        <form class = "form" method="post" action="{{Route('alumni.updateinternship', $internship->id)}}" id="internshipform" enctype="multipart/form-data">
             @csrf
+            {{method_field('PUT')}}
+            <input type="hidden" name="id" id="id" value="{{ $internship->id }}">
             <div class="form-group">
                 <label for="sel1">Internship Title:</label>
-                <textarea class="form-control" rows="1" id="title" name="title" value=""></textarea>
+                <textarea class="form-control" rows="1" id="title" name="title">{{$internship->title}}</textarea>
               </div>
-              <div class="form-group">
-                <label for="fileinput">Image</label>
-                <input type="file" class="form-control-file" name="imagef" value = "" required>
+            <div class = "form-group">
+                <label for = "address">Internship Address</label>
+                <textarea class="form-control" rows="2" id="address" name="address" required>{{$internship->address}}</textarea>
             </div>
-            <div class = "form-group">
-              <label for = "company_name">Company Name</label>
-              <textarea class="form-control" rows="1" id="company_name" name="company_name" value="" required></textarea>
-          </div>
-            <div class = "form-group">
-                <label for = "company_headquater">Company Headquater</label>
-                <textarea class="form-control" rows="2" id="company_headquater" name="company_headquater" value="" required></textarea>
-            </div>
-            <div class = "form-group">
-              <label for = "address">Address</label>
-              <textarea class="form-control" rows="2" id="address" name="address" value="" required></textarea>
-          </div>
             <div class = "form-group">
                 <label for = "skills_req">Skills Required</label>
-                <textarea class="form-control" rows="4" id="skills_req" name="skills_req" value="" required></textarea>
+                <textarea class="form-control" rows="4" id="skills_req" name="skills_req" required>{{$internship->skills_req}}</textarea>
             </div>
             <div class = "form-group">
               <label for = "Description">Job Description</label>
-              <textarea class="form-control" rows="4" id="job_desc" name="job_desc" value="" required></textarea>
+              <textarea class="form-control" rows="4" id="job_desc" name="job_desc" required>{{$internship->job_desc}}</textarea>
           </div>
             <div class="form-group">
               <label for="item-price" class="control-label" >Date</label>
-              <input type="date" class="form-control" id="date" name="date" value="" required>
+              <input type="date" class="form-control" id="date" name="date" value="{{$internship->date}}" required>
             </div>
-           <button type = "submit" class = "btn btn-primary">Create Internship </button>
+           <button type = "submit" class = "btn btn-primary">Update </button>
         </form>
         <br><br><br><br>
      </div>

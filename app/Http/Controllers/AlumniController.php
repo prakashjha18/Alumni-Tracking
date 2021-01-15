@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\internships;
 use App\reviews;
 use Auth;
 use Session;
@@ -199,12 +200,18 @@ class AlumniController extends Controller
     }
     public function friends() {
         $user_id = Auth::user()->id;
-        $friendCount = friends::where(['friend_id' => $user_id, 'status' => 1])->count();
-        $friends = friends::where(['friend_id' => $user_id, 'status' => 1])->orwhere(function($query){
-            $query->where(['user_id' => Auth::user()->id, 'status' => 1]);
-        })->get();
-        
-        return view('alumni.friends')->with('friends', $friends);
+        $friendCount = friends::where(['friend_id' => $user_id, 'status' => 1])->orwhere(function($query)
+                                                                                {
+                                                                                    $query->where(['user_id' => Auth::user()->id, 'status' => 1]);
+                                                                                })->count();
+        if ($friendCount > 0) {
+            $friends = friends::where(['friend_id' => $user_id, 'status' => 1])->orwhere(function($query)
+                                                                                {
+                                                                                    $query->where(['user_id' => Auth::user()->id, 'status' => 1]);
+                                                                                })->get();
+        // return $friends; 
+            return view('alumni.friends')->with('friends', $friends);
+        }
     }
     public function confirmfriendrequest($id) {
         $user_id = Auth::user()->id;
@@ -253,6 +260,77 @@ class AlumniController extends Controller
             return redirect()->back();
         }
         return view('alumni.alumnisinglevent')->with('events',$events);
+    }
+    public function myinternships() {
+        $internships = internships::where('user_id', Auth::user()->id)->get();
+        return view('alumni.myinternships')->with('internships', $internships);
+    }
+    public function storeinternship (Request $request) {
+        $this->validate($request, [
+            'title' => 'required', 
+            'company_name' => 'required',
+            'company_headquater' => 'required',
+            'address' => 'required',
+            'imagef' => 'image|nullable|max:1999',
+            'skills_req' => 'required',
+            'job_desc' => 'required',
+            'date' => 'required', 
+        ]);
+        $internships = new internships;
+        $internships->title = $request->title;
+        $internships->user_id = Auth::user()->id;
+        if($request->hasFile('imagef')){
+            // return $request;
+            $avatar = $request->imagef;
+            $avatar_new_name = time() .$avatar->getClientOriginalName();
+            $avatar->move('uploads/internships',$avatar_new_name);
+            $internships->image = 'uploads/internships/' .$avatar_new_name;
+        } else {
+            $internships->image = 'uploads/internships/noimage.jpg';
+        }
+        $internships->company_name = $request->company_name;
+        $internships->company_headquater = $request->company_headquater;
+        $internships->address = $request->address;
+        $internships->skills_req = $request->skills_req;
+        $internships->job_desc = $request->job_desc;
+        $internships->date = $request->date;
+        $internships->save();
+        Session::flash('success', 'Internships successfully created, you can view in My Internships ');
+        return redirect()->back();
+    }   
+    public function singleinternship($id) {
+        $internship = internships::find($id);
+        return view('alumni.singleinternship')->with('internship', $internship);
+    }
+    public function editinternship($id) {
+        $internship = internships::find($id);
+        return view('alumni.editinternship')->with('internship', $internship);
+    }
+    public function updateinternship (Request $request, $id) {
+        $this->validate($request, [
+            'title' => 'required', 
+            'address' => 'required',
+            'skills_req' => 'required',
+            'job_desc' => 'required',
+            'date' => 'required',
+        ]);
+        $internship = internships::find($id);
+        
+        $internship->title = $request->title;
+        $internship->user_id = Auth::user()->id;
+        $internship->address = $request->address;
+        $internship->skills_req = $request->skills_req;
+        $internship->job_desc = $request->job_desc;
+        $internship->date = $request->date;
+        $internship->save();
+        Session::flash('success', 'Internship successfully updated');
+        return redirect('/myinternships');
+    }
+    public function deleteinternship($id) {
+        $internship = internships::find($id);
+        $internship->delete();
+        Session::flash('success', 'Event successfully deleted');
+        return redirect('/myinternships');
     }
 }
 

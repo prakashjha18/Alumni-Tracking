@@ -346,119 +346,25 @@
                 <div class="job-opportunity-wrapper">
                     <div class="row">
                         <!--== Single Job opportunity Start ==-->
+                        @foreach ($internship as $internship)
                         <div class="col-lg-4 col-sm-6 text-center">
                             <div class="single-job-opportunity">
                                 <div class="job-opportunity-text">
                                     <div class="job-oppor-logo">
                                         <div class="display-table">
                                             <div class="display-table-cell">
-                                                <img src="assets\img\job\compnay-logo-1.png" alt="Job">
+                                                <img src="{{asset($internship->image)}}" alt="Job">
                                             </div>
                                         </div>
                                     </div>
-                                    <h3><a href="#">Java Developer</a></h3>
-                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                    <h3><a href="{{url('/jobdescription/' .$internship->id)}}">{{$internship->title}}</a></h3>
+                                    <p>{{$internship->job_desc}}.<a href="{{url('/jobdescription/' .$internship->id)}}">[...]</a></p>
                                 </div>
-                                <a href="#" class="btn btn-job">Apply now</a>
+                                <a href="{{url('/jobdescription/' .$internship->id)}}" class="btn btn-job" style="padding: 10px 15px !important;">Apply now</a>
                             </div>
                         </div>
+                        @endforeach
                         <!--== Single Job opportunity End ==-->
-        
-                        <!--== Single Job opportunity Start ==-->
-                        <div class="col-lg-4 col-sm-6 text-center">
-                            <div class="single-job-opportunity">
-                                <div class="job-opportunity-text">
-                                    <div class="job-oppor-logo">
-                                        <div class="display-table">
-                                            <div class="display-table-cell">
-                                                <img src="assets\img\job\compnay-logo-2.png" alt="Job">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3><a href="#">Software Engineer</a></h3>
-                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                </div>
-                                <a href="#" class="btn btn-job">Apply now</a>
-                            </div>
-                        </div>
-                        <!--== Single Job opportunity End ==-->
-        
-                        <!--== Single Job opportunity Start ==-->
-                        <div class="col-lg-4 col-sm-6 text-center">
-                            <div class="single-job-opportunity">
-                                <div class="job-opportunity-text">
-                                    <div class="job-oppor-logo">
-                                        <div class="display-table">
-                                            <div class="display-table-cell">
-                                                <img src="assets\img\job\compnay-logo-1.png" alt="Job">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3><a href="#">Backend Developer (Java) (m/f) wanted for leading</a></h3>
-                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                </div>
-                                <a href="#" class="btn btn-job ">Apply Now</a>
-                            </div>
-                        </div>
-                        <!--== Single Job opportunity End ==-->
-        
-                        <!--== Single Job opportunity Start ==-->
-                        <div class="col-lg-4 col-sm-6 text-center">
-                            <div class="single-job-opportunity">
-                                <div class="job-opportunity-text">
-                                    <div class="job-oppor-logo">
-                                        <div class="display-table">
-                                            <div class="display-table-cell">
-                                                <img src="assets\img\job\compnay-logo-2.png" alt="Job">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3><a href="#">DataBase Expert</a></h3>
-                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                </div>
-                                <a href="#" class="btn btn-job">Apply now</a>
-                            </div>
-                        </div>
-                        <!--== Single Job opportunity End ==-->
-        
-                        <!--== Single Job opportunity Start ==-->
-                        <div class="col-lg-4 col-sm-6 text-center">
-                            <div class="single-job-opportunity">
-                                <div class="job-opportunity-text">
-                                    <div class="job-oppor-logo">
-                                        <div class="display-table">
-                                            <div class="display-table-cell">
-                                                <img src="assets\img\job\compnay-logo-3.png" alt="Job">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3><a href="#">Javascript Developer</a></h3>
-                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                </div>
-                                <a href="#" class="btn btn-job">Apply Now</a>
-                            </div>
-                        </div>
-                        <!--== Single Job opportunity End ==-->
-        
-                        <!--== Single Job opportunity Start ==-->
-                        <div class="col-lg-4 col-sm-6 text-center">
-                            <div class="single-job-opportunity">
-                                <div class="job-opportunity-text">
-                                    <div class="job-oppor-logo">
-                                        <div class="display-table">
-                                            <div class="display-table-cell">
-                                                <img src="assets\img\job\compnay-logo-4.png" alt="Job">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3><a href="#">Python Developer</a></h3>
-                                    <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                </div>
-                                <a href="#" class="btn btn-job">Apply now</a>
-                            </div>
-                        </div>
-                        <!--== Single Job opportunity End ==-->
-                    </div>
         
                     <div class="row">
                         <div class="col-lg-12 text-center">

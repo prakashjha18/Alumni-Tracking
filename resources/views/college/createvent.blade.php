@@ -13,7 +13,7 @@
         </li>
      </ol>
      <div class="container"> 
-        <form method="post" action="{{Route('college.storevent')}}" id="eventform" enctype="multipart/form-data">
+        <form class="form" method="post" action="{{Route('college.storevent')}}" id="eventform" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="Title">Title</label>
