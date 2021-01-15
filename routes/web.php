@@ -264,3 +264,19 @@ Route::get('/deleteinternship/{id}', [
     'uses' => 'AlumniController@deleteinternship',
     'as'   => 'alumni.deleteinternship'
 ]);
+Route::post('/applicants/{id}', [
+    'uses' => 'AlumniController@applicants',
+    'as'   => 'alumni.applicants'
+]);
+Route::get('/applications/{id}', [
+    'uses' => 'AlumniController@applications',
+    'as'   => 'alumni.applications'
+]);
+Route::get('/downloadresume/{id}', [
+    'uses' => 'AlumniController@downloadresume',
+    'as'   => 'alumni.downloadresume'
+]);
+Route::get('/deleteapplication/{id}', [
+    'uses' => 'AlumniController@deleteapplication',
+    'as'   => 'alumni.deleteapplication'
+]);

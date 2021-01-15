@@ -18,12 +18,12 @@
     <meta property="og:site_name" content="Your site name here">
     <!--meta property="fb:admins" content="" /-->  <!-- use this if you have  -->
     <meta property="og:type" content="website"> <!-- 'article' for single page  -->
-    <meta property="og:image" content="assets/img/opengraph/fbphoto-476-476.png"> <!-- when you post this page url in facebook , this image will be shown -->
+    <meta property="og:image" content="{{asset('assets/img/opengraph/fbphoto-476-476.png')}}"> <!-- when you post this page url in facebook , this image will be shown -->
     <!-- facebook open graph ends here -->
 
     <!-- desktop bookmark -->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicon/cap.png">
+    <meta name="msapplication-TileImage" content="{{asset('assets/img/favicon/cap.png')}}">
     <meta name="theme-color" content="#ffffff">
 
     <!-- icons & favicons -->
@@ -56,29 +56,29 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
     <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="{{ asset('assets\vendor\bootstrap\css\bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets\vendor\navbar\bootstrap-4-navbar.css')}}">
+    <link rel="stylesheet" href="{{asset('assets\vendor\bootstrap\css\bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets\vendor\navbar\bootstrap-4-navbar.css')}}">
 
     <!--Animate css -->
-    <link rel="stylesheet" href="{{ asset('assets\vendor\animate\animate.css')}}" media="all">
+    <link rel="stylesheet" href="{{asset('assets\vendor\animate\animate.css')}}" media="all">
 
     <!-- FONT AWESOME CSS -->
-    <link rel="stylesheet" href="{{ asset('assets\vendor\fontawesome\css\font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets\vendor\fontawesome\css\font-awesome.min.css')}}">
 
     <!--owl carousel css -->
-    <link rel="stylesheet" href="{{ asset('assets\vendor\owl-carousel\owl.carousel.css')}}" media="all">
+    <link rel="stylesheet" href="{{asset('assets\vendor\owl-carousel\owl.carousel.css')}}" media="all">
 
     <!--Magnific Popup css -->
-    <link rel="stylesheet" href="{{ asset('assets\vendor\magnific\magnific-popup.css')}}" media="all">
+    <link rel="stylesheet" href="{{asset('assets\vendor\magnific\magnific-popup.css')}}" media="all">
 
     <!--Nice Select css -->
-    <link rel="stylesheet" href="{{ asset('assets\vendor\nice-select\nice-select.css')}}" media="all">
+    <link rel="stylesheet" href="{{asset('assets\vendor\nice-select\nice-select.css')}}" media="all">
 
     <!--Offcanvas css -->
-    <link rel="stylesheet" href="{{ asset('assets\vendor\js-offcanvas\css\js-offcanvas.css')}}" media="all">
+    <link rel="stylesheet" href="{{asset('assets\vendor\js-offcanvas\css\js-offcanvas.css')}}" media="all">
 
     <!-- MODERNIZER  -->
     <script src="{{ asset('assets\vendor\modernizr\modernizr-custom.js')}}"></script>
     <!-- Main Master Style  CSS  -->
-    <link id="cbx-style" data-layout="1" rel="stylesheet" href="{{ asset('assets\css\style-default.min.css')}}" media="all">
+    <link id="cbx-style" data-layout="1" rel="stylesheet" href="{{asset('assets\css\style-default.min.css')}}" media="all">
 </head>

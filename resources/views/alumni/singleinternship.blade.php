@@ -38,6 +38,7 @@
             </div>
             <a class="btn btn-primary" href="/editinternship/{{$internship->id}}">Update</a>
             <a class="btn btn-danger" class = "float-right" href="/deleteinternship/{{$internship->id}}">Delete</a>
+            <a class="btn btn-primary" href="/applications/{{$internship->id}}">Applications</a>
         </form>
         <br><br><br><br>
      </div>

@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 use App\User;
 use App\internships;
 use App\reviews;
+use App\applications;
 use Auth;
 use Session;
 use App\events;
 use App\friends;
 use Illuminate\Http\Request;
+use Response;
 
 class AlumniController extends Controller
 {
@@ -331,6 +333,49 @@ class AlumniController extends Controller
         $internship->delete();
         Session::flash('success', 'Event successfully deleted');
         return redirect('/myinternships');
+    }
+    public function applicants(Request $request, $internship_id) {
+        // return $request;
+        $this->validate($request, [
+            'name' => 'required', 
+            'email' => 'required',
+            'resume' => "required|mimes:pdf|max:10000",
+        ]);
+        $application = new applications;
+        $application->name = $request->name;
+        $application->email = $request->email;
+        if($request->hasFile('resume')){
+            // return $request;
+            $avatar = $request->resume;
+            $avatar_new_name = time() .$avatar->getClientOriginalName();
+            $avatar->move('uploads/applications',$avatar_new_name);
+            $application->resume = 'uploads/applications/' .$avatar_new_name;
+        } else {
+            $application->resume = 'uploads/applications/nopdf.pdf';
+        }
+        $application->internship_id = $internship_id;
+        $application->save();
+        return redirect()->back();
+    }
+    public function applications($internship_id) {
+        $applications = applications::where('internship_id', $internship_id)->get();
+        return view('alumni.applications')->with('applications', $applications);
+    }
+    public function downloadresume($application_id) {
+        $application = applications::find($application_id);
+        $resume_path = str_replace("/","\\",$application->resume);
+        $file= public_path()."\\" .$resume_path;
+        // return $file;
+        $headers = [
+            'Content-Type' => 'application/pdf',
+         ];
+        return response()->download($file);
+    }
+    public function deleteapplication($application_id) {
+        $application = applications::find($application_id);
+        $application->delete();
+        Session::flash('success', 'Application successfully deleted');
+        return redirect()->back();
     }
 }
 
