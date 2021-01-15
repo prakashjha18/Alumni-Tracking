@@ -57,9 +57,6 @@
                       <a href="{{ url('/editprofile') }}" style="color:#868e96;display:block;padding:1em">Edit Profile</a>
                     </li>
                     <li>
-                        <a href="{{ url('/conventions') }}" style="color:#868e96;display:block;padding:1em">Conventions</a>
-                    </li>
-                    <li>
                         <a href="{{ url('/internship') }}" style="color:#868e96;display:block;padding:1em">Organise Intership</a>
                     </li>
                     <li>
