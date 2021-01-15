@@ -64,7 +64,7 @@
                         overflow: hidden;
                         float: left;
                         margin-right: 20px;">
-                            <img src="assets/img/job/compnay-logo-1.png" style="max-width: 120px;
+                            <img src="{{ asset('assets/img/job/compnay-logo-1.png')}}" style="max-width: 120px;
                             border: 1px solid #dddddd;" alt="company logo" title="resume">
                         </a>
                         <div class="resume-top-info" style="float: left;">

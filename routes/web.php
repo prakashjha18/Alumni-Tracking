@@ -17,10 +17,11 @@ Route::get('/', function () {
     $internship = internships::all();
     return view('dashboard')->with('internship', $internship);
 });
-Route::get('/jobdescription/{id}/',function($id) {
-    $internship = internships::find($id);
-    return view('jobdescription');
-});
+// Route::get('/jobdescription/{id}/',function($id) {
+//     //$internship = internships::find($id);
+//     return view('jobdescription');
+// });
+Route::get('/jobdescription/{id}','StudentController@jobdesc')->name('home.job');
 Route::get('/about',function(){
     return view('about');
 });

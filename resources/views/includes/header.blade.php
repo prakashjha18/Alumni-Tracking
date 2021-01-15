@@ -25,7 +25,7 @@
                 <div class="col-lg-12">
                     <nav class="main-menu navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="/">
-                            <img src="assets\img\logo.png" alt="Logo" style="height: 14vh; width: 10vw;">
+                            <img src="{{asset('assets\img\logo.png')}}" alt="Logo" style="height: 14vh; width: 10vw;">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menucontent" aria-controls="menucontent" aria-expanded="false">
                             <span class="navbar-toggler-icon"></span>
