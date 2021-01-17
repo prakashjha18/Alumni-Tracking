@@ -42,7 +42,8 @@ Route::get('/directory',function(){
     return view('directory');
 });
 Route::get('/career',function(){
-    return view('career');
+    $internships = internships::all();
+    return view('career')->with('internships', $internships);
 });
 Route::get('/contact',function(){
     return view('contact');

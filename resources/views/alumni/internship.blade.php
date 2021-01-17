@@ -14,7 +14,7 @@
       {{-- <img src="/assets/img/internship2.jpg" style="width:100%;height:200px;"> --}}
       <div class = "container">
         <h2>Internship</h2>
-        <form class = "form" method="POST" action="{{Route('alumni.storeinternship', $internship->id)}}" id="internshipform" enctype="multipart/form-data">
+        <form class = "form" method="POST" action="{{Route('alumni.storeinternship', )}}" id="internshipform" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="sel1">Internship Title:</label>

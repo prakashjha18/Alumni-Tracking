@@ -205,7 +205,7 @@
             <div class="career-page-content-wrap section-padding">
                 <div class="container">
 
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-lg-12">
                             <div class="event-filter-area">
                                 <form action="index.html" class="form-inline">
@@ -238,184 +238,38 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="job-opportunity-wrapper">
                         <div class="row">
                             <!--== Single Job opportunity Start ==-->
+                            @foreach ($internships as $internship)
+                            <?php 
+                                $description = explode('.',$internship->job_desc,-1);
+                            ?>
                             <div class="col-lg-4 col-sm-6 text-center">
                                 <div class="single-job-opportunity">
                                     <div class="job-opportunity-text">
                                         <div class="job-oppor-logo">
                                             <div class="display-table">
                                                 <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-1.png" alt="Job">
+                                                    <img src="{{asset($internship->image)}}" alt="Job">
                                                 </div>
                                             </div>
                                         </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
+                                        <h3><a href="{{url('/jobdescription/' .$internship->id)}}">{{$internship->title}}</a></h3>
+                                        <p>{{$description[0]}}<a href="{{url('/jobdescription/' .$internship->id)}}">[...]</a></p>
                                     </div>
-                                    <a href="#" class="btn btn-job">Apply now</a>
+                                    <a href="{{url('/jobdescription/' .$internship->id)}}" class="btn btn-job">Apply now</a>
                                 </div>
                             </div>
+                            @endforeach
                             <!--== Single Job opportunity End ==-->
 
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-2.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job">Apply now</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
-
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-1.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job btn-expired disabled">Expired</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
-
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-2.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job">Apply now</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
-
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-3.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job btn-expired disabled">Expired</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
-
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-4.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job">Apply now</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
-
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-2.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job">Apply now</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
-
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-3.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job btn-expired disabled">Expired</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
-
-                            <!--== Single Job opportunity Start ==-->
-                            <div class="col-lg-4 col-sm-6 text-center">
-                                <div class="single-job-opportunity">
-                                    <div class="job-opportunity-text">
-                                        <div class="job-oppor-logo">
-                                            <div class="display-table">
-                                                <div class="display-table-cell">
-                                                    <img src="assets\img\job\compnay-logo-4.png" alt="Job">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3><a href="#">Urgently Need Five Data Center Specialist</a></h3>
-                                        <p>Claritas est etiam procsus dymicus, qui sequitur mutationem Claritas est etiam procsus est etiam procsus dymicus.<a href="#">[...]</a></p>
-                                    </div>
-                                    <a href="#" class="btn btn-job">Apply now</a>
-                                </div>
-                            </div>
-                            <!--== Single Job opportunity End ==-->
                         </div>
 
                         <!-- Pagination Start -->
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-lg-12">
                                 <div class="pagination-wrap text-center">
                                     <nav>
@@ -431,7 +285,7 @@
                                     </nav>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- Pagination End -->
                     </div>
                 </div>

@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-12">
           <div class="card-header">
-            <i class="fa fa-table">Internship Applications</i>
+            <i class="fa fa-table">&nbsp; Internship Applications</i>
           </div>
           <div class="card-body">
             <div class="table-responsive">

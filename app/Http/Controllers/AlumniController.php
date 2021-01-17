@@ -273,11 +273,12 @@ class AlumniController extends Controller
             'company_name' => 'required',
             'company_headquater' => 'required',
             'address' => 'required',
-            'imagef' => 'image|nullable|max:1999',
+            'imagef' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
             'skills_req' => 'required',
             'job_desc' => 'required',
             'date' => 'required', 
         ]);
+        // return $request->imagef;
         $internships = new internships;
         $internships->title = $request->title;
         $internships->user_id = Auth::user()->id;
@@ -331,7 +332,7 @@ class AlumniController extends Controller
     public function deleteinternship($id) {
         $internship = internships::find($id);
         $internship->delete();
-        Session::flash('success', 'Event successfully deleted');
+        Session::flash('success', 'Internship successfully deleted');
         return redirect('/myinternships');
     }
     public function applicants(Request $request, $internship_id) {
