@@ -21,19 +21,21 @@
             
             <div class="col-sm-7">
             <br><br>
+            <p> Your location will only be shared to college authorities and nearby user for connectivity under no circumstances it will be shared to 3rd party application</p>
+            <br><br>
             <button id="demo" class="btn btn-lg btn-success" onclick="getLocation()">enable geolocation</button>
                       <form class="form" action="{{Route('alumni.storelocation')}}" method="post" id="registrationForm" enctype="multipart/form-data">
                           @csrf
                           <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
                                 <label for="first_name"><h6>Latitude</h6></label>
-                                    <input type="text" class="form-control" name="lat" id="lat" style="margin-top:-2%"  placeholder="Longitude"  >
+                                    <input type="text" class="form-control" name="lat" id="lat" style="margin-top:-2%"  placeholder="Longitude" readonly>
                                 </div>
                         </div>
                          <div class="form-group" style="margin:0">
                                 <div class="col-xs-6">
                                 <label for="first_name"><h6>Longitude</h6></label>
-                                    <input type="text" class="form-control" name="lng" id="lng" style="margin-top:-2%"  placeholder="Longitude" >
+                                    <input type="text" class="form-control" name="lng" id="lng" style="margin-top:-2%"  placeholder="Longitude" readonly>
                                 </div>
                         </div>
                         <div class="form-group" style="margin-top:2%">

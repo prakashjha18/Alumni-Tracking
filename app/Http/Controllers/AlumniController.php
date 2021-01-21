@@ -398,6 +398,14 @@ class AlumniController extends Controller
         return redirect()->route('alumni.location');
 
     }
+    public function editlocation(Request $request){
+        user_locs::where('user_id',Auth::user()->id)->update([
+            'lat'=>$request->lat,
+            'lng'=>$request->lng
+        ]);
+        Session::flash('success', 'Location Editted successfully');
+        return redirect()->route('alumni.location');
+    }
 }
 
 // $users = User::where('id', '!=', auth()->id())->get();

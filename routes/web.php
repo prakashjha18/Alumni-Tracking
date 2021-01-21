@@ -289,3 +289,8 @@ Route::post('/mylocation/store', [
     'uses' => 'AlumniController@storelocation',
     'as'   => 'alumni.storelocation'
 ]);
+
+Route::post('/mylocation/edit', [
+    'uses' => 'AlumniController@editlocation',
+    'as'   => 'alumni.editlocation'
+]);
