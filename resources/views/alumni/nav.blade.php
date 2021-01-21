@@ -62,6 +62,9 @@
                     <li>
                         <a href="{{ url('/myinternships') }}" style="color:#868e96;display:block;padding:1em">My Interships</a>
                     </li>
+                    <li>
+                        <a href="{{ url('/mylocation') }}" style="color:#868e96;display:block;padding:1em">My Location</a>
+                    </li>
                 </ul>
             </li>  
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Network">

@@ -281,3 +281,11 @@ Route::get('/deleteapplication/{id}', [
     'uses' => 'AlumniController@deleteapplication',
     'as'   => 'alumni.deleteapplication'
 ]);
+Route::get('/mylocation', [
+    'uses' => 'AlumniController@mylocation',
+    'as'   => 'alumni.location'
+]);
+Route::post('/mylocation/store', [
+    'uses' => 'AlumniController@storelocation',
+    'as'   => 'alumni.storelocation'
+]);

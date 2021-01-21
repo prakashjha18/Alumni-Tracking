@@ -5,6 +5,7 @@ use App\User;
 use App\internships;
 use App\reviews;
 use App\applications;
+use App\user_locs;
 use Auth;
 use Session;
 use App\events;
@@ -377,6 +378,25 @@ class AlumniController extends Controller
         $application->delete();
         Session::flash('success', 'Application successfully deleted');
         return redirect()->back();
+    }
+
+    public function mylocation(){
+        $location = user_locs::where('user_id',Auth::user()->id)->get()->first();
+        if($location==null){
+            return view('alumni.enablelocation');
+        } else {
+            return view('alumni.viewlocation')->with('location',$location);
+        }
+    }
+    public function storelocation(Request $request){
+        $useloc = new user_locs;
+        $useloc->user_id = Auth::user()->id;
+        $useloc->lat=$request->lat;
+        $useloc->lng=$request->lng;
+        $useloc->save();
+        Session::flash('success', 'Location submitted successfully');
+        return redirect()->route('alumni.location');
+
     }
 }
 
