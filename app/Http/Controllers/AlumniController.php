@@ -406,6 +406,10 @@ class AlumniController extends Controller
         Session::flash('success', 'Location Editted successfully');
         return redirect()->route('alumni.location');
     }
+    public function userlocations(){
+        $user_locs = user_locs::get();
+        return view('alumni.userlocations')->with('user_locs',$user_locs);
+    }
 }
 
 // $users = User::where('id', '!=', auth()->id())->get();

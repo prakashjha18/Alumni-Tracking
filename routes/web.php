@@ -294,3 +294,8 @@ Route::post('/mylocation/edit', [
     'uses' => 'AlumniController@editlocation',
     'as'   => 'alumni.editlocation'
 ]);
+
+Route::get('/userlocations', [
+    'uses' => 'AlumniController@userlocations',
+    'as'   => 'alumni.userlocations'
+]);

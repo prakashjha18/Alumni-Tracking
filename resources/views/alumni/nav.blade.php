@@ -77,6 +77,9 @@
                         <a href="{{ url('http://localhost:8000') }}" target="_blank">Forum</a>
                     </li>
                     <li>
+                        <a href="{{ url('userlocations') }}" >View all alumni location</a>
+                    </li>
+                    <li>
                         <a href="{{ url('http://laterigrade-masts.000webhostapp.com/') }}" target="_blank">Blogs</a>
                     </li>
                 </ul>
