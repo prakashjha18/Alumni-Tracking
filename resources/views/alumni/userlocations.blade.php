@@ -26,6 +26,7 @@
         <div id="map" style="width: 1100px; height: 400px; background: grey"></div>
         
         <script type="text/javascript">
+        var all_users = @json($new_user);
             var locations = @json($user_locs);
             console.log(locations[0].lat);
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -46,8 +47,18 @@
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
-                infowindow.setContent(locations[i][0]);
-                infowindow.open(map, marker);
+                  var x = locations[i].user_id;
+                        var name = "";
+                        for(i in all_users){
+                            //console.log(all_users[i]);
+                            if(all_users[i].id == x){
+                                //console.log(all_users[i].id);
+                                name = all_users[i].name;
+                                console.log(name);
+                            }
+                        }
+                  infowindow.setContent(name);
+                  infowindow.open(map, marker);
                 }
             })(marker, i));
             }

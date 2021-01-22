@@ -409,7 +409,14 @@ class AlumniController extends Controller
     }
     public function userlocations() {
         $user_locs = user_locs::get();
-        return view('alumni.userlocations')->with('user_locs',$user_locs);
+        $new_user = [];
+        $users = Auth::user()::all();
+        for ($i = 0; $i < count($user_locs); $i++) {
+                $new_user[$i] = $users->where('id', $user_locs[$i]->user_id)->first();
+                $new_user_loc[$i] = $user_locs[$i];
+            
+        }
+        return view('alumni.userlocations')->with('user_locs',$user_locs)->with('new_user',$new_user);
     }
     public function getnearbyusers() {
         $current_user_loc = user_locs::where('user_id',Auth::user()->id)->get()->first();
@@ -433,7 +440,7 @@ class AlumniController extends Controller
         }
         //dd(($users_locs));
         $authuser = Auth::user()->id;
-        return view('alumni.nearbyusers')->with('new_user_loc',$users_locs)->with('new_user',$new_user)->with('authuser',$authuser);
+        return view('alumni.nearbyusers')->with('new_user_loc',$users_locs)->with('new_user',$new_user)->with('authuser',$authuser)->with('users',$users);
     }
 }
 
