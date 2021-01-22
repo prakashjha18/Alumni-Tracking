@@ -77,7 +77,7 @@
                         <a href="{{ url('http://localhost:8000') }}" target="_blank">Forum</a>
                     </li>
                     <li>
-                        <a href="{{ url('nearbyalumni') }}" >View nearby alumni location</a>
+                        <a href="{{ url('nearbyusers') }}" >View nearby alumni location</a>
                     </li>
                     <li>
                         <a href="{{ url('userlocations') }}" >View all alumni location</a>

@@ -11,6 +11,7 @@ use Session;
 use App\events;
 use App\friends;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 class AlumniController extends Controller
@@ -380,7 +381,7 @@ class AlumniController extends Controller
         return redirect()->back();
     }
 
-    public function mylocation(){
+    public function mylocation() {
         $location = user_locs::where('user_id',Auth::user()->id)->get()->first();
         if($location==null){
             return view('alumni.enablelocation');
@@ -388,7 +389,7 @@ class AlumniController extends Controller
             return view('alumni.viewlocation')->with('location',$location);
         }
     }
-    public function storelocation(Request $request){
+    public function storelocation(Request $request) {
         $useloc = new user_locs;
         $useloc->user_id = Auth::user()->id;
         $useloc->lat=$request->lat;
@@ -398,7 +399,7 @@ class AlumniController extends Controller
         return redirect()->route('alumni.location');
 
     }
-    public function editlocation(Request $request){
+    public function editlocation(Request $request) {
         user_locs::where('user_id',Auth::user()->id)->update([
             'lat'=>$request->lat,
             'lng'=>$request->lng
@@ -406,9 +407,26 @@ class AlumniController extends Controller
         Session::flash('success', 'Location Editted successfully');
         return redirect()->route('alumni.location');
     }
-    public function userlocations(){
+    public function userlocations() {
         $user_locs = user_locs::get();
         return view('alumni.userlocations')->with('user_locs',$user_locs);
+    }
+    public function getnearbyusers() {
+        $current_user_loc = user_locs::where('user_id',Auth::user()->id)->get()->first();
+        $longitude = $current_user_loc->lng;
+        $latitude = $current_user_loc->lat;
+        $string = "SELECT user_id, ( 6371 * acos( cos( radians(?) ) *
+        cos( radians( lat ) ) * cos( radians(lng) - radians(?) ) + sin( radians(?) ) * sin( radians( lat ) ) ) )
+        AS distance FROM user_locs HAVING distance < ? ORDER BY distance LIMIT 0, 20;";
+        $args = [$latitude, $longitude, $latitude, 20];
+        $users_locs = DB::select($string, $args);
+        $users = Auth::user()::all();
+        $new_user = [];
+        for ($i = 0; $i < count($users_locs); $i++) {
+            $new_user[$i] = $users->where('id', $users_locs[$i]->user_id)->first();
+        }
+        // dd(($new_user));
+        return view('alumni.nearbyusers')->with('new_user',$new_user);
     }
 }
 
