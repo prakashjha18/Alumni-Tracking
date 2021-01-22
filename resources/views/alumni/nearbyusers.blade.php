@@ -38,17 +38,22 @@
         var marker, i;
 
         for (i = 0; i < locations.length; i++) {  
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
-            map: map
-        });
-
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            return function() {
-            infowindow.setContent(locations[i][0]);
-            infowindow.open(map, marker);
+            if(locations[i].user_id == {{$authuser}}){
+                continue;
             }
-        })(marker, i));
+            else {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+                    map: map
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() { 
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
         }
     </script>
     </div><!--/col-9-->

@@ -421,6 +421,7 @@ class AlumniController extends Controller
         $args = [$latitude, $longitude, $latitude, 20];
         $users_locs = DB::select($string, $args);
         $users = Auth::user()::all();
+        //return $users_locs;
         $new_user = [];
         $new_user_loc = [];
         // dd((Auth::user()->id));
@@ -430,8 +431,9 @@ class AlumniController extends Controller
                 $new_user_loc[$i] = $users_locs[$i];
             }
         }
-        // dd(($users_locs));
-        return view('alumni.nearbyusers')->with('new_user_loc',$new_user_loc)->with('new_user',$new_user);
+        //dd(($users_locs));
+        $authuser = Auth::user()->id;
+        return view('alumni.nearbyusers')->with('new_user_loc',$users_locs)->with('new_user',$new_user)->with('authuser',$authuser);
     }
 }
 
