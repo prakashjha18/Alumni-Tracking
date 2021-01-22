@@ -424,21 +424,17 @@ class AlumniController extends Controller
         $latitude = $current_user_loc->lat;
         $string = "SELECT user_id, lng, lat, ( 6371 * acos( cos( radians(?) ) *
         cos( radians( lat ) ) * cos( radians(lng) - radians(?) ) + sin( radians(?) ) * sin( radians( lat ) ) ) )
-        AS distance FROM user_locs HAVING distance < ? ORDER BY user_id LIMIT 0, 20;";
-        $args = [$latitude, $longitude, $latitude, 20];
+        AS distance FROM user_locs HAVING distance < ? AND user_id != ? ORDER BY user_id LIMIT 0, 20;";
+        $args = [$latitude, $longitude, $latitude, 20, Auth::user()->id];
         $users_locs = DB::select($string, $args);
         $users = Auth::user()::all();
         //return $users_locs;
         $new_user = [];
-        // dd((Auth::user()->id));
         for ($i = 0; $i < count($users_locs); $i++) {
-            if ($users_locs[$i]->user_id != Auth::user()->id) {
-                $new_user[$i] = $users->where('id', $users_locs[$i]->user_id)->first();
-            }
+            $new_user[$i] = $users->where('id', $users_locs[$i]->user_id)->first();
         }
-        //dd(($users_locs));
-        $authuser = Auth::user()->id;
-        return view('alumni.nearbyusers')->with('new_user_loc',$users_locs)->with('new_user',$new_user)->with('authuser',$authuser)->with('users',$users);
+        // dd(($users_locs));
+        return view('alumni.nearbyusers')->with('new_user_loc',$users_locs)->with('new_user',$new_user)->with('users',$users);
     }
 }
 

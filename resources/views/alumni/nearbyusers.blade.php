@@ -25,7 +25,8 @@
     <div id="map" style="width: 1100px; height: 400px; background: grey"></div>
     
     <script type="text/javascript">
-        var locations = @json($users_locs);
+        var all_users = @json($new_user);
+        var locations = @json($new_user_loc);
         console.log(locations);
         var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
@@ -38,32 +39,28 @@
         var marker, i;
 
         for (i = 0; i < locations.length; i++) {  
-            if(locations[i].user_id == {{$authuser}}){
-                continue;
-            }
-            else {
-                marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
-                    map: map
-                });
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+                map: map
+            });
 
-                google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                    return function() { 
-                        var x = locations[i].user_id;
-                        var name = "";
-                        for(i in all_users){
-                            //console.log(all_users[i]);
-                            if(all_users[i].id == x){
-                                //console.log(all_users[i].id);
-                                name = all_users[i].name;
-                                console.log(name);
-                            }
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() { 
+                    var x = locations[i].user_id;
+                    var name = "";
+                    var j = i;
+                    for(j in all_users){
+                        //console.log(all_users[i]);
+                        if(all_users[j].id == x){
+                            //console.log(all_users[i].id);
+                            name = all_users[j].name;
+                            console.log(name);
                         }
-                        infowindow.setContent(name);
-                        infowindow.open(map, marker);
                     }
-                })(marker, i));
-            }
+                    infowindow.setContent(name);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
         }
     </script>
     </div><!--/col-9-->
