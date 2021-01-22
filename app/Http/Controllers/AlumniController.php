@@ -423,12 +423,10 @@ class AlumniController extends Controller
         $users = Auth::user()::all();
         //return $users_locs;
         $new_user = [];
-        $new_user_loc = [];
         // dd((Auth::user()->id));
         for ($i = 0; $i < count($users_locs); $i++) {
             if ($users_locs[$i]->user_id != Auth::user()->id) {
                 $new_user[$i] = $users->where('id', $users_locs[$i]->user_id)->first();
-                $new_user_loc[$i] = $users_locs[$i];
             }
         }
         //dd(($users_locs));

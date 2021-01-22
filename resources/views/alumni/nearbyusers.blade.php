@@ -25,7 +25,7 @@
     <div id="map" style="width: 1100px; height: 400px; background: grey"></div>
     
     <script type="text/javascript">
-        var locations = @json($new_user_loc);
+        var locations = @json($users_locs);
         console.log(locations);
         var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
