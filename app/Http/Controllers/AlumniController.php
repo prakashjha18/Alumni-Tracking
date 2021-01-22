@@ -415,7 +415,7 @@ class AlumniController extends Controller
         $current_user_loc = user_locs::where('user_id',Auth::user()->id)->get()->first();
         $longitude = $current_user_loc->lng;
         $latitude = $current_user_loc->lat;
-        $string = "SELECT user_id, ( 6371 * acos( cos( radians(?) ) *
+        $string = "SELECT user_id, lng, lat, ( 6371 * acos( cos( radians(?) ) *
         cos( radians( lat ) ) * cos( radians(lng) - radians(?) ) + sin( radians(?) ) * sin( radians( lat ) ) ) )
         AS distance FROM user_locs HAVING distance < ? ORDER BY distance LIMIT 0, 20;";
         $args = [$latitude, $longitude, $latitude, 20];
@@ -425,8 +425,8 @@ class AlumniController extends Controller
         for ($i = 0; $i < count($users_locs); $i++) {
             $new_user[$i] = $users->where('id', $users_locs[$i]->user_id)->first();
         }
-        // dd(($new_user));
-        return view('alumni.nearbyusers')->with('new_user',$new_user);
+        // dd(($users_locs));
+        return view('alumni.nearbyusers')->with('new_user',$new_user)->with('users_locs',$users_locs);
     }
 }
 
