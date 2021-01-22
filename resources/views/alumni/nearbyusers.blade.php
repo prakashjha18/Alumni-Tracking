@@ -13,7 +13,6 @@
             <a href="/nearbyusers">All Nearby Users</a>
         </li>
      </ol>
-  
      <!-- Section: Group of personal cards -->
     <section class="my-5">
         <div class="col-sm-3"><!--left col-->              
@@ -26,8 +25,8 @@
     <div id="map" style="width: 1100px; height: 400px; background: grey"></div>
     
     <script type="text/javascript">
-        var locations = @json($users_locs);
-        console.log(locations[0].lat);
+        var locations = @json($new_user_loc);
+        console.log(locations);
         var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: new google.maps.LatLng(locations[0].lat, locations[0].lng),
